@@ -1,4 +1,4 @@
-// 小米产品全球比价插件 - 主逻辑
+﻿// 小米产品全球比价插件 - 主逻辑
 // 支持东北欧28个国家，264个产品
 
 // 从Excel提取的产品列表（short_name）
@@ -1417,7 +1417,6 @@ function renderAggregatorSellers(priceData) {
     const countryInfo = countryData[country];
     const aggregator = countryInfo?.aggregator;
     
-    // 获取或创建容器
     let container = document.getElementById('aggregatorSellersSection');
     if (!container) {
         container = document.createElement('div');
@@ -1440,7 +1439,7 @@ function renderAggregatorSellers(priceData) {
     const sellerMax = aggregatorSellerPrices[sellerCount - 1];
     const sellerAvg = aggregatorSellerPrices.reduce((s, p) => s + p.price, 0) / sellerCount;
     
-    let sellerRowsHtml = '';
+    let tableRowsHtml = '';
     aggregatorSellerPrices.forEach((seller, index) => {
         const diff = seller.price - miStorePrice;
         const discount = ((miStorePrice - seller.price) / miStorePrice * 100).toFixed(1);
@@ -1448,43 +1447,29 @@ function renderAggregatorSellers(priceData) {
         const isHighest = index === sellerCount - 1;
         
         let priceTag = '';
-        if (isLowest) priceTag = '<span class="seller-tag seller-tag-lowest">最低价</span>';
-        else if (isHighest) priceTag = '<span class="seller-tag seller-tag-highest">最高价</span>';
+        if (isLowest) priceTag = ' <span class="seller-tag seller-tag-lowest">最低价</span>';
+        else if (isHighest) priceTag = ' <span class="seller-tag seller-tag-highest">最高价</span>';
         
         const barWidth = miStorePrice > 0 ? Math.min(100, (seller.price / miStorePrice) * 100) : 50;
         const barColor = seller.price <= miStorePrice ? '#4CAF50' : '#F44336';
         
-        sellerRowsHtml += `
-            <div class="seller-row ${isLowest ? 'seller-row-best' : ''}">
-                <div class="seller-info">
-                    <span class="seller-rank">${index + 1}</span>
-                    <div class="seller-detail">
-                        <span class="seller-name">${seller.sellerName}</span>
-                        ${priceTag}
-                    </div>
-                </div>
-                <div class="seller-price-section">
-                    <div class="seller-bar-container">
-                        <div class="seller-bar" style="width: ${barWidth}%; background: ${barColor};"></div>
-                    </div>
-                    <div class="seller-price-info">
-                        <span class="seller-price">${currencySymbol}${seller.price.toFixed(2)}</span>
-                        <span class="seller-diff ${diff < 0 ? 'positive' : diff > 0 ? 'negative' : ''}">
-                            ${diff < 0 ? '\u2193' : diff > 0 ? '\u2191' : '='}${Math.abs(discount)}%
-                        </span>
-                    </div>
-                </div>
-                <a href="${seller.productUrl}" target="_blank" class="seller-link">前往</a>
-            </div>
-        `;
+        tableRowsHtml += `
+                        <tr class="${isLowest ? 'seller-row-best' : ''}">
+                            <td class="col-rank"><span class="seller-rank-cell">${index + 1}</span></td>
+                            <td class="col-name"><div class="seller-name-cell"><span class="seller-name-text">${seller.sellerName}</span>${priceTag}</div></td>
+                            <td class="col-bar"><div class="seller-bar-wrap"><div class="seller-bar-fill" style="width:${barWidth}%;background:${barColor};"></div></div></td>
+                            <td class="col-price"><span class="seller-price-text">${currencySymbol}${seller.price.toFixed(2)}</span></td>
+                            <td class="col-diff"><span class="seller-diff-text ${diff < 0 ? 'positive' : diff > 0 ? 'negative' : ''}">${diff < 0 ? '\u2193' : diff > 0 ? '\u2191' : '='}${Math.abs(discount)}%</span></td>
+                            <td class="col-action"><a href="${seller.productUrl}" target="_blank" class="seller-link">前往</a></td>
+                        </tr>`;
     });
     
     container.innerHTML = `
         <div class="aggregator-sellers-panel">
             <div class="aggregator-sellers-header" onclick="toggleAggregatorPanel()">
                 <div class="aggregator-sellers-title">
-                    <span class="aggregator-icon">\uD83C\uDFEA</span>
-                    <h3>${aggregator.name} \u2014 各商家报价明细</h3>
+                    <span class="aggregator-icon">🏪</span>
+                    <h3>${aggregator.name} — 各商家报价明细</h3>
                     <span class="aggregator-count">${sellerCount} 家商家</span>
                 </div>
                 <div class="aggregator-sellers-summary">
@@ -1505,20 +1490,34 @@ function renderAggregatorSellers(priceData) {
                         <span class="summary-seller">${sellerMax.sellerName}</span>
                     </span>
                 </div>
-                <span class="aggregator-toggle" id="aggregatorToggle">\u25BC 展开详情</span>
+                <span class="aggregator-toggle" id="aggregatorToggle">▼ 展开详情</span>
             </div>
             <div class="aggregator-sellers-body" id="aggregatorSellersBody" style="display: none;">
                 <div class="sellers-legend">
                     <span>价格条相对于小米官网价 (${currencySymbol}${miStorePrice.toFixed(2)}) 的比率</span>
                     <span>
-                        <span class="legend-dot" style="background: #4CAF50;"></span> 低于官网价
-                        <span class="legend-dot" style="background: #F44336;"></span> 高于官网价
+                        <span class="legend-dot" style="background:#4CAF50;"></span> 低于官网价
+                        <span class="legend-dot" style="background:#F44336;"></span> 高于官网价
                     </span>
                 </div>
-                ${sellerRowsHtml}
+                <table class="seller-table">
+                    <thead>
+                        <tr>
+                            <th class="col-rank">#</th>
+                            <th class="col-name">商家</th>
+                            <th class="col-bar">价格条</th>
+                            <th class="col-price">报价</th>
+                            <th class="col-diff">vs官网</th>
+                            <th class="col-action">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        ${tableRowsHtml}
+                    </tbody>
+                </table>
                 <div class="sellers-footer">
                     <a href="${generateProductUrl(priceData.productName, aggregator.url)}" target="_blank" class="sellers-footer-link">
-                        \uD83D\uDD17 在 ${aggregator.name} 上查看完整报价 \u2192
+                        🔗 在 ${aggregator.name} 上查看完整报价 →
                     </a>
                     <span class="sellers-footer-note">以上为模拟数据，实际价格以 ${aggregator.name} 网站为准</span>
                 </div>
@@ -1526,6 +1525,7 @@ function renderAggregatorSellers(priceData) {
         </div>
     `;
 }
+
 
 // 切换聚合面板展开/收起
 function toggleAggregatorPanel() {
