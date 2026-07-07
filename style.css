@@ -874,6 +874,178 @@ section {
 
 .sellers-footer-note { font-size: 0.8rem; color: var(--mi-gray-dark); font-style: italic; }
 
+/* ========== 表格内嵌展开的商家子面板 ========== */
+.seller-panel-row > td {
+    padding: 0 !important;
+    background: #FAFAFA;
+}
+
+.seller-panel {
+    margin: 0;
+    padding: 16px 20px;
+    background: #FAFAFA;
+    border-top: 2px solid #FFE082;
+    border-bottom: 2px solid #FFE082;
+}
+
+.seller-panel-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+}
+
+.seller-panel-icon { font-size: 1.2rem; }
+
+.seller-panel-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--mi-black);
+}
+
+.seller-panel-subtitle {
+    font-size: 0.8rem;
+    color: var(--mi-gray-dark);
+}
+
+.seller-table-wrapper { overflow-x: auto; }
+
+.seller-panel .seller-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.seller-panel .seller-table th,
+.seller-panel .seller-table td {
+    padding: 9px 12px;
+    text-align: left;
+    vertical-align: middle;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 0.85rem;
+}
+
+.seller-panel .seller-table thead th {
+    background: #FFF8E1;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--mi-gray-dark);
+    border-bottom: 2px solid #FFE082;
+    white-space: nowrap;
+}
+
+.seller-panel .seller-table th:nth-child(1),
+.seller-panel .seller-table td:nth-child(1) { width: 56px; text-align: center; }
+
+.seller-panel .seller-table th:nth-child(2),
+.seller-panel .seller-table td:nth-child(2) { width: 30%; }
+
+.seller-panel .seller-table th:nth-child(3),
+.seller-panel .seller-table td:nth-child(3) { width: 22%; }
+
+.seller-panel .seller-table th:nth-child(4),
+.seller-panel .seller-table td:nth-child(4) { width: 20%; }
+
+.seller-panel .seller-table th:nth-child(5),
+.seller-panel .seller-table td:nth-child(5) { width: 14%; }
+
+.seller-panel .seller-table th:nth-child(6),
+.seller-panel .seller-table td:nth-child(6) { width: 72px; text-align: center; }
+
+.seller-panel .seller-table tbody tr:hover { background: #f5f5f5; }
+.seller-panel .seller-table tbody tr:last-child td { border-bottom: none; }
+
+.seller-panel .seller-table .rank-best { background: #E8F5E9; }
+.seller-panel .seller-table .rank-best:hover { background: #C8E6C9; }
+.seller-panel .seller-table .rank-top3 { background: #F1F8E9; }
+.seller-panel .seller-table .rank-top3:hover { background: #DCEDC8; }
+
+.seller-panel .seller-table .seller-rank {
+    font-weight: 700;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.seller-panel .seller-table .seller-name a {
+    color: var(--mi-black);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.seller-panel .seller-table .seller-name a:hover {
+    color: var(--mi-orange);
+    text-decoration: underline;
+}
+
+.seller-panel .seller-table .seller-price { font-weight: 700; }
+
+.seller-link-btn {
+    display: inline-block;
+    padding: 4px 10px;
+    background: var(--mi-blue);
+    color: white !important;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.seller-link-btn:hover { background: #1976D2; transform: translateY(-1px); }
+
+.seller-panel-footer {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.seller-stat {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.seller-stat-label {
+    font-size: 0.8rem;
+    color: var(--mi-gray-dark);
+}
+
+.seller-stat-value {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--mi-black);
+}
+
+.seller-stat-value.positive { color: var(--mi-green); }
+.seller-stat-value.negative { color: var(--mi-red); }
+.seller-stat-value.highlight { color: var(--mi-orange); }
+
+.expand-sellers-btn {
+    display: inline-block;
+    padding: 3px 10px;
+    background: #FFF3E0;
+    border: 1px solid #FFCC80;
+    border-radius: 5px;
+    color: var(--mi-orange);
+    font-size: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-left: 8px;
+    font-family: inherit;
+    vertical-align: middle;
+}
+
+.expand-sellers-btn:hover {
+    background: var(--mi-orange);
+    color: white;
+    border-color: var(--mi-orange);
+}
+
 /* ========== 覆盖地区 ========== */
 .coverage {
     background: var(--mi-gray-light);
@@ -1158,6 +1330,9 @@ section {
 
     .seller-table { min-width: 580px; }
     .aggregator-sellers-body { overflow-x: auto; }
+    .seller-table-wrapper { overflow-x: auto; }
+    .seller-panel .seller-table { min-width: 500px; }
+    .seller-panel-footer { gap: 12px; }
     .aggregator-sellers-summary { flex-direction: column; align-items: flex-start; gap: 6px; }
     .summary-divider { display: none; }
     .sellers-footer { flex-direction: column; align-items: flex-start; }
