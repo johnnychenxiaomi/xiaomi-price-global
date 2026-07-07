@@ -61,6 +61,99 @@ const productList = [
     "Xiaomi 11T", "Mi 11 Lite", "Xiaomi 14 Ultra"
 ];
 
+// API 配置 — 爬虫服务地址（部署后改为实际地址）
+const API_BASE_URL = 'http://localhost:8000';
+
+// 国家代码 → 中文名映射
+const COUNTRY_CODE_MAP = {
+    PL:'波兰',CZ:'捷克',SK:'斯洛伐克',HU:'匈牙利',RO:'罗马尼亚',BG:'保加利亚',
+    HR:'克罗地亚',SI:'斯洛文尼亚',RS:'塞尔维亚',ME:'黑山',MK:'北马其顿',
+    AL:'阿尔巴尼亚',BA:'波斯尼亚和黑塞哥维那',XK:'科索沃',SE:'瑞典',DK:'丹麦',
+    FI:'芬兰',NO:'挪威',GR:'希腊',UA:'乌克兰',LV:'拉脱维亚',LT:'立陶宛',
+    EE:'爱沙尼亚',MD:'摩尔多瓦',MT:'马耳他',CY:'塞浦路斯',DE:'德国',FR:'法国',
+    IT:'意大利',ES:'西班牙',PT:'葡萄牙',NL:'荷兰',BE:'比利时',AT:'奥地利',
+    CH:'瑞士',IE:'爱尔兰',GB:'英国',LU:'卢森堡'
+};
+
+// 从 API 加载真实价格数据
+async function loadFromAPI() {
+    try {
+        const resp = await fetch(API_BASE_URL + '/api/prices?limit=5000', { signal: AbortSignal.timeout(5000) });
+        if (!resp.ok) return null;
+        const prices = await resp.json();
+        if (!prices || prices.length === 0) return null;
+
+        // 按国家+平台分组
+        const grouped = {};
+        for (const p of prices) {
+            const cn = COUNTRY_CODE_MAP[p.country_code];
+            if (!cn) continue;
+            if (!grouped[cn]) grouped[cn] = {};
+            if (!grouped[cn][p.platform]) grouped[cn][p.platform] = [];
+            grouped[cn][p.platform].push(p);
+        }
+
+        // 转换为前端格式，与 mockData 合并
+        const data = JSON.parse(JSON.stringify(mockData)); // 先复制模拟数据作为基础
+        for (const [country, platforms] of Object.entries(grouped)) {
+            const ci = countryData[country];
+            if (!ci) continue;
+
+            const platformList = [];
+            for (const [pName, products] of Object.entries(platforms)) {
+                const prods = products.map(p => ({
+                    id: p.product_id,
+                    name: p.product_name,
+                    price: p.price,
+                    miStorePrice: Math.round(p.price * 1.1),
+                    miStoreUrl: ci.miStoreUrl + '/product/' + p.product_id,
+                    productUrl: p.url || '#'
+                }));
+                // 找到平台URL
+                const existingPlatform = ci.platforms?.find(pl => pl.name === pName);
+                platformList.push({ name: pName, url: existingPlatform?.url || '#', products: prods });
+            }
+
+            // 也保留原有平台列表（如果API没有覆盖）
+            for (const pl of (ci.platforms || [])) {
+                if (!platformList.find(p => p.name === pl.name)) {
+                    platformList.push(pl);
+                }
+            }
+
+            data[country] = {
+                currency: ci.currency,
+                currencySymbol: ci.currencySymbol,
+                miStoreUrl: ci.miStoreUrl,
+                platforms: platformList,
+                aggregatorSellers: ci.aggregator?.sellers || null
+            };
+        }
+        return data;
+    } catch (e) {
+        return null;
+    }
+}
+
+// 数据来源指示器
+function showDataSourceIndicator(type) {
+    let el = document.getElementById('dataSourceIndicator');
+    if (!el) {
+        el = document.createElement('div');
+        el.id = 'dataSourceIndicator';
+        el.style.cssText = 'position:fixed;bottom:12px;right:12px;padding:6px 14px;border-radius:20px;font-size:0.72rem;font-weight:600;z-index:9999;box-shadow:0 2px 8px rgba(0,0,0,0.15);cursor:pointer;';
+        el.onclick = () => el.style.display = 'none';
+        document.body.appendChild(el);
+    }
+    if (type === 'real') {
+        el.style.background = '#4CAF50'; el.style.color = '#fff';
+        el.textContent = '✓ 真实价格数据（来自爬虫）';
+    } else {
+        el.style.background = '#FF9800'; el.style.color = '#fff';
+        el.textContent = '⚠ 模拟数据 — 运行爬虫后自动切换为真实价格';
+    }
+}
+
 // 生成模拟价格数据的函数
 function generateMockPrice(basePrice, variance = 0.1) {
     const min = basePrice * (1 - variance);
@@ -1069,7 +1162,7 @@ function generateMockData() {
 }
 
 // 生成完整的mockData
-const mockData = generateMockData();
+let mockData = generateMockData();
 
 // 全局状态
 let currentCountry = null;
@@ -1090,8 +1183,15 @@ const updateTime = document.getElementById('updateTime');
 const exportCSV = document.getElementById('exportCSV');
 const exportJSON = document.getElementById('exportJSON');
 
-// 初始化
-document.addEventListener('DOMContentLoaded', function() {
+// 初始化 — 优先从 API 加载真实数据
+document.addEventListener('DOMContentLoaded', async function() {
+    const apiData = await loadFromAPI();
+    if (apiData) {
+        mockData = apiData;
+        showDataSourceIndicator('real');
+    } else {
+        showDataSourceIndicator('mock');
+    }
     initCountrySelect();
     setupEventListeners();
     updateTimestamp();
