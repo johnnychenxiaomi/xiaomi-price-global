@@ -1694,29 +1694,53 @@ function initCoverageMap() {
     const grid = document.getElementById('coverageGrid');
     if (!grid) return;
 
-    // 按类型分组排序：有聚合 > 有官网 > 仅覆盖
-    const entries = Object.entries(mapCountries).sort(([, a], [, b]) => {
-        const rank = c => c.aggregator ? 0 : c.store ? 1 : 2;
-        return rank(a) - rank(b);
+    // 瓦片网格 — [列, 行] (0-indexed), 按欧洲地理位置排列
+    const positions = {
+        NO: [3,0], SE: [4,0], FI: [5,0], AX: [6,0],
+        DK: [3,1], EE: [5,1],
+        IE: [0,2], UK: [1,2], NL: [2,2], DE: [3,2], PL: [4,2], LV: [5,2], LT: [6,2],
+        FR: [1,3], BE: [2,3], CZ: [3,3], SK: [4,3], UA: [5,3], BY: [6,3],
+        ES: [0,4], CH: [1,4], AT: [2,4], HU: [3,4], RO: [4,4], MD: [5,4],
+        PT: [0,5], IT: [1,5], SI: [2,5], HR: [3,5], RS: [4,5], BG: [5,5],
+        BA: [2,6], ME: [3,6], MK: [4,6], GR: [5,6],
+        AL: [3,7], XK: [4,7], CY: [6,7],
+        MT: [4,8]
+    };
+
+    const bgCountries = {
+        IE: {zh:'爱尔兰',flag:'🇮🇪'}, UK: {zh:'英国',flag:'🇬🇧'}, FR: {zh:'法国',flag:'🇫🇷'},
+        BE: {zh:'比利时',flag:'🇧🇪'}, CH: {zh:'瑞士',flag:'🇨🇭'}, AT: {zh:'奥地利',flag:'🇦🇹'},
+        PT: {zh:'葡萄牙',flag:'🇵🇹'}, IT: {zh:'意大利',flag:'🇮🇹'}, DE: {zh:'德国',flag:'🇩🇪'},
+        NL: {zh:'荷兰',flag:'🇳🇱'}, ES: {zh:'西班牙',flag:'🇪🇸'}, BY: {zh:'白俄罗斯',flag:'🇧🇾'}
+    };
+
+    const coveredSet = new Set(Object.keys(mapCountries));
+    let html = '';
+
+    Object.entries(positions).forEach(([code, [col, row]]) => {
+        const info = mapCountries[code];
+        const bg = bgCountries[code];
+        const data = info || bg;
+        if (!data) return;
+
+        const isCovered = coveredSet.has(code);
+        const type = isCovered ? (info.aggregator ? 'aggregator' : info.store ? 'store' : 'covered') : 'bg';
+        const title = info
+            ? (info.aggregator ? '聚合比价: ' + info.aggregator : info.store ? '小米官网: ' + info.store : '已覆盖')
+            : data.zh;
+
+        html += '<div class="tile tile-' + type + '" style="grid-column:' + (col+1) + ';grid-row:' + (row+1) + ';"' +
+            (info ? ' data-country="' + info.countryKey + '"' : '') +
+            ' title="' + title + '">' +
+            '<span class="tile-flag">' + (data.flag || '') + '</span>' +
+            '<span class="tile-name">' + data.zh + '</span></div>';
     });
 
-    grid.innerHTML = entries.map(([code, info]) => {
-        const type = info.aggregator ? 'aggregator' : info.store ? 'store' : 'covered';
-        const tag = info.aggregator
-            ? '<span class="cg-tag cg-tag-agg">' + info.aggregator + '</span>'
-            : info.store
-            ? '<span class="cg-tag cg-tag-store">小米官网</span>'
-            : '<span class="cg-tag cg-tag-covered">仅覆盖</span>';
-        return '<div class="cg-card cg-' + type + '" data-country="' + info.countryKey + '">' +
-            '<span class="cg-flag">' + (info.flag || '') + '</span>' +
-            '<span class="cg-name">' + info.zh + '</span>' + tag +
-            '</div>';
-    }).join('');
+    grid.innerHTML = html;
 
-    // 点击跳转比价
-    grid.querySelectorAll('.cg-card').forEach(card => {
-        card.addEventListener('click', () => {
-            const country = card.dataset.country;
+    grid.querySelectorAll('.tile[data-country]').forEach(tile => {
+        tile.addEventListener('click', () => {
+            const country = tile.dataset.country;
             const sel = document.getElementById('countrySelect');
             if (!sel) return;
             for (let i = 0; i < sel.options.length; i++) {
