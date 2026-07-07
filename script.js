@@ -62,7 +62,7 @@ const productList = [
 ];
 
 // API 配置 — 爬虫服务地址（部署后改为实际地址）
-const API_BASE_URL = 'http://localhost:8000';
+const API_BASE_URL = 'http://localhost:8001';
 
 // 国家代码 → 中文名映射
 const COUNTRY_CODE_MAP = {
