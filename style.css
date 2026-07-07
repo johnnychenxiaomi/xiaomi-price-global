@@ -1056,61 +1056,45 @@ section {
     background: white;
     border-radius: var(--radius);
     box-shadow: var(--shadow-sm);
-    padding: 32px;
+    padding: 0;
     overflow: hidden;
 }
 
 .coverage-map {
     width: 100%;
-    min-height: 420px;
+    height: 500px;
 }
 
-.coverage-map svg {
-    width: 100%;
-    height: auto;
+.mi-map-tooltip {
+    background: rgba(0, 0, 0, 0.85) !important;
+    color: #fff !important;
+    border: none !important;
+    border-radius: 8px !important;
+    padding: 10px 14px !important;
+    font-size: 0.85rem !important;
+    line-height: 1.6 !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2) !important;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
 }
 
-.coverage-map svg path {
-    stroke: #fff;
-    stroke-width: 0.5;
-    cursor: pointer;
-    transition: opacity 0.2s, filter 0.2s;
+.mi-map-tooltip::before {
+    border-top-color: rgba(0, 0, 0, 0.85) !important;
 }
 
-.coverage-map svg path:hover {
-    opacity: 0.8;
-    filter: brightness(1.1);
-    stroke: #333;
-    stroke-width: 1.2;
+.leaflet-control-zoom a {
+    background: white !important;
+    color: var(--mi-black) !important;
+    border-color: var(--mi-gray) !important;
+    font-weight: 600 !important;
 }
 
-.map-tooltip {
-    display: none;
-    position: absolute;
-    background: rgba(0, 0, 0, 0.85);
-    color: #fff;
-    padding: 10px 14px;
-    border-radius: 8px;
-    font-size: 0.85rem;
-    line-height: 1.6;
-    pointer-events: none;
-    z-index: 100;
-    max-width: 260px;
-    backdrop-filter: blur(4px);
+.leaflet-control-zoom a:hover {
+    background: var(--mi-gray-light) !important;
 }
 
-.map-tooltip .tooltip-title {
-    font-weight: 700;
-    font-size: 0.95rem;
-    margin-bottom: 4px;
-}
-
-.map-tooltip .tooltip-aggregator {
-    color: #FFB74D;
-}
-
-.map-tooltip .tooltip-store {
-    color: #90CAF9;
+.leaflet-control-attribution {
+    font-size: 0.7rem !important;
+    background: rgba(255,255,255,0.7) !important;
 }
 
 .map-legend {
@@ -1335,8 +1319,7 @@ section {
     .hero-stat-value { font-size: 2rem; }
 
     .features-grid { grid-template-columns: 1fr; }
-    .coverage-map-wrapper { padding: 16px; }
-    .coverage-map { min-height: 280px; }
+    .coverage-map { height: 350px; }
     .map-legend { gap: 16px; }
     .tips-grid { grid-template-columns: 1fr; }
 
