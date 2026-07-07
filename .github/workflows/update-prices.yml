@@ -18,7 +18,9 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Scrape Amazon prices
+      - name: Scrape prices (Amazon + aggregators)
+        env:
+          SCRAPINGBEE_API_KEY: ${{ secrets.SCRAPINGBEE_API_KEY }}
         run: python scrape_prices.py
 
       - name: Commit and push if changed
