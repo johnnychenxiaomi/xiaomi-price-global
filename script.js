@@ -1660,155 +1660,77 @@ function handleExportJSON() {
 // ========== 覆盖地区交互式地图（全新欧洲地图） ==========
 // 覆盖的27国数据（不含冰岛）
 const mapCountries = {
-    PL: { zh: '波兰', aggregator: 'Ceneo.pl', store: 'mi-store.pl', countryKey: '波兰' },
-    CZ: { zh: '捷克', aggregator: 'Heureka.cz', store: 'mi-store.cz', countryKey: '捷克' },
-    SK: { zh: '斯洛伐克', aggregator: 'Heureka.sk', store: 'mi-store.sk', countryKey: '斯洛伐克' },
-    HU: { zh: '匈牙利', aggregator: 'Arukereso.hu', store: 'mi-store.hu', countryKey: '匈牙利' },
-    RO: { zh: '罗马尼亚', aggregator: 'Compari.ro', store: 'mi-store.ro', countryKey: '罗马尼亚' },
-    BG: { zh: '保加利亚', aggregator: 'Pazaruvaj.com', store: 'mi-store.bg', countryKey: '保加利亚' },
-    HR: { zh: '克罗地亚', aggregator: 'Jeftinije.hr', store: null, countryKey: '克罗地亚' },
-    SI: { zh: '斯洛文尼亚', aggregator: 'Ceneje.si', store: null, countryKey: '斯洛文尼亚' },
-    RS: { zh: '塞尔维亚', aggregator: 'Idealno.rs', store: 'mi-store.rs', countryKey: '塞尔维亚' },
-    ME: { zh: '黑山', aggregator: null, store: null, countryKey: '黑山' },
-    MK: { zh: '北马其顿', aggregator: null, store: null, countryKey: '北马其顿' },
-    AL: { zh: '阿尔巴尼亚', aggregator: null, store: null, countryKey: '阿尔巴尼亚' },
-    BA: { zh: '波黑', aggregator: null, store: null, countryKey: '波斯尼亚和黑塞哥维那' },
-    XK: { zh: '科索沃', aggregator: null, store: null, countryKey: '科索沃' },
-    SE: { zh: '瑞典', aggregator: 'PriceRunner.se', store: 'mi.com/se', countryKey: '瑞典' },
-    DK: { zh: '丹麦', aggregator: 'PriceRunner.dk', store: 'mi.com/dk', countryKey: '丹麦' },
-    FI: { zh: '芬兰', aggregator: 'Hinta.fi', store: 'mi.com/fi', countryKey: '芬兰' },
-    NO: { zh: '挪威', aggregator: 'Prisguiden.no', store: 'mi.com/no', countryKey: '挪威' },
-    GR: { zh: '希腊', aggregator: 'Skroutz.gr', store: 'mi.com/gr', countryKey: '希腊' },
-    UA: { zh: '乌克兰', aggregator: 'Hotline.ua', store: null, countryKey: '乌克兰' },
-    LV: { zh: '拉脱维亚', aggregator: 'Salidzini.lv', store: null, countryKey: '拉脱维亚' },
-    LT: { zh: '立陶宛', aggregator: 'Kainos.lt', store: null, countryKey: '立陶宛' },
-    EE: { zh: '爱沙尼亚', aggregator: 'Hinnavaatlus.ee', store: null, countryKey: '爱沙尼亚' },
-    MD: { zh: '摩尔多瓦', aggregator: null, store: null, countryKey: '摩尔多瓦' },
-    MT: { zh: '马耳他', aggregator: null, store: null, countryKey: '马耳他' },
-    CY: { zh: '塞浦路斯', aggregator: null, store: null, countryKey: '塞浦路斯' },
-    AX: { zh: '奥兰', aggregator: null, store: null, countryKey: '奥兰' },
-    YU: { zh: '南斯拉夫', aggregator: null, store: null, countryKey: '南斯拉夫' }
+    PL: { zh: '波兰', flag: '🇵🇱', aggregator: 'Ceneo.pl', store: 'mi-store.pl', countryKey: '波兰' },
+    CZ: { zh: '捷克', flag: '🇨🇿', aggregator: 'Heureka.cz', store: 'mi-store.cz', countryKey: '捷克' },
+    SK: { zh: '斯洛伐克', flag: '🇸🇰', aggregator: 'Heureka.sk', store: 'mi-store.sk', countryKey: '斯洛伐克' },
+    HU: { zh: '匈牙利', flag: '🇭🇺', aggregator: 'Arukereso.hu', store: 'mi-store.hu', countryKey: '匈牙利' },
+    RO: { zh: '罗马尼亚', flag: '🇷🇴', aggregator: 'Compari.ro', store: 'mi-store.ro', countryKey: '罗马尼亚' },
+    BG: { zh: '保加利亚', flag: '🇧🇬', aggregator: 'Pazaruvaj.com', store: 'mi-store.bg', countryKey: '保加利亚' },
+    HR: { zh: '克罗地亚', flag: '🇭🇷', aggregator: 'Jeftinije.hr', store: null, countryKey: '克罗地亚' },
+    SI: { zh: '斯洛文尼亚', flag: '🇸🇮', aggregator: 'Ceneje.si', store: null, countryKey: '斯洛文尼亚' },
+    RS: { zh: '塞尔维亚', flag: '🇷🇸', aggregator: 'Idealno.rs', store: 'mi-store.rs', countryKey: '塞尔维亚' },
+    ME: { zh: '黑山', flag: '🇲🇪', aggregator: null, store: null, countryKey: '黑山' },
+    MK: { zh: '北马其顿', flag: '🇲🇰', aggregator: null, store: null, countryKey: '北马其顿' },
+    AL: { zh: '阿尔巴尼亚', flag: '🇦🇱', aggregator: null, store: null, countryKey: '阿尔巴尼亚' },
+    BA: { zh: '波黑', flag: '🇧🇦', aggregator: null, store: null, countryKey: '波斯尼亚和黑塞哥维那' },
+    XK: { zh: '科索沃', flag: '🇽🇰', aggregator: null, store: null, countryKey: '科索沃' },
+    SE: { zh: '瑞典', flag: '🇸🇪', aggregator: 'PriceRunner.se', store: 'mi.com/se', countryKey: '瑞典' },
+    DK: { zh: '丹麦', flag: '🇩🇰', aggregator: 'PriceRunner.dk', store: 'mi.com/dk', countryKey: '丹麦' },
+    FI: { zh: '芬兰', flag: '🇫🇮', aggregator: 'Hinta.fi', store: 'mi.com/fi', countryKey: '芬兰' },
+    NO: { zh: '挪威', flag: '🇳🇴', aggregator: 'Prisguiden.no', store: 'mi.com/no', countryKey: '挪威' },
+    GR: { zh: '希腊', flag: '🇬🇷', aggregator: 'Skroutz.gr', store: 'mi.com/gr', countryKey: '希腊' },
+    UA: { zh: '乌克兰', flag: '🇺🇦', aggregator: 'Hotline.ua', store: null, countryKey: '乌克兰' },
+    LV: { zh: '拉脱维亚', flag: '🇱🇻', aggregator: 'Salidzini.lv', store: null, countryKey: '拉脱维亚' },
+    LT: { zh: '立陶宛', flag: '🇱🇹', aggregator: 'Kainos.lt', store: null, countryKey: '立陶宛' },
+    EE: { zh: '爱沙尼亚', flag: '🇪🇪', aggregator: 'Hinnavaatlus.ee', store: null, countryKey: '爱沙尼亚' },
+    MD: { zh: '摩尔多瓦', flag: '🇲🇩', aggregator: null, store: null, countryKey: '摩尔多瓦' },
+    MT: { zh: '马耳他', flag: '🇲🇹', aggregator: null, store: null, countryKey: '马耳他' },
+    CY: { zh: '塞浦路斯', flag: '🇨🇾', aggregator: null, store: null, countryKey: '塞浦路斯' },
+    AX: { zh: '奥兰', flag: '🇦🇽', aggregator: null, store: null, countryKey: '奥兰' },
+    YU: { zh: '南斯拉夫', flag: '🇷🇸', aggregator: null, store: null, countryKey: '南斯拉夫' }
 };
 
-// ISO 3166-1 numeric → alpha-2 欧洲国家映射
-const euroNumericToAlpha2 = {
-    8: 'AL', 40: 'AT', 56: 'BE', 70: 'BA', 100: 'BG', 112: 'BY',
-    191: 'HR', 196: 'CY', 203: 'CZ', 208: 'DK', 233: 'EE', 246: 'FI', 250: 'FR',
-    276: 'DE', 300: 'GR', 348: 'HU', 372: 'IE', 380: 'IT',
-    428: 'LV', 440: 'LT', 442: 'LU', 470: 'MT', 498: 'MD', 499: 'ME',
-    528: 'NL', 578: 'NO', 616: 'PL', 620: 'PT', 642: 'RO', 643: 'RU',
-    688: 'RS', 703: 'SK', 705: 'SI', 724: 'ES', 752: 'SE', 756: 'CH',
-    804: 'UA', 807: 'MK', 826: 'GB'
-};
+function initCoverageMap() {
+    const grid = document.getElementById('coverageGrid');
+    if (!grid) return;
 
-let leafletMap = null;
+    // 按类型分组排序：有聚合 > 有官网 > 仅覆盖
+    const entries = Object.entries(mapCountries).sort(([, a], [, b]) => {
+        const rank = c => c.aggregator ? 0 : c.store ? 1 : 2;
+        return rank(a) - rank(b);
+    });
 
-async function initCoverageMap() {
-    const container = document.getElementById('coverageMap');
-    if (!container) return;
+    grid.innerHTML = entries.map(([code, info]) => {
+        const type = info.aggregator ? 'aggregator' : info.store ? 'store' : 'covered';
+        const tag = info.aggregator
+            ? '<span class="cg-tag cg-tag-agg">' + info.aggregator + '</span>'
+            : info.store
+            ? '<span class="cg-tag cg-tag-store">小米官网</span>'
+            : '<span class="cg-tag cg-tag-covered">仅覆盖</span>';
+        return '<div class="cg-card cg-' + type + '" data-country="' + info.countryKey + '">' +
+            '<span class="cg-flag">' + (info.flag || '') + '</span>' +
+            '<span class="cg-name">' + info.zh + '</span>' + tag +
+            '</div>';
+    }).join('');
 
-    if (typeof L === 'undefined' || typeof topojson === 'undefined') {
-        container.innerHTML = '<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;color:#999;gap:12px;"><span style="font-size:2rem;">🗺️</span><span>地图库加载失败，请检查网络连接</span></div>';
-        return;
-    }
-
-    container.innerHTML = '';
-    container.style.height = '500px';
-    container.style.borderRadius = '12px';
-    container.style.overflow = 'hidden';
-
-    const euroBounds = L.latLngBounds(L.latLng(33, -26), L.latLng(72, 52));
-    leafletMap = L.map(container, {
-        zoomControl: false,
-        scrollWheelZoom: false,
-        dragging: false,
-        touchZoom: false,
-        doubleClickZoom: false,
-        boxZoom: false,
-        keyboard: false,
-        maxBounds: euroBounds,
-        maxBoundsViscosity: 1.0
-    }).setView([54, 15], 4);
-
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>',
-        maxZoom: 4,
-        minZoom: 4,
-        subdomains: 'abcd'
-    }).addTo(leafletMap);
-
-    try {
-        const resp = await fetch('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json');
-        if (!resp.ok) throw new Error('Map data load failed');
-        const world = await resp.json();
-        const countries = topojson.feature(world, world.objects.countries);
-
-        L.geoJSON(countries, {
-            style: feature => {
-                const id = parseInt(feature.id);
-                const alpha2 = euroNumericToAlpha2[id];
-                const info = alpha2 ? mapCountries[alpha2] : null;
-                let fillColor = '#E0E0E0', fillOpacity = 0.35, weight = 0.5, color = '#ccc';
-                if (info && info.aggregator) {
-                    fillColor = '#FF6900'; fillOpacity = 0.65; weight = 1.5; color = '#E55D00';
-                } else if (info && info.countryKey && !info.aggregator) {
-                    fillColor = '#42A5F5'; fillOpacity = 0.5; weight = 1; color = '#1E88E5';
+    // 点击跳转比价
+    grid.querySelectorAll('.cg-card').forEach(card => {
+        card.addEventListener('click', () => {
+            const country = card.dataset.country;
+            const sel = document.getElementById('countrySelect');
+            if (!sel) return;
+            for (let i = 0; i < sel.options.length; i++) {
+                if (sel.options[i].value === country) {
+                    sel.value = country;
+                    sel.dispatchEvent(new Event('change'));
+                    document.getElementById('tool')?.scrollIntoView({ behavior: 'smooth' });
+                    break;
                 }
-                return { fillColor, fillOpacity, weight, color, opacity: 0.9 };
-            },
-            onEachFeature: (feature, layer) => {
-                const id = parseInt(feature.id);
-                const alpha2 = euroNumericToAlpha2[id];
-                const info = alpha2 ? mapCountries[alpha2] : null;
-                if (!info) return;
-
-                let html = '<strong>' + info.zh + '</strong>';
-                if (info.aggregator) html += '<br><span style="color:#FFB74D">聚合比价: ' + info.aggregator + '</span>';
-                if (info.store) html += '<br><span style="color:#90CAF9">小米官网: ' + info.store + '</span>';
-                if (!info.aggregator && !info.store) html += '<br><span style="color:#aaa">仅官网覆盖</span>';
-                layer.bindTooltip(html, { sticky: true, className: 'mi-map-tooltip' });
-
-                layer.on('click', () => onMapCountryClick(alpha2));
-                layer.on('mouseover', function() {
-                    this.setStyle({ weight: 3, fillOpacity: 0.85 });
-                    this.bringToFront();
-                });
-                layer.on('mouseout', function() {
-                    const a2 = euroNumericToAlpha2[parseInt(feature.id)];
-                    const inf = a2 ? mapCountries[a2] : null;
-                    let fo = 0.35, w = 0.5;
-                    if (inf && inf.aggregator) { fo = 0.65; w = 1.5; }
-                    else if (inf && inf.countryKey) { fo = 0.5; w = 1; }
-                    this.setStyle({ weight: w, fillOpacity: fo });
-                });
-            },
-            filter: feature => parseInt(feature.id) in euroNumericToAlpha2
-        }).addTo(leafletMap);
-
-        leafletMap.fitBounds(euroBounds, { padding: [10, 10] });
-        setTimeout(() => leafletMap.invalidateSize(), 200);
-    } catch (err) {
-        console.error('Map load error:', err);
-        container.innerHTML = '<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;color:#999;gap:12px;"><span style="font-size:2rem;">🗺️</span><span>地图数据加载失败，请检查网络连接</span></div>';
-    }
-}
-
-
-
-function onMapCountryClick(code) {
-    const info = mapCountries[code];
-    if (!info || !info.countryKey) return;
-    const countrySelect = document.getElementById('countrySelect');
-    if (countrySelect) {
-        for (let i = 0; i < countrySelect.options.length; i++) {
-            if (countrySelect.options[i].value === info.countryKey) {
-                countrySelect.value = info.countryKey;
-                countrySelect.dispatchEvent(new Event('change'));
-                document.getElementById('tool')?.scrollIntoView({ behavior: 'smooth' });
-                break;
             }
-        }
-    }
+        });
+    });
 }
+
+
 
 document.addEventListener('DOMContentLoaded', initCoverageMap);
