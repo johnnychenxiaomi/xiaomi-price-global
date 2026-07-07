@@ -2,12 +2,17 @@
 Amazon 多国价格抓取脚本 — 供 GitHub Actions 自动运行
 从 8 个 Amazon 站点抓取小米产品价格，输出 prices.json
 """
-import json, re, sys, time
-from datetime import datetime
+import json, re, sys, time, random
+from datetime import datetime, timezone
 from urllib.request import Request, urlopen
 from urllib.error import URLError, HTTPError
 
-USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+USER_AGENTS = [
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+    "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:128.0) Gecko/20100101 Firefox/128.0",
+]
 
 STORES = [
     {"domain": "amazon.de", "cc": "DE", "currency": "EUR"},
@@ -61,16 +66,19 @@ def fetch_page(url, retries=2):
     for attempt in range(retries + 1):
         try:
             req = Request(url, headers={
-                "User-Agent": USER_AGENT,
-                "Accept-Language": "en-US,en;q=0.9",
-                "Accept": "text/html,application/xhtml+xml",
+                "User-Agent": random.choice(USER_AGENTS),
+                "Accept-Language": "en-US,en;q=0.9,de;q=0.8",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+                "Accept-Encoding": "identity",
+                "Connection": "keep-alive",
+                "Upgrade-Insecure-Requests": "1",
             })
-            with urlopen(req, timeout=15) as resp:
+            with urlopen(req, timeout=20) as resp:
                 return resp.read().decode("utf-8", errors="replace")
         except (URLError, HTTPError, TimeoutError) as e:
             print(f"  Attempt {attempt+1} failed for {url}: {e}")
             if attempt < retries:
-                time.sleep(2 * (attempt + 1))
+                time.sleep(3 * (attempt + 1))
     return None
 
 def extract_products_from_html(html, country_code, currency, domain):
@@ -98,7 +106,7 @@ def extract_products_from_html(html, country_code, currency, domain):
                         "country_code": country_code,
                         "currency": currency,
                         "price": round(price, 2),
-                        "timestamp": datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S")
+                        "timestamp": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
                     })
                     break
     return results
@@ -129,7 +137,7 @@ def scrape_all():
                     all_prices.append(p)
                     print(f"    {p['product_name']}: {p['price']} {p['currency']}")
 
-            time.sleep(1.5)
+            time.sleep(random.uniform(2, 4))
 
     print(f"\n=== Total: {len(all_prices)} products from {len(set(p['country_code'] for p in all_prices))} countries ===")
     return all_prices
@@ -143,7 +151,7 @@ def main():
         sys.exit(0)
 
     output = {
-        "updated": datetime.utcnow().strftime("%Y-%m-%d"),
+        "updated": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
         "total": len(prices),
         "prices": sorted(prices, key=lambda p: (p["country_code"], p["product_name"]))
     }
