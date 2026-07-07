@@ -1,0 +1,62 @@
+{
+  "timestamp": "2026-07-07T19:31:08.781588",
+  "total_prices": 3,
+  "countries": {
+    "DE": {
+      "name": "德国",
+      "currency": "EUR",
+      "products": {}
+    },
+    "FR": {
+      "name": "法国",
+      "currency": "EUR",
+      "products": {}
+    },
+    "IT": {
+      "name": "意大利",
+      "currency": "EUR",
+      "products": {
+        "Xiaomi 15 Ultra": 205.0
+      }
+    },
+    "ES": {
+      "name": "西班牙",
+      "currency": "EUR",
+      "products": {}
+    },
+    "GB": {
+      "name": "英国",
+      "currency": "GBP",
+      "products": {}
+    },
+    "PL": {
+      "name": "波兰",
+      "currency": "PLN",
+      "products": {}
+    },
+    "SE": {
+      "name": "瑞典",
+      "currency": "SEK",
+      "products": {}
+    },
+    "NL": {
+      "name": "荷兰",
+      "currency": "EUR",
+      "products": {
+        "POCO F6": 210.98
+      }
+    },
+    "AT": {
+      "name": "奥地利",
+      "currency": "EUR",
+      "products": {}
+    },
+    "CH": {
+      "name": "瑞士",
+      "currency": "CHF",
+      "products": {
+        "Xiaomi Pad 7": 100.35
+      }
+    }
+  }
+}

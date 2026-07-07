@@ -1,0 +1,58 @@
+{
+  "德国": {
+    "currency": "EUR",
+    "currencySymbol": "€",
+    "miStoreUrl": "https://www.mi.com/de",
+    "aggregator": "Idealo.de",
+    "products": {}
+  },
+  "法国": {
+    "currency": "EUR",
+    "currencySymbol": "€",
+    "miStoreUrl": "https://www.mi.com/fr",
+    "aggregator": "Idealo.fr",
+    "products": {}
+  },
+  "意大利": {
+    "currency": "EUR",
+    "currencySymbol": "€",
+    "miStoreUrl": "https://www.mi.com/it",
+    "aggregator": "Idealo.it",
+    "products": {}
+  },
+  "西班牙": {
+    "currency": "EUR",
+    "currencySymbol": "€",
+    "miStoreUrl": "https://www.mi.com/es",
+    "aggregator": "Idealo.es",
+    "products": {}
+  },
+  "英国": {
+    "currency": "GBP",
+    "currencySymbol": "£",
+    "miStoreUrl": "https://www.mi.com/gb",
+    "aggregator": "PriceRunner",
+    "products": {}
+  },
+  "波兰": {
+    "currency": "PLN",
+    "currencySymbol": "zł",
+    "miStoreUrl": "https://mi-store.pl",
+    "aggregator": "Ceneo.pl",
+    "products": {}
+  },
+  "捷克": {
+    "currency": "CZK",
+    "currencySymbol": "Kč",
+    "miStoreUrl": "https://mi-store.cz",
+    "aggregator": "Heureka.cz",
+    "products": {}
+  },
+  "瑞典": {
+    "currency": "SEK",
+    "currencySymbol": "kr",
+    "miStoreUrl": "https://www.mi.com/se",
+    "aggregator": "PriceRunner.se",
+    "products": {}
+  }
+}
