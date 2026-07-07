@@ -759,12 +759,214 @@ const countryData = {
         ]
     },
     "南斯拉夫": {
-        currency: "YUN",
-        currencySymbol: "din",
-        miStoreUrl: "https://mi-store.yu",
+        currency: "YUN", currencySymbol: "din", miStoreUrl: "https://mi-store.yu",
+        aggregator: null,
+        platforms: [{ name: "Mi Store Yugoslavia", url: "https://mi-store.yu" }]
+    },
+    "德国": {
+        currency: "EUR", currencySymbol: "€", miStoreUrl: "https://www.mi.com/de",
+        aggregator: { name: "Idealo.de", url: "https://www.idealo.de",
+            sellers: [
+                { name: "Amazon.de", url: "https://www.amazon.de" },
+                { name: "MediaMarkt", url: "https://www.mediamarkt.de" },
+                { name: "Saturn", url: "https://www.saturn.de" },
+                { name: "Cyberport", url: "https://www.cyberport.de" },
+                { name: "Notebooksbilliger", url: "https://www.notebooksbilliger.de" }
+            ]
+        },
+        platforms: [
+            { name: "Mi Store Germany", url: "https://www.mi.com/de" },
+            { name: "Idealo.de (聚合)", url: "https://www.idealo.de" },
+            { name: "Amazon.de", url: "https://www.amazon.de" },
+            { name: "MediaMarkt", url: "https://www.mediamarkt.de" },
+            { name: "Saturn", url: "https://www.saturn.de" }
+        ]
+    },
+    "法国": {
+        currency: "EUR", currencySymbol: "€", miStoreUrl: "https://www.mi.com/fr",
+        aggregator: { name: "Idealo.fr", url: "https://www.idealo.fr",
+            sellers: [
+                { name: "Amazon.fr", url: "https://www.amazon.fr" },
+                { name: "Fnac", url: "https://www.fnac.com" },
+                { name: "Darty", url: "https://www.darty.com" },
+                { name: "Cdiscount", url: "https://www.cdiscount.com" },
+                { name: "Boulanger", url: "https://www.boulanger.com" }
+            ]
+        },
+        platforms: [
+            { name: "Mi Store France", url: "https://www.mi.com/fr" },
+            { name: "Idealo.fr (聚合)", url: "https://www.idealo.fr" },
+            { name: "Amazon.fr", url: "https://www.amazon.fr" },
+            { name: "Fnac", url: "https://www.fnac.com" },
+            { name: "Darty", url: "https://www.darty.com" }
+        ]
+    },
+    "意大利": {
+        currency: "EUR", currencySymbol: "€", miStoreUrl: "https://www.mi.com/it",
+        aggregator: { name: "TrovaPrezzi.it", url: "https://www.trovaprezzi.it",
+            sellers: [
+                { name: "Amazon.it", url: "https://www.amazon.it" },
+                { name: "Unieuro", url: "https://www.unieuro.it" },
+                { name: "Euronics", url: "https://www.euronics.it" },
+                { name: "Mediaworld", url: "https://www.mediaworld.it" },
+                { name: "Eprice", url: "https://www.eprice.it" }
+            ]
+        },
+        platforms: [
+            { name: "Mi Store Italy", url: "https://www.mi.com/it" },
+            { name: "TrovaPrezzi.it (聚合)", url: "https://www.trovaprezzi.it" },
+            { name: "Amazon.it", url: "https://www.amazon.it" },
+            { name: "Unieuro", url: "https://www.unieuro.it" },
+            { name: "Mediaworld", url: "https://www.mediaworld.it" }
+        ]
+    },
+    "西班牙": {
+        currency: "EUR", currencySymbol: "€", miStoreUrl: "https://www.mi.com/es",
+        aggregator: { name: "Idealo.es", url: "https://www.idealo.es",
+            sellers: [
+                { name: "Amazon.es", url: "https://www.amazon.es" },
+                { name: "PcComponentes", url: "https://www.pccomponentes.com" },
+                { name: "MediaMarkt", url: "https://www.mediamarkt.es" },
+                { name: "El Corte Ingles", url: "https://www.elcorteingles.es" },
+                { name: "Fnac", url: "https://www.fnac.es" }
+            ]
+        },
+        platforms: [
+            { name: "Mi Store Spain", url: "https://www.mi.com/es" },
+            { name: "Idealo.es (聚合)", url: "https://www.idealo.es" },
+            { name: "Amazon.es", url: "https://www.amazon.es" },
+            { name: "PcComponentes", url: "https://www.pccomponentes.com" },
+            { name: "MediaMarkt", url: "https://www.mediamarkt.es" }
+        ]
+    },
+    "葡萄牙": {
+        currency: "EUR", currencySymbol: "€", miStoreUrl: "https://www.mi.com/pt",
+        aggregator: { name: "KuantoKusta.pt", url: "https://www.kuantokusta.pt",
+            sellers: [
+                { name: "Amazon.es", url: "https://www.amazon.es" },
+                { name: "Worten", url: "https://www.worten.pt" },
+                { name: "Fnac", url: "https://www.fnac.pt" },
+                { name: "Radio Popular", url: "https://www.radiopopular.pt" }
+            ]
+        },
+        platforms: [
+            { name: "Mi Store Portugal", url: "https://www.mi.com/pt" },
+            { name: "KuantoKusta.pt (聚合)", url: "https://www.kuantokusta.pt" },
+            { name: "Worten", url: "https://www.worten.pt" },
+            { name: "Fnac", url: "https://www.fnac.pt" },
+            { name: "Radio Popular", url: "https://www.radiopopular.pt" }
+        ]
+    },
+    "荷兰": {
+        currency: "EUR", currencySymbol: "€", miStoreUrl: "https://www.mi.com/nl",
+        aggregator: { name: "Kieskeurig.nl", url: "https://www.kieskeurig.nl",
+            sellers: [
+                { name: "Coolblue", url: "https://www.coolblue.nl" },
+                { name: "Bol.com", url: "https://www.bol.com" },
+                { name: "MediaMarkt", url: "https://www.mediamarkt.nl" },
+                { name: "BCC", url: "https://www.bcc.nl" },
+                { name: "Wehkamp", url: "https://www.wehkamp.nl" }
+            ]
+        },
+        platforms: [
+            { name: "Mi Store Netherlands", url: "https://www.mi.com/nl" },
+            { name: "Kieskeurig.nl (聚合)", url: "https://www.kieskeurig.nl" },
+            { name: "Coolblue", url: "https://www.coolblue.nl" },
+            { name: "Bol.com", url: "https://www.bol.com" },
+            { name: "MediaMarkt", url: "https://www.mediamarkt.nl" }
+        ]
+    },
+    "比利时": {
+        currency: "EUR", currencySymbol: "€", miStoreUrl: "https://www.mi.com/be",
+        aggregator: { name: "Kieskeurig.be", url: "https://www.kieskeurig.be",
+            sellers: [
+                { name: "Coolblue", url: "https://www.coolblue.be" },
+                { name: "Bol.com", url: "https://www.bol.com" },
+                { name: "MediaMarkt", url: "https://www.mediamarkt.be" },
+                { name: "Vanden Borre", url: "https://www.vandenborre.be" }
+            ]
+        },
+        platforms: [
+            { name: "Mi Store Belgium", url: "https://www.mi.com/be" },
+            { name: "Kieskeurig.be (聚合)", url: "https://www.kieskeurig.be" },
+            { name: "Coolblue", url: "https://www.coolblue.be" },
+            { name: "Bol.com", url: "https://www.bol.com" },
+            { name: "MediaMarkt", url: "https://www.mediamarkt.be" }
+        ]
+    },
+    "奥地利": {
+        currency: "EUR", currencySymbol: "€", miStoreUrl: "https://www.mi.com/at",
+        aggregator: { name: "Geizhals.at", url: "https://geizhals.at",
+            sellers: [
+                { name: "Amazon.de", url: "https://www.amazon.de" },
+                { name: "MediaMarkt", url: "https://www.mediamarkt.at" },
+                { name: "Electronicshop", url: "https://www.electronicshop.com" },
+                { name: "Conrad", url: "https://www.conrad.at" }
+            ]
+        },
+        platforms: [
+            { name: "Mi Store Austria", url: "https://www.mi.com/at" },
+            { name: "Geizhals.at (聚合)", url: "https://geizhals.at" },
+            { name: "Amazon.de", url: "https://www.amazon.de" },
+            { name: "MediaMarkt", url: "https://www.mediamarkt.at" },
+            { name: "Electronicshop", url: "https://www.electronicshop.com" }
+        ]
+    },
+    "瑞士": {
+        currency: "CHF", currencySymbol: "CHF", miStoreUrl: "https://www.mi.com/ch",
+        aggregator: { name: "Toppreise.ch", url: "https://www.toppreise.ch",
+            sellers: [
+                { name: "Digitec", url: "https://www.digitec.ch" },
+                { name: "Microspot", url: "https://www.microspot.ch" },
+                { name: "Interdiscount", url: "https://www.interdiscount.ch" },
+                { name: "Brack", url: "https://www.brack.ch" }
+            ]
+        },
+        platforms: [
+            { name: "Mi Store Switzerland", url: "https://www.mi.com/ch" },
+            { name: "Toppreise.ch (聚合)", url: "https://www.toppreise.ch" },
+            { name: "Digitec", url: "https://www.digitec.ch" },
+            { name: "Microspot", url: "https://www.microspot.ch" },
+            { name: "Interdiscount", url: "https://www.interdiscount.ch" }
+        ]
+    },
+    "爱尔兰": {
+        currency: "EUR", currencySymbol: "€", miStoreUrl: "https://www.mi.com/ie",
         aggregator: null,
         platforms: [
-            { name: "Mi Store Yugoslavia", url: "https://mi-store.yu" }
+            { name: "Mi Store Ireland", url: "https://www.mi.com/ie" },
+            { name: "Amazon.co.uk", url: "https://www.amazon.co.uk" },
+            { name: "Harvey Norman", url: "https://www.harveynorman.ie" },
+            { name: "DID", url: "https://www.did.ie" }
+        ]
+    },
+    "英国": {
+        currency: "GBP", currencySymbol: "£", miStoreUrl: "https://www.mi.com/gb",
+        aggregator: { name: "PriceRunner UK", url: "https://www.pricerunner.com",
+            sellers: [
+                { name: "Amazon.co.uk", url: "https://www.amazon.co.uk" },
+                { name: "Currys", url: "https://www.currys.co.uk" },
+                { name: "Argos", url: "https://www.argos.co.uk" },
+                { name: "John Lewis", url: "https://www.johnlewis.com" },
+                { name: "AO.com", url: "https://www.ao.com" }
+            ]
+        },
+        platforms: [
+            { name: "Mi Store UK", url: "https://www.mi.com/gb" },
+            { name: "PriceRunner (聚合)", url: "https://www.pricerunner.com" },
+            { name: "Amazon.co.uk", url: "https://www.amazon.co.uk" },
+            { name: "Currys", url: "https://www.currys.co.uk" },
+            { name: "Argos", url: "https://www.argos.co.uk" }
+        ]
+    },
+    "卢森堡": {
+        currency: "EUR", currencySymbol: "€", miStoreUrl: "https://www.mi.com/lu",
+        aggregator: null,
+        platforms: [
+            { name: "Mi Store Luxembourg", url: "https://www.mi.com/lu" },
+            { name: "Amazon.de", url: "https://www.amazon.de" },
+            { name: "MediaMarkt", url: "https://www.mediamarkt.de" },
+            { name: "Coolblue", url: "https://www.coolblue.be" }
         ]
     }
 };
@@ -793,6 +995,8 @@ function generateMockData() {
             else if (info.currency === "UAH") countryMultiplier = 41;
             else if (info.currency === "MDL") countryMultiplier = 19;
             else if (info.currency === "BGN") countryMultiplier = 1.95;
+            else if (info.currency === "GBP") countryMultiplier = 0.86;
+            else if (info.currency === "CHF") countryMultiplier = 0.94;
             
             const miStorePrice = Math.round(basePrice * countryMultiplier);
             const productId = productName.toLowerCase().replace(/\s+/g, '-');
@@ -1687,7 +1891,19 @@ const mapCountries = {
     MT: { zh: '马耳他', flag: '🇲🇹', aggregator: null, store: null, countryKey: '马耳他' },
     CY: { zh: '塞浦路斯', flag: '🇨🇾', aggregator: null, store: null, countryKey: '塞浦路斯' },
     AX: { zh: '奥兰', flag: '🇦🇽', aggregator: null, store: null, countryKey: '奥兰' },
-    YU: { zh: '南斯拉夫', flag: '🇷🇸', aggregator: null, store: null, countryKey: '南斯拉夫' }
+    YU: { zh: '南斯拉夫', flag: '🇷🇸', aggregator: null, store: null, countryKey: '南斯拉夫' },
+    DE: { zh: '德国', flag: '🇩🇪', aggregator: 'Idealo.de', store: 'mi.com/de', countryKey: '德国' },
+    FR: { zh: '法国', flag: '🇫🇷', aggregator: 'Idealo.fr', store: 'mi.com/fr', countryKey: '法国' },
+    IT: { zh: '意大利', flag: '🇮🇹', aggregator: 'TrovaPrezzi.it', store: 'mi.com/it', countryKey: '意大利' },
+    ES: { zh: '西班牙', flag: '🇪🇸', aggregator: 'Idealo.es', store: 'mi.com/es', countryKey: '西班牙' },
+    PT: { zh: '葡萄牙', flag: '🇵🇹', aggregator: 'KuantoKusta.pt', store: 'mi.com/pt', countryKey: '葡萄牙' },
+    NL: { zh: '荷兰', flag: '🇳🇱', aggregator: 'Kieskeurig.nl', store: 'mi.com/nl', countryKey: '荷兰' },
+    BE: { zh: '比利时', flag: '🇧🇪', aggregator: 'Kieskeurig.be', store: 'mi.com/be', countryKey: '比利时' },
+    AT: { zh: '奥地利', flag: '🇦🇹', aggregator: 'Geizhals.at', store: 'mi.com/at', countryKey: '奥地利' },
+    CH: { zh: '瑞士', flag: '🇨🇭', aggregator: 'Toppreise.ch', store: 'mi.com/ch', countryKey: '瑞士' },
+    IE: { zh: '爱尔兰', flag: '🇮🇪', aggregator: null, store: 'mi.com/ie', countryKey: '爱尔兰' },
+    GB: { zh: '英国', flag: '🇬🇧', aggregator: 'PriceRunner UK', store: 'mi.com/gb', countryKey: '英国' },
+    LU: { zh: '卢森堡', flag: '🇱🇺', aggregator: null, store: 'mi.com/lu', countryKey: '卢森堡' }
 };
 
 function initCoverageMap() {
@@ -1697,7 +1913,7 @@ function initCoverageMap() {
     // 瓦片网格 — [列, 行] (0-indexed), 按欧洲地理位置排列
     const positions = {
         NO: [3,0], SE: [4,0], FI: [5,0], AX: [6,0],
-        DK: [3,1], EE: [5,1],
+        DK: [3,1], EE: [5,1], LU: [2,1],
         IE: [0,2], UK: [1,2], NL: [2,2], DE: [3,2], PL: [4,2], LV: [5,2], LT: [6,2],
         FR: [1,3], BE: [2,3], CZ: [3,3], SK: [4,3], UA: [5,3], BY: [6,3],
         ES: [0,4], CH: [1,4], AT: [2,4], HU: [3,4], RO: [4,4], MD: [5,4],
@@ -1708,10 +1924,7 @@ function initCoverageMap() {
     };
 
     const bgCountries = {
-        IE: {zh:'爱尔兰',flag:'🇮🇪'}, UK: {zh:'英国',flag:'🇬🇧'}, FR: {zh:'法国',flag:'🇫🇷'},
-        BE: {zh:'比利时',flag:'🇧🇪'}, CH: {zh:'瑞士',flag:'🇨🇭'}, AT: {zh:'奥地利',flag:'🇦🇹'},
-        PT: {zh:'葡萄牙',flag:'🇵🇹'}, IT: {zh:'意大利',flag:'🇮🇹'}, DE: {zh:'德国',flag:'🇩🇪'},
-        NL: {zh:'荷兰',flag:'🇳🇱'}, ES: {zh:'西班牙',flag:'🇪🇸'}, BY: {zh:'白俄罗斯',flag:'🇧🇾'}
+        BY: {zh:'白俄罗斯',flag:'🇧🇾'}
     };
 
     const coveredSet = new Set(Object.keys(mapCountries));
