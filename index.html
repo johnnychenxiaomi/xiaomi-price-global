@@ -178,64 +178,22 @@
         </div>
     </section>
 
-    <!-- 覆盖地区 -->
+    <!-- 覆盖地区 - 交互式地图 -->
     <section class="coverage" id="coverage">
         <div class="section-container">
             <div class="section-header">
                 <h2>覆盖地区</h2>
                 <p>28 个东北欧国家和地区，18 个比价聚合网站</p>
             </div>
-            <div class="coverage-grid">
-                <div class="region-group">
-                    <h3 class="region-title">中东欧</h3>
-                    <div class="country-tags">
-                        <span class="country-tag has-aggregator" title="Ceneo.pl">🇵🇱 波兰</span>
-                        <span class="country-tag has-aggregator" title="Heureka.cz">🇨🇿 捷克</span>
-                        <span class="country-tag has-aggregator" title="Heureka.sk">🇸🇰 斯洛伐克</span>
-                        <span class="country-tag has-aggregator" title="Arukereso.hu">🇭🇺 匈牙利</span>
-                        <span class="country-tag has-aggregator" title="Compari.ro">🇷🇴 罗马尼亚</span>
-                        <span class="country-tag has-aggregator" title="Pazaruvaj.com">🇧🇬 保加利亚</span>
-                    </div>
-                </div>
-                <div class="region-group">
-                    <h3 class="region-title">巴尔干</h3>
-                    <div class="country-tags">
-                        <span class="country-tag has-aggregator" title="Jeftinije.hr">🇭🇷 克罗地亚</span>
-                        <span class="country-tag has-aggregator" title="Ceneje.si">🇸🇮 斯洛文尼亚</span>
-                        <span class="country-tag has-aggregator" title="Idealno.rs">🇷🇸 塞尔维亚</span>
-                        <span class="country-tag">🇲🇪 黑山</span>
-                        <span class="country-tag">🇲🇰 北马其顿</span>
-                        <span class="country-tag">🇦🇱 阿尔巴尼亚</span>
-                        <span class="country-tag">🇧🇦 波黑</span>
-                        <span class="country-tag">🇽🇰 科索沃</span>
-                    </div>
-                </div>
-                <div class="region-group">
-                    <h3 class="region-title">北欧</h3>
-                    <div class="country-tags">
-                        <span class="country-tag has-aggregator" title="PriceRunner.se">🇸🇪 瑞典</span>
-                        <span class="country-tag has-aggregator" title="PriceRunner.dk">🇩🇰 丹麦</span>
-                        <span class="country-tag has-aggregator" title="Hinta.fi">🇫🇮 芬兰</span>
-                        <span class="country-tag has-aggregator" title="Prisguiden.no">🇳🇴 挪威</span>
-                        <span class="country-tag">🇮🇸 冰岛</span>
-                        <span class="country-tag">🇦🇽 奥兰</span>
-                    </div>
-                </div>
-                <div class="region-group">
-                    <h3 class="region-title">南欧 / 东欧 / 波罗的海</h3>
-                    <div class="country-tags">
-                        <span class="country-tag has-aggregator" title="Skroutz.gr">🇬🇷 希腊</span>
-                        <span class="country-tag has-aggregator" title="Hotline.ua">🇺🇦 乌克兰</span>
-                        <span class="country-tag has-aggregator" title="Salidzini.lv">🇱🇻 拉脱维亚</span>
-                        <span class="country-tag has-aggregator" title="Kainos.lt">🇱🇹 立陶宛</span>
-                        <span class="country-tag has-aggregator" title="Hinnavaatlus.ee">🇪🇪 爱沙尼亚</span>
-                        <span class="country-tag">🇲🇩 摩尔多瓦</span>
-                        <span class="country-tag">🇲🇹 马耳他</span>
-                        <span class="country-tag">🇨🇾 塞浦路斯</span>
-                    </div>
-                </div>
+            <div class="coverage-map-wrapper">
+                <div class="coverage-map" id="coverageMap"></div>
+                <div class="map-tooltip" id="mapTooltip"></div>
             </div>
-            <p class="coverage-note">标记为橙色的国家已接入当地比价聚合网站，可查看多商家详细报价</p>
+            <div class="map-legend">
+                <span class="legend-item"><span class="legend-color" style="background:#FF6900;"></span> 有聚合比价网站</span>
+                <span class="legend-item"><span class="legend-color" style="background:#42A5F5;"></span> 仅官网覆盖</span>
+                <span class="legend-item"><span class="legend-color" style="background:#E0E0E0;"></span> 未覆盖</span>
+            </div>
         </div>
     </section>
 

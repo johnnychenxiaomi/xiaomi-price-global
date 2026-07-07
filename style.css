@@ -1051,65 +1051,90 @@ section {
     background: var(--mi-gray-light);
 }
 
-.coverage-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-}
-
-.region-group {
+.coverage-map-wrapper {
+    position: relative;
     background: white;
-    padding: 24px;
     border-radius: var(--radius);
     box-shadow: var(--shadow-sm);
+    padding: 32px;
+    overflow: hidden;
 }
 
-.region-title {
-    font-size: 1rem;
+.coverage-map {
+    width: 100%;
+    min-height: 420px;
+}
+
+.coverage-map svg {
+    width: 100%;
+    height: auto;
+}
+
+.coverage-map svg path {
+    stroke: #fff;
+    stroke-width: 0.5;
+    cursor: pointer;
+    transition: opacity 0.2s, filter 0.2s;
+}
+
+.coverage-map svg path:hover {
+    opacity: 0.8;
+    filter: brightness(1.1);
+    stroke: #333;
+    stroke-width: 1.2;
+}
+
+.map-tooltip {
+    display: none;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.85);
+    color: #fff;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    pointer-events: none;
+    z-index: 100;
+    max-width: 260px;
+    backdrop-filter: blur(4px);
+}
+
+.map-tooltip .tooltip-title {
     font-weight: 700;
-    color: var(--mi-black);
-    margin-bottom: 14px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid var(--mi-gray-light);
+    font-size: 0.95rem;
+    margin-bottom: 4px;
 }
 
-.country-tags {
+.map-tooltip .tooltip-aggregator {
+    color: #FFB74D;
+}
+
+.map-tooltip .tooltip-store {
+    color: #90CAF9;
+}
+
+.map-legend {
     display: flex;
+    justify-content: center;
+    gap: 28px;
+    margin-top: 20px;
     flex-wrap: wrap;
-    gap: 10px;
 }
 
-.country-tag {
+.legend-item {
     display: inline-flex;
     align-items: center;
-    gap: 4px;
-    padding: 6px 14px;
-    background: var(--mi-gray-light);
-    border: 1px solid var(--mi-gray);
-    border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: 500;
-    color: var(--mi-black);
-    transition: all 0.2s;
-}
-
-.country-tag.has-aggregator {
-    background: var(--mi-orange-light);
-    border-color: #FFCC80;
-    color: var(--mi-orange-dark);
-    font-weight: 600;
-}
-
-.country-tag.has-aggregator:hover {
-    background: #FFE0B2;
-    border-color: var(--mi-orange);
-}
-
-.coverage-note {
-    text-align: center;
-    margin-top: 24px;
+    gap: 8px;
     font-size: 0.85rem;
     color: var(--mi-gray-dark);
+}
+
+.legend-color {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    border: 1px solid rgba(0,0,0,0.1);
 }
 
 /* ========== 使用指南 ========== */
@@ -1310,7 +1335,9 @@ section {
     .hero-stat-value { font-size: 2rem; }
 
     .features-grid { grid-template-columns: 1fr; }
-    .coverage-grid { grid-template-columns: 1fr; }
+    .coverage-map-wrapper { padding: 16px; }
+    .coverage-map { min-height: 280px; }
+    .map-legend { gap: 16px; }
     .tips-grid { grid-template-columns: 1fr; }
 
     .controls { flex-direction: column; }
