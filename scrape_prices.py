@@ -186,43 +186,72 @@ def extract_amazon_products(html, cc, currency, domain):
     return results
 
 # ==================== 聚合网站解析 ====================
-def extract_aggregator_products(html, site_name, cc, currency):
+def extract_idealo_products(html, site_name, cc, currency):
+    """Idealo 专用解析: 按 sr-resultItemTile 分割产品卡片"""
     results = []
-    lines = html.split('\n')
-    full_text = html
-
-    product_names = GENERIC_PRODUCT_PATTERN.findall(full_text)
-    seen_names = set()
-
-    for raw_name in product_names:
-        name = clean_name(raw_name)
+    cards = re.split(r'class="sr-resultItemTile', html)
+    for card in cards[1:]:
+        name_m = re.search(r'(?:title|alt|aria-label)="([^"]*(?:Xiaomi|Redmi|POCO)[^"]*)"', card[:3000], re.IGNORECASE)
+        if not name_m:
+            name_m = re.search(r'>([^<]*(?:Xiaomi|Redmi|POCO)[^<]*)</(?:a|span|h2|h3)', card[:3000], re.IGNORECASE)
+        if not name_m:
+            continue
+        name = clean_name(name_m.group(1))
         if not is_xiaomi_phone(name):
             continue
-        name_key = name.lower().strip()
-        if name_key in seen_names:
+        price_m = re.search(r'(\d{2,4}[.,]\d{2})\s*\u20ac', card[:5000])
+        if not price_m:
             continue
-
-        name_pos = full_text.find(raw_name)
-        if name_pos == -1:
-            continue
-        context = full_text[name_pos:name_pos + 500]
-
-        for pat in GENERIC_PRICE_PATTERNS:
-            m = pat.search(context)
-            if m:
-                price = parse_price(m.group(1))
-                if price:
-                    seen_names.add(name_key)
-                    results.append({
-                        "product_name": name,
-                        "platform": site_name,
-                        "country_code": cc,
-                        "currency": currency,
-                        "price": round(price, 2),
-                        "timestamp": now_str()
-                    })
-                    break
+        price = parse_price(price_m.group(1))
+        if price and price > 70:
+            results.append({"product_name": name, "platform": site_name,
+                           "country_code": cc, "currency": currency,
+                           "price": round(price, 2), "timestamp": now_str()})
     return results
+
+def extract_generic_products(html, site_name, cc, currency):
+    """通用解析: 找产品名附近的价格"""
+    results = []
+    seen = set()
+    currency_symbols = {"EUR": "\u20ac", "PLN": "z\u0142", "SEK": "kr", "DKK": "kr",
+                        "CZK": "K\u010d", "GBP": "\u00a3", "NOK": "kr", "HUF": "Ft"}
+    sym = currency_symbols.get(currency, "\u20ac")
+
+    # 尝试多种分割方式
+    for splitter in [r'class="[^"]*(?:product|result|item|card)[^"]*(?:Card|Item|Tile|Row|List)',
+                     r'data-testid="[^"]*product',
+                     r'<article', r'<li[^>]*class="[^"]*product']:
+        cards = re.split(splitter, html, flags=re.IGNORECASE)
+        if len(cards) > 3:
+            break
+    else:
+        cards = [html]
+
+    for card in cards[1:] if len(cards) > 1 else [html]:
+        name_m = re.search(r'(?:title|alt|aria-label)="([^"]*(?:Xiaomi|Redmi|POCO)[^"]*)"', card[:5000], re.IGNORECASE)
+        if not name_m:
+            name_m = re.search(r'>([^<]*(?:Xiaomi|Redmi|POCO)[^<]{5,60})</(?:a|span|h2|h3|div|p)', card[:5000], re.IGNORECASE)
+        if not name_m:
+            continue
+        name = clean_name(name_m.group(1))
+        if not is_xiaomi_phone(name) or name.lower() in seen:
+            continue
+
+        price_m = re.search(r'(\d{2,5}[.,]\d{2})', card[:5000])
+        if price_m:
+            price = parse_price(price_m.group(1))
+            if price and price > 50:
+                seen.add(name.lower())
+                results.append({"product_name": name, "platform": site_name,
+                               "country_code": cc, "currency": currency,
+                               "price": round(price, 2), "timestamp": now_str()})
+    return results
+
+def extract_aggregator_products(html, site_name, cc, currency):
+    """智能选择解析器"""
+    if "idealo" in site_name.lower():
+        return extract_idealo_products(html, site_name, cc, currency)
+    return extract_generic_products(html, site_name, cc, currency)
 
 # ==================== 主流程 ====================
 def scrape_amazon():
