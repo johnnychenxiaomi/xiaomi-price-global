@@ -1717,15 +1717,23 @@ async function initCoverageMap() {
     container.style.borderRadius = '12px';
     container.style.overflow = 'hidden';
 
+    const euroBounds = L.latLngBounds(L.latLng(33, -26), L.latLng(72, 52));
     leafletMap = L.map(container, {
-        zoomControl: true,
+        zoomControl: false,
         scrollWheelZoom: false,
-        dragging: true
-    }).setView([54, 18], 4);
+        dragging: false,
+        touchZoom: false,
+        doubleClickZoom: false,
+        boxZoom: false,
+        keyboard: false,
+        maxBounds: euroBounds,
+        maxBoundsViscosity: 1.0
+    }).setView([54, 15], 4);
 
     L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>',
-        maxZoom: 19,
+        maxZoom: 4,
+        minZoom: 4,
         subdomains: 'abcd'
     }).addTo(leafletMap);
 
@@ -1777,7 +1785,7 @@ async function initCoverageMap() {
             filter: feature => parseInt(feature.id) in euroNumericToAlpha2
         }).addTo(leafletMap);
 
-        leafletMap.fitBounds(L.latLngBounds(L.latLng(34, -25), L.latLng(72, 50)), { padding: [20, 20] });
+        leafletMap.fitBounds(euroBounds, { padding: [10, 10] });
         setTimeout(() => leafletMap.invalidateSize(), 200);
     } catch (err) {
         console.error('Map load error:', err);
