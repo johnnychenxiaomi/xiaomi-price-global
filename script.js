@@ -61,7 +61,8 @@ const productList = [
     "Xiaomi 11T", "Mi 11 Lite", "Xiaomi 14 Ultra"
 ];
 
-// API 配置 — 爬虫服务地址（部署后改为实际地址）
+// 数据源：优先从 prices.json 加载（GitHub Pages 可用），备选本地 API
+const PRICES_JSON_URL = 'prices.json';
 const API_BASE_URL = 'http://localhost:8001';
 
 // 国家代码 → 中文名映射
@@ -75,15 +76,40 @@ const COUNTRY_CODE_MAP = {
     CH:'瑞士',IE:'爱尔兰',GB:'英国',LU:'卢森堡'
 };
 
-// 从 API 加载真实价格数据
+// 从 prices.json 或 API 加载真实价格数据
 async function loadFromAPI() {
-    try {
-        const resp = await fetch(API_BASE_URL + '/api/prices?limit=5000', { signal: AbortSignal.timeout(5000) });
-        if (!resp.ok) return null;
-        const prices = await resp.json();
-        if (!prices || prices.length === 0) return null;
+    let prices = null;
+    let source = '';
 
-        // 按国家+平台分组
+    // 1. 优先加载 prices.json（GitHub Pages / 本地均可用）
+    try {
+        const resp = await fetch(PRICES_JSON_URL, { signal: AbortSignal.timeout(3000) });
+        if (resp.ok) {
+            const json = await resp.json();
+            if (json.prices && json.prices.length > 0) {
+                prices = json.prices;
+                source = `真实价格数据（${json.updated} 更新，${json.total} 条）`;
+            }
+        }
+    } catch (e) {}
+
+    // 2. 备选：本地爬虫 API
+    if (!prices) {
+        try {
+            const resp = await fetch(API_BASE_URL + '/api/prices?limit=5000', { signal: AbortSignal.timeout(5000) });
+            if (resp.ok) {
+                prices = await resp.json();
+                source = '真实价格数据（来自爬虫API）';
+            }
+        } catch (e) {}
+    }
+
+    if (!prices || prices.length === 0) return null;
+
+    // 记录数据源描述供指示器使用
+    loadFromAPI._source = source;
+
+    // 按国家+平台分组
         const grouped = {};
         for (const p of prices) {
             const cn = COUNTRY_CODE_MAP[p.country_code];
@@ -130,9 +156,6 @@ async function loadFromAPI() {
             };
         }
         return data;
-    } catch (e) {
-        return null;
-    }
 }
 
 // 数据来源指示器
@@ -147,7 +170,7 @@ function showDataSourceIndicator(type) {
     }
     if (type === 'real') {
         el.style.background = '#4CAF50'; el.style.color = '#fff';
-        el.textContent = '✓ 真实价格数据（来自爬虫）';
+        el.textContent = '✓ ' + (loadFromAPI._source || '真实价格数据');
     } else {
         el.style.background = '#FF9800'; el.style.color = '#fff';
         el.textContent = '⚠ 模拟数据 — 运行爬虫后自动切换为真实价格';

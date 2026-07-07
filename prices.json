@@ -1,0 +1,1342 @@
+{
+  "updated": "2026-07-07",
+  "total": 167,
+  "prices": [
+    {
+      "product_name": "POCO C85 6+128GB",
+      "platform": "Amazon.de",
+      "country_code": "AT",
+      "currency": "EUR",
+      "price": 109.0,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "POCO F7 12+512GB",
+      "platform": "Amazon.de",
+      "country_code": "AT",
+      "currency": "EUR",
+      "price": 369.0,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "POCO F8 Pro 12+512GB",
+      "platform": "Amazon.de",
+      "country_code": "AT",
+      "currency": "EUR",
+      "price": 479.0,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "POCO M7 6+128GB",
+      "platform": "Amazon.de",
+      "country_code": "AT",
+      "currency": "EUR",
+      "price": 119.0,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "POCO M8 8+256GB",
+      "platform": "Amazon.de",
+      "country_code": "AT",
+      "currency": "EUR",
+      "price": 199.0,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "POCO X8 Pro 12+512GB",
+      "platform": "Amazon.de",
+      "country_code": "AT",
+      "currency": "EUR",
+      "price": 339.0,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "POCO X8 Pro Max 12+512GB",
+      "platform": "Amazon.de",
+      "country_code": "AT",
+      "currency": "EUR",
+      "price": 499.0,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi 15 8+256GB",
+      "platform": "Amazon.de",
+      "country_code": "AT",
+      "currency": "EUR",
+      "price": 149.0,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi 15C 4+128GB",
+      "platform": "Amazon.de",
+      "country_code": "AT",
+      "currency": "EUR",
+      "price": 109.0,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi A5 4+128GB",
+      "platform": "Amazon.de",
+      "country_code": "AT",
+      "currency": "EUR",
+      "price": 99.0,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi Note 14 Pro 5G 8+256GB",
+      "platform": "Amazon.de",
+      "country_code": "AT",
+      "currency": "EUR",
+      "price": 249.0,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi Note 14 Pro+ 5G 8+256GB",
+      "platform": "Amazon.de",
+      "country_code": "AT",
+      "currency": "EUR",
+      "price": 269.0,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi Note 15 5G 8+256GB",
+      "platform": "Amazon.de",
+      "country_code": "AT",
+      "currency": "EUR",
+      "price": 209.0,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi Note 15 8+256GB",
+      "platform": "Amazon.de",
+      "country_code": "AT",
+      "currency": "EUR",
+      "price": 179.0,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi Note 15 Pro 8+256GB",
+      "platform": "Amazon.de",
+      "country_code": "AT",
+      "currency": "EUR",
+      "price": 209.0,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi Note 15 Pro+ 5G 8+256GB",
+      "platform": "Amazon.de",
+      "country_code": "AT",
+      "currency": "EUR",
+      "price": 329.0,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Xiaomi 15 12+256GB",
+      "platform": "Amazon.de",
+      "country_code": "AT",
+      "currency": "EUR",
+      "price": 799.0,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Xiaomi 15T 12+256GB",
+      "platform": "Amazon.de",
+      "country_code": "AT",
+      "currency": "EUR",
+      "price": 499.0,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Xiaomi 17 Ultra 16+512GB",
+      "platform": "Amazon.de",
+      "country_code": "AT",
+      "currency": "EUR",
+      "price": 1399.0,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Xiaomi 17T 12+256GB",
+      "platform": "Amazon.de",
+      "country_code": "AT",
+      "currency": "EUR",
+      "price": 699.0,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "POCO C85 6+128GB",
+      "platform": "Amazon.de",
+      "country_code": "DE",
+      "currency": "EUR",
+      "price": 109.0,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "POCO F7 12+512GB",
+      "platform": "Amazon.de",
+      "country_code": "DE",
+      "currency": "EUR",
+      "price": 369.0,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "POCO F8 Pro 12+512GB",
+      "platform": "Amazon.de",
+      "country_code": "DE",
+      "currency": "EUR",
+      "price": 479.0,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "POCO M7 6+128GB",
+      "platform": "Amazon.de",
+      "country_code": "DE",
+      "currency": "EUR",
+      "price": 119.0,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "POCO M8 8+256GB",
+      "platform": "Amazon.de",
+      "country_code": "DE",
+      "currency": "EUR",
+      "price": 199.0,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "POCO X8 Pro 12+512GB",
+      "platform": "Amazon.de",
+      "country_code": "DE",
+      "currency": "EUR",
+      "price": 339.0,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "POCO X8 Pro Max 12+512GB",
+      "platform": "Amazon.de",
+      "country_code": "DE",
+      "currency": "EUR",
+      "price": 499.0,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi 15 8+256GB",
+      "platform": "Amazon.de",
+      "country_code": "DE",
+      "currency": "EUR",
+      "price": 149.0,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi 15C 4+128GB",
+      "platform": "Amazon.de",
+      "country_code": "DE",
+      "currency": "EUR",
+      "price": 109.0,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi A5 4+128GB",
+      "platform": "Amazon.de",
+      "country_code": "DE",
+      "currency": "EUR",
+      "price": 99.0,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi Note 14 Pro 5G 8+256GB",
+      "platform": "Amazon.de",
+      "country_code": "DE",
+      "currency": "EUR",
+      "price": 249.0,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi Note 14 Pro+ 5G 8+256GB",
+      "platform": "Amazon.de",
+      "country_code": "DE",
+      "currency": "EUR",
+      "price": 269.0,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi Note 15 5G 8+256GB",
+      "platform": "Amazon.de",
+      "country_code": "DE",
+      "currency": "EUR",
+      "price": 209.0,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi Note 15 8+256GB",
+      "platform": "Amazon.de",
+      "country_code": "DE",
+      "currency": "EUR",
+      "price": 179.0,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi Note 15 Pro 8+256GB",
+      "platform": "Amazon.de",
+      "country_code": "DE",
+      "currency": "EUR",
+      "price": 209.0,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi Note 15 Pro+ 5G 8+256GB",
+      "platform": "Amazon.de",
+      "country_code": "DE",
+      "currency": "EUR",
+      "price": 329.0,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Xiaomi 15 12+256GB",
+      "platform": "Amazon.de",
+      "country_code": "DE",
+      "currency": "EUR",
+      "price": 799.0,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Xiaomi 15T 12+256GB",
+      "platform": "Amazon.de",
+      "country_code": "DE",
+      "currency": "EUR",
+      "price": 499.0,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Xiaomi 17 Ultra 16+512GB",
+      "platform": "Amazon.de",
+      "country_code": "DE",
+      "currency": "EUR",
+      "price": 1399.0,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Xiaomi 17T 12+256GB",
+      "platform": "Amazon.de",
+      "country_code": "DE",
+      "currency": "EUR",
+      "price": 699.0,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "POCO C85 6+128GB",
+      "platform": "Amazon.es",
+      "country_code": "ES",
+      "currency": "EUR",
+      "price": 99.17,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "POCO C85 8+256GB",
+      "platform": "Amazon.es",
+      "country_code": "ES",
+      "currency": "EUR",
+      "price": 107.43,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "POCO F7 12+512GB",
+      "platform": "Amazon.es",
+      "country_code": "ES",
+      "currency": "EUR",
+      "price": 356.33,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "POCO F8 Pro 12+256GB",
+      "platform": "Amazon.es",
+      "country_code": "ES",
+      "currency": "EUR",
+      "price": 247.11,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "POCO F8 Ultra 16+512GB",
+      "platform": "Amazon.es",
+      "country_code": "ES",
+      "currency": "EUR",
+      "price": 619.83,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "POCO M7 6+128GB",
+      "platform": "Amazon.es",
+      "country_code": "ES",
+      "currency": "EUR",
+      "price": 107.43,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "POCO M8 5G 8+512GB",
+      "platform": "Amazon.es",
+      "country_code": "ES",
+      "currency": "EUR",
+      "price": 190.07,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "POCO X8 Pro 12+512GB",
+      "platform": "Amazon.es",
+      "country_code": "ES",
+      "currency": "EUR",
+      "price": 313.22,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi 15 8+256GB",
+      "platform": "Amazon.es",
+      "country_code": "ES",
+      "currency": "EUR",
+      "price": 147.93,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi 15C 4+128GB",
+      "platform": "Amazon.es",
+      "country_code": "ES",
+      "currency": "EUR",
+      "price": 115.0,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi 15C 4+256GB",
+      "platform": "Amazon.es",
+      "country_code": "ES",
+      "currency": "EUR",
+      "price": 129.0,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi A5 4+128GB",
+      "platform": "Amazon.es",
+      "country_code": "ES",
+      "currency": "EUR",
+      "price": 109.0,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi Note 14 8+256GB",
+      "platform": "Amazon.es",
+      "country_code": "ES",
+      "currency": "EUR",
+      "price": 151.0,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi Note 14 Pro+ 5G 8+256GB",
+      "platform": "Amazon.es",
+      "country_code": "ES",
+      "currency": "EUR",
+      "price": 261.27,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi Note 15 5G 8+256GB",
+      "platform": "Amazon.es",
+      "country_code": "ES",
+      "currency": "EUR",
+      "price": 189.26,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi Note 15 8+256GB",
+      "platform": "Amazon.es",
+      "country_code": "ES",
+      "currency": "EUR",
+      "price": 173.0,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi Note 15 8+256GB",
+      "platform": "Amazon.es",
+      "country_code": "ES",
+      "currency": "EUR",
+      "price": 165.28,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi Note 15 Pro 8+256GB",
+      "platform": "Amazon.es",
+      "country_code": "ES",
+      "currency": "EUR",
+      "price": 219.0,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi Note 15 Pro+ 5G 8+256GB",
+      "platform": "Amazon.es",
+      "country_code": "ES",
+      "currency": "EUR",
+      "price": 312.58,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Xiaomi 15T Pro 12+512GB",
+      "platform": "Amazon.es",
+      "country_code": "ES",
+      "currency": "EUR",
+      "price": 488.0,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Xiaomi 17 12+512GB",
+      "platform": "Amazon.es",
+      "country_code": "ES",
+      "currency": "EUR",
+      "price": 661.15,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Xiaomi 17 Ultra 16+512GB",
+      "platform": "Amazon.es",
+      "country_code": "ES",
+      "currency": "EUR",
+      "price": 1033.05,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Xiaomi 17T 12+256GB",
+      "platform": "Amazon.es",
+      "country_code": "ES",
+      "currency": "EUR",
+      "price": 619.01,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "POCO C85 6+128GB",
+      "platform": "Amazon.fr",
+      "country_code": "FR",
+      "currency": "EUR",
+      "price": 112.0,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "POCO F7 12+512GB",
+      "platform": "Amazon.fr",
+      "country_code": "FR",
+      "currency": "EUR",
+      "price": 379.0,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "POCO F8 Pro 12+512GB",
+      "platform": "Amazon.fr",
+      "country_code": "FR",
+      "currency": "EUR",
+      "price": 489.0,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "POCO M7 6+128GB",
+      "platform": "Amazon.fr",
+      "country_code": "FR",
+      "currency": "EUR",
+      "price": 125.0,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "POCO M8 8+256GB",
+      "platform": "Amazon.fr",
+      "country_code": "FR",
+      "currency": "EUR",
+      "price": 205.0,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "POCO X8 Pro 12+512GB",
+      "platform": "Amazon.fr",
+      "country_code": "FR",
+      "currency": "EUR",
+      "price": 345.0,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi 15 8+256GB",
+      "platform": "Amazon.fr",
+      "country_code": "FR",
+      "currency": "EUR",
+      "price": 155.0,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi 15C 4+128GB",
+      "platform": "Amazon.fr",
+      "country_code": "FR",
+      "currency": "EUR",
+      "price": 115.0,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi Note 14 Pro+ 5G 8+256GB",
+      "platform": "Amazon.fr",
+      "country_code": "FR",
+      "currency": "EUR",
+      "price": 275.0,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi Note 15 5G 8+256GB",
+      "platform": "Amazon.fr",
+      "country_code": "FR",
+      "currency": "EUR",
+      "price": 215.0,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi Note 15 8+256GB",
+      "platform": "Amazon.fr",
+      "country_code": "FR",
+      "currency": "EUR",
+      "price": 185.0,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi Note 15 Pro 8+256GB",
+      "platform": "Amazon.fr",
+      "country_code": "FR",
+      "currency": "EUR",
+      "price": 215.0,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Xiaomi 15 12+256GB",
+      "platform": "Amazon.fr",
+      "country_code": "FR",
+      "currency": "EUR",
+      "price": 819.0,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Xiaomi 15T 12+256GB",
+      "platform": "Amazon.fr",
+      "country_code": "FR",
+      "currency": "EUR",
+      "price": 509.0,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Xiaomi 17 Ultra 16+512GB",
+      "platform": "Amazon.fr",
+      "country_code": "FR",
+      "currency": "EUR",
+      "price": 1449.0,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Xiaomi 17T 12+256GB",
+      "platform": "Amazon.fr",
+      "country_code": "FR",
+      "currency": "EUR",
+      "price": 719.0,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "POCO C85 6+128GB",
+      "platform": "Amazon.it",
+      "country_code": "IT",
+      "currency": "EUR",
+      "price": 106.48,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "POCO C85 8+256GB",
+      "platform": "Amazon.it",
+      "country_code": "IT",
+      "currency": "EUR",
+      "price": 136.3,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "POCO F8 Pro 12+512GB",
+      "platform": "Amazon.it",
+      "country_code": "IT",
+      "currency": "EUR",
+      "price": 475.33,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "POCO M7 6+128GB",
+      "platform": "Amazon.it",
+      "country_code": "IT",
+      "currency": "EUR",
+      "price": 122.87,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "POCO M8 5G 8+512GB",
+      "platform": "Amazon.it",
+      "country_code": "IT",
+      "currency": "EUR",
+      "price": 213.03,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "POCO X8 Pro 12+512GB",
+      "platform": "Amazon.it",
+      "country_code": "IT",
+      "currency": "EUR",
+      "price": 327.79,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi 15 5G 8+256GB",
+      "platform": "Amazon.it",
+      "country_code": "IT",
+      "currency": "EUR",
+      "price": 172.05,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi 15 8+256GB",
+      "platform": "Amazon.it",
+      "country_code": "IT",
+      "currency": "EUR",
+      "price": 146.72,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi 15C 4+256GB",
+      "platform": "Amazon.it",
+      "country_code": "IT",
+      "currency": "EUR",
+      "price": 106.14,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi Note 14 Pro+ 5G 12+512GB",
+      "platform": "Amazon.it",
+      "country_code": "IT",
+      "currency": "EUR",
+      "price": 336.89,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi Note 14 Pro+ 5G 8+256GB",
+      "platform": "Amazon.it",
+      "country_code": "IT",
+      "currency": "EUR",
+      "price": 261.14,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi Note 15 5G 8+256GB",
+      "platform": "Amazon.it",
+      "country_code": "IT",
+      "currency": "EUR",
+      "price": 204.1,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi Note 15 8+256GB",
+      "platform": "Amazon.it",
+      "country_code": "IT",
+      "currency": "EUR",
+      "price": 180.33,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi Note 15 8+256GB",
+      "platform": "Amazon.it",
+      "country_code": "IT",
+      "currency": "EUR",
+      "price": 173.63,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi Note 15 Pro 5G 8+256GB",
+      "platform": "Amazon.it",
+      "country_code": "IT",
+      "currency": "EUR",
+      "price": 288.88,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi Note 15 Pro 8+256GB",
+      "platform": "Amazon.it",
+      "country_code": "IT",
+      "currency": "EUR",
+      "price": 204.5,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Xiaomi 13T Pro 12+512GB",
+      "platform": "Amazon.it",
+      "country_code": "IT",
+      "currency": "EUR",
+      "price": 395.99,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Xiaomi 15T 12+256GB",
+      "platform": "Amazon.it",
+      "country_code": "IT",
+      "currency": "EUR",
+      "price": 450.0,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Xiaomi 17 Ultra 16+512GB",
+      "platform": "Amazon.it",
+      "country_code": "IT",
+      "currency": "EUR",
+      "price": 1487.31,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Xiaomi 17T 12+256GB",
+      "platform": "Amazon.it",
+      "country_code": "IT",
+      "currency": "EUR",
+      "price": 614.67,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "POCO C81 Pro 4+256GB",
+      "platform": "Amazon.nl",
+      "country_code": "NL",
+      "currency": "EUR",
+      "price": 159.9,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "POCO C85 6+128GB",
+      "platform": "Amazon.nl",
+      "country_code": "NL",
+      "currency": "EUR",
+      "price": 129.9,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "POCO F8 Pro 12+256GB",
+      "platform": "Amazon.nl",
+      "country_code": "NL",
+      "currency": "EUR",
+      "price": 459.9,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "POCO M7 8+256GB",
+      "platform": "Amazon.nl",
+      "country_code": "NL",
+      "currency": "EUR",
+      "price": 149.0,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "POCO M8 8+256GB",
+      "platform": "Amazon.nl",
+      "country_code": "NL",
+      "currency": "EUR",
+      "price": 199.9,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "POCO X8 Pro 8+256GB",
+      "platform": "Amazon.nl",
+      "country_code": "NL",
+      "currency": "EUR",
+      "price": 309.9,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "POCO X8 Pro Max 12+512GB",
+      "platform": "Amazon.nl",
+      "country_code": "NL",
+      "currency": "EUR",
+      "price": 512.69,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi 15 8+256GB",
+      "platform": "Amazon.nl",
+      "country_code": "NL",
+      "currency": "EUR",
+      "price": 159.0,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi 15 8+256GB",
+      "platform": "Amazon.nl",
+      "country_code": "NL",
+      "currency": "EUR",
+      "price": 179.9,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi 15C 4+128GB",
+      "platform": "Amazon.nl",
+      "country_code": "NL",
+      "currency": "EUR",
+      "price": 119.0,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi 15C 5G 4+128GB",
+      "platform": "Amazon.nl",
+      "country_code": "NL",
+      "currency": "EUR",
+      "price": 127.7,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi A5 3+64GB",
+      "platform": "Amazon.nl",
+      "country_code": "NL",
+      "currency": "EUR",
+      "price": 98.8,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi Note 14 Pro 5G 8+256GB",
+      "platform": "Amazon.nl",
+      "country_code": "NL",
+      "currency": "EUR",
+      "price": 264.99,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi Note 14 Pro 8+256GB",
+      "platform": "Amazon.nl",
+      "country_code": "NL",
+      "currency": "EUR",
+      "price": 227.0,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi Note 15 8+128GB",
+      "platform": "Amazon.nl",
+      "country_code": "NL",
+      "currency": "EUR",
+      "price": 189.9,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi Note 15 8+256GB",
+      "platform": "Amazon.nl",
+      "country_code": "NL",
+      "currency": "EUR",
+      "price": 199.9,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi Note 15 Pro 5G 12+512GB",
+      "platform": "Amazon.nl",
+      "country_code": "NL",
+      "currency": "EUR",
+      "price": 329.9,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Xiaomi 15T 12+512GB",
+      "platform": "Amazon.nl",
+      "country_code": "NL",
+      "currency": "EUR",
+      "price": 659.35,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Xiaomi 17 Ultra 16+512GB",
+      "platform": "Amazon.nl",
+      "country_code": "NL",
+      "currency": "EUR",
+      "price": 1364.9,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Xiaomi 17T 12+256GB",
+      "platform": "Amazon.nl",
+      "country_code": "NL",
+      "currency": "EUR",
+      "price": 749.0,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "POCO C85 6+128GB",
+      "platform": "Amazon.pl",
+      "country_code": "PL",
+      "currency": "PLN",
+      "price": 599.99,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "POCO C85 8+256GB",
+      "platform": "Amazon.pl",
+      "country_code": "PL",
+      "currency": "PLN",
+      "price": 489.0,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "POCO F6 Pro 12+512GB",
+      "platform": "Amazon.pl",
+      "country_code": "PL",
+      "currency": "PLN",
+      "price": 1718.25,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "POCO F7 12+512GB",
+      "platform": "Amazon.pl",
+      "country_code": "PL",
+      "currency": "PLN",
+      "price": 2199.99,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "POCO F8 Pro 12+256GB",
+      "platform": "Amazon.pl",
+      "country_code": "PL",
+      "currency": "PLN",
+      "price": 2611.55,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "POCO M7 6+128GB",
+      "platform": "Amazon.pl",
+      "country_code": "PL",
+      "currency": "PLN",
+      "price": 478.08,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "POCO X7 12+512GB",
+      "platform": "Amazon.pl",
+      "country_code": "PL",
+      "currency": "PLN",
+      "price": 1296.08,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "POCO X8 Pro Max 12+256GB",
+      "platform": "Amazon.pl",
+      "country_code": "PL",
+      "currency": "PLN",
+      "price": 2239.7,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi 15 5G 8+256GB",
+      "platform": "Amazon.pl",
+      "country_code": "PL",
+      "currency": "PLN",
+      "price": 913.99,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi 15C 8+256GB",
+      "platform": "Amazon.pl",
+      "country_code": "PL",
+      "currency": "PLN",
+      "price": 662.99,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi A5 4+128GB",
+      "platform": "Amazon.pl",
+      "country_code": "PL",
+      "currency": "PLN",
+      "price": 370.48,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi Note 14 Pro 8+256GB",
+      "platform": "Amazon.pl",
+      "country_code": "PL",
+      "currency": "PLN",
+      "price": 999.0,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi Note 14 Pro+ 5G 8+256GB",
+      "platform": "Amazon.pl",
+      "country_code": "PL",
+      "currency": "PLN",
+      "price": 1828.1,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi Note 15 5G 8+256GB",
+      "platform": "Amazon.pl",
+      "country_code": "PL",
+      "currency": "PLN",
+      "price": 1176.87,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi Note 15 6+128GB",
+      "platform": "Amazon.pl",
+      "country_code": "PL",
+      "currency": "PLN",
+      "price": 790.0,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi Note 15 8+256GB",
+      "platform": "Amazon.pl",
+      "country_code": "PL",
+      "currency": "PLN",
+      "price": 984.72,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi Note 15 Pro 4G 8+256GB",
+      "platform": "Amazon.pl",
+      "country_code": "PL",
+      "currency": "PLN",
+      "price": 801.07,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi Note 15 Pro 5G 8+512GB",
+      "platform": "Amazon.pl",
+      "country_code": "PL",
+      "currency": "PLN",
+      "price": 1643.55,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi Note 15 Pro+ 5G 12+512GB",
+      "platform": "Amazon.pl",
+      "country_code": "PL",
+      "currency": "PLN",
+      "price": 1899.0,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Xiaomi 14 12+256GB",
+      "platform": "Amazon.pl",
+      "country_code": "PL",
+      "currency": "PLN",
+      "price": 2507.99,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Xiaomi 15 12+256GB",
+      "platform": "Amazon.pl",
+      "country_code": "PL",
+      "currency": "PLN",
+      "price": 2784.99,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Xiaomi 15T Pro 12+512GB",
+      "platform": "Amazon.pl",
+      "country_code": "PL",
+      "currency": "PLN",
+      "price": 2899.0,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Xiaomi 17 12+512GB",
+      "platform": "Amazon.pl",
+      "country_code": "PL",
+      "currency": "PLN",
+      "price": 4099.0,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Xiaomi 17 Ultra 16+1024GB",
+      "platform": "Amazon.pl",
+      "country_code": "PL",
+      "currency": "PLN",
+      "price": 6742.58,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "POCO C85 6+128GB",
+      "platform": "Amazon.se",
+      "country_code": "SE",
+      "currency": "SEK",
+      "price": 1144.06,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "POCO C85 8+256GB",
+      "platform": "Amazon.se",
+      "country_code": "SE",
+      "currency": "SEK",
+      "price": 1324.89,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "POCO F7 12+512GB",
+      "platform": "Amazon.se",
+      "country_code": "SE",
+      "currency": "SEK",
+      "price": 4957.21,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "POCO F7 Ultra 16+512GB",
+      "platform": "Amazon.se",
+      "country_code": "SE",
+      "currency": "SEK",
+      "price": 7527.12,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "POCO F8 Ultra 16+512GB",
+      "platform": "Amazon.se",
+      "country_code": "SE",
+      "currency": "SEK",
+      "price": 8710.76,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "POCO M7 6+128GB",
+      "platform": "Amazon.se",
+      "country_code": "SE",
+      "currency": "SEK",
+      "price": 2007.18,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "POCO M8 8+256GB",
+      "platform": "Amazon.se",
+      "country_code": "SE",
+      "currency": "SEK",
+      "price": 2999.54,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "POCO X8 Pro 8+256GB",
+      "platform": "Amazon.se",
+      "country_code": "SE",
+      "currency": "SEK",
+      "price": 4466.76,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "POCO X8 Pro Max 12+256GB",
+      "platform": "Amazon.se",
+      "country_code": "SE",
+      "currency": "SEK",
+      "price": 5495.21,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi 15 8+256GB",
+      "platform": "Amazon.se",
+      "country_code": "SE",
+      "currency": "SEK",
+      "price": 2109.11,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi 15C 4+128GB",
+      "platform": "Amazon.se",
+      "country_code": "SE",
+      "currency": "SEK",
+      "price": 1528.44,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi A5 4+128GB",
+      "platform": "Amazon.se",
+      "country_code": "SE",
+      "currency": "SEK",
+      "price": 1290.0,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi Note 14 8+256GB",
+      "platform": "Amazon.se",
+      "country_code": "SE",
+      "currency": "SEK",
+      "price": 2307.92,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi Note 14 Pro 4G 8+256GB",
+      "platform": "Amazon.se",
+      "country_code": "SE",
+      "currency": "SEK",
+      "price": 2942.29,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi Note 14 Pro 5G 12+512GB",
+      "platform": "Amazon.se",
+      "country_code": "SE",
+      "currency": "SEK",
+      "price": 4172.53,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi Note 14 Pro+ 8+256GB",
+      "platform": "Amazon.se",
+      "country_code": "SE",
+      "currency": "SEK",
+      "price": 3439.91,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi Note 15 5G 8+256GB",
+      "platform": "Amazon.se",
+      "country_code": "SE",
+      "currency": "SEK",
+      "price": 2827.47,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi Note 15 6+128GB",
+      "platform": "Amazon.se",
+      "country_code": "SE",
+      "currency": "SEK",
+      "price": 1949.07,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi Note 15 Pro 5G 8+512GB",
+      "platform": "Amazon.se",
+      "country_code": "SE",
+      "currency": "SEK",
+      "price": 3979.53,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Redmi Note 15 Pro+ 5G 12+512GB",
+      "platform": "Amazon.se",
+      "country_code": "SE",
+      "currency": "SEK",
+      "price": 4003.74,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Xiaomi 14T Pro 12+512GB",
+      "platform": "Amazon.se",
+      "country_code": "SE",
+      "currency": "SEK",
+      "price": 5328.21,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Xiaomi 15 12+256GB",
+      "platform": "Amazon.se",
+      "country_code": "SE",
+      "currency": "SEK",
+      "price": 10293.24,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Xiaomi 15 12+512GB",
+      "platform": "Amazon.se",
+      "country_code": "SE",
+      "currency": "SEK",
+      "price": 10293.24,
+      "timestamp": "2026-07-07 12:08:43"
+    },
+    {
+      "product_name": "Xiaomi 17 12+512GB",
+      "platform": "Amazon.se",
+      "country_code": "SE",
+      "currency": "SEK",
+      "price": 12724.92,
+      "timestamp": "2026-07-07 12:08:43"
+    }
+  ]
+}
