@@ -1,4 +1,85 @@
-SCRAPINGBEE_KEY present: True
-SCRAPINGBEE_KEY length: 78
-SCRAPINGBEE_KEY first 8: 540U1WLD
-All env vars with SCRAPING: ['SCRAPINGBEE_API_KEY']
+[2026-07-08 02:08:46] SCRAPINGBEE_KEY present: True (len=78)
+[2026-07-08 02:08:46] SCRAPINGBEE_KEY first 8: 540U1WLD
+[2026-07-08 02:12:04] Phase 1 done: 55 Amazon prices
+[2026-07-08 02:12:05]     ScrapingBee HTTP 401 for https://www.idealo.de/preisvergleich/ProductCategory/19116.html?q=Xiaomi: {"message":"Invalid api key: 540U1WLD4N21VYSA0EZ4HD482M5RGEQOACV5S48OL3ITKPMMMNUB4VES9PCEZ1XGT5BIQ9ZUWL4ETT"}
+
+[2026-07-08 02:12:05]     ScrapingBee HTTP 401 for https://www.idealo.fr/cat/19116/smartphones.html?q=Xiaomi: {"message":"Invalid api key: 540U1WLD4N21VYSA0EZ4HD482M5RGEQOACV5S48OL3ITKPMMMNUB4VES9PCEZ1XGT5BIQ9ZUWL4ETT"}
+
+[2026-07-08 02:12:05]     ScrapingBee HTTP 401 for https://www.idealo.es/cat/19116/smartphones.html?q=Xiaomi: {"message":"Invalid api key: 540U1WLD4N21VYSA0EZ4HD482M5RGEQOACV5S48OL3ITKPMMMNUB4VES9PCEZ1XGT5BIQ9ZUWL4ETT"}
+
+[2026-07-08 02:12:05]     ScrapingBee HTTP 401 for https://www.idealo.it/cat/19116/smartphones.html?q=Xiaomi: {"message":"Invalid api key: 540U1WLD4N21VYSA0EZ4HD482M5RGEQOACV5S48OL3ITKPMMMNUB4VES9PCEZ1XGT5BIQ9ZUWL4ETT"}
+
+[2026-07-08 02:12:06]     ScrapingBee HTTP 401 for https://www.ceneo.pl/Smartfony;szukaj-Xiaomi: {"message":"Invalid api key: 540U1WLD4N21VYSA0EZ4HD482M5RGEQOACV5S48OL3ITKPMMMNUB4VES9PCEZ1XGT5BIQ9ZUWL4ETT"}
+
+[2026-07-08 02:12:06]     ScrapingBee HTTP 401 for https://geizhals.at/?fs=Xiaomi&cat=umtsover: {"message":"Invalid api key: 540U1WLD4N21VYSA0EZ4HD482M5RGEQOACV5S48OL3ITKPMMMNUB4VES9PCEZ1XGT5BIQ9ZUWL4ETT"}
+
+[2026-07-08 02:12:06]     ScrapingBee HTTP 401 for https://www.pricerunner.se/cl/36/Mobiltelefoner?q=Xiaomi: {"message":"Invalid api key: 540U1WLD4N21VYSA0EZ4HD482M5RGEQOACV5S48OL3ITKPMMMNUB4VES9PCEZ1XGT5BIQ9ZUWL4ETT"}
+
+[2026-07-08 02:12:06]     ScrapingBee HTTP 401 for https://www.pricerunner.dk/cl/36/Mobiltelefoner?q=Xiaomi: {"message":"Invalid api key: 540U1WLD4N21VYSA0EZ4HD482M5RGEQOACV5S48OL3ITKPMMMNUB4VES9PCEZ1XGT5BIQ9ZUWL4ETT"}
+
+[2026-07-08 02:12:07]     ScrapingBee HTTP 401 for https://www.skroutz.gr/search?keyphrase=Xiaomi+smartphone: {"message":"Invalid api key: 540U1WLD4N21VYSA0EZ4HD482M5RGEQOACV5S48OL3ITKPMMMNUB4VES9PCEZ1XGT5BIQ9ZUWL4ETT"}
+
+[2026-07-08 02:12:07]     ScrapingBee HTTP 401 for https://www.heureka.cz/?h%5Bfraze%5D=Xiaomi+smartphone: {"message":"Invalid api key: 540U1WLD4N21VYSA0EZ4HD482M5RGEQOACV5S48OL3ITKPMMMNUB4VES9PCEZ1XGT5BIQ9ZUWL4ETT"}
+
+[2026-07-08 02:12:07] Phase 2 done: 0 aggregator prices, 10 API calls
+[2026-07-08 02:12:07]     ScrapingBee HTTP 401 for https://www.mi.com/de/product/xiaomi-17-ultra: {"message":"Invalid api key: 540U1WLD4N21VYSA0EZ4HD482M5RGEQOACV5S48OL3ITKPMMMNUB4VES9PCEZ1XGT5BIQ9ZUWL4ETT"}
+
+[2026-07-08 02:12:08]     ScrapingBee HTTP 401 for https://www.mi.com/de/product/xiaomi-17t: {"message":"Invalid api key: 540U1WLD4N21VYSA0EZ4HD482M5RGEQOACV5S48OL3ITKPMMMNUB4VES9PCEZ1XGT5BIQ9ZUWL4ETT"}
+
+[2026-07-08 02:12:08]     ScrapingBee HTTP 401 for https://www.mi.com/de/product/xiaomi-17t-pro: {"message":"Invalid api key: 540U1WLD4N21VYSA0EZ4HD482M5RGEQOACV5S48OL3ITKPMMMNUB4VES9PCEZ1XGT5BIQ9ZUWL4ETT"}
+
+[2026-07-08 02:12:08]     ScrapingBee HTTP 401 for https://www.mi.com/de/product/xiaomi-15t: {"message":"Invalid api key: 540U1WLD4N21VYSA0EZ4HD482M5RGEQOACV5S48OL3ITKPMMMNUB4VES9PCEZ1XGT5BIQ9ZUWL4ETT"}
+
+[2026-07-08 02:12:08]     ScrapingBee HTTP 401 for https://www.mi.com/de/product/xiaomi-15t-pro: {"message":"Invalid api key: 540U1WLD4N21VYSA0EZ4HD482M5RGEQOACV5S48OL3ITKPMMMNUB4VES9PCEZ1XGT5BIQ9ZUWL4ETT"}
+
+[2026-07-08 02:12:09]     ScrapingBee HTTP 401 for https://www.mi.com/de/product/redmi-note-15-pro-5g: {"message":"Invalid api key: 540U1WLD4N21VYSA0EZ4HD482M5RGEQOACV5S48OL3ITKPMMMNUB4VES9PCEZ1XGT5BIQ9ZUWL4ETT"}
+
+[2026-07-08 02:12:09]     ScrapingBee HTTP 401 for https://www.mi.com/de/product/redmi-note-15-pro-plus-5g: {"message":"Invalid api key: 540U1WLD4N21VYSA0EZ4HD482M5RGEQOACV5S48OL3ITKPMMMNUB4VES9PCEZ1XGT5BIQ9ZUWL4ETT"}
+
+[2026-07-08 02:12:09]     ScrapingBee HTTP 401 for https://www.mi.com/de/product/poco-f8-ultra: {"message":"Invalid api key: 540U1WLD4N21VYSA0EZ4HD482M5RGEQOACV5S48OL3ITKPMMMNUB4VES9PCEZ1XGT5BIQ9ZUWL4ETT"}
+
+[2026-07-08 02:12:09]     ScrapingBee HTTP 401 for https://www.mi.com/de/product/poco-x8-pro: {"message":"Invalid api key: 540U1WLD4N21VYSA0EZ4HD482M5RGEQOACV5S48OL3ITKPMMMNUB4VES9PCEZ1XGT5BIQ9ZUWL4ETT"}
+
+[2026-07-08 02:12:10]     ScrapingBee HTTP 401 for https://www.mi.com/de/product/poco-f7: {"message":"Invalid api key: 540U1WLD4N21VYSA0EZ4HD482M5RGEQOACV5S48OL3ITKPMMMNUB4VES9PCEZ1XGT5BIQ9ZUWL4ETT"}
+
+[2026-07-08 02:12:10]     ScrapingBee HTTP 401 for https://www.mi.com/de/product/poco-f7-pro: {"message":"Invalid api key: 540U1WLD4N21VYSA0EZ4HD482M5RGEQOACV5S48OL3ITKPMMMNUB4VES9PCEZ1XGT5BIQ9ZUWL4ETT"}
+
+[2026-07-08 02:12:10]     ScrapingBee HTTP 401 for https://www.mi.com/de/product/redmi-note-14-pro-5g: {"message":"Invalid api key: 540U1WLD4N21VYSA0EZ4HD482M5RGEQOACV5S48OL3ITKPMMMNUB4VES9PCEZ1XGT5BIQ9ZUWL4ETT"}
+
+[2026-07-08 02:12:11]     ScrapingBee HTTP 401 for https://www.mi.com/fr/product/xiaomi-17-ultra: {"message":"Invalid api key: 540U1WLD4N21VYSA0EZ4HD482M5RGEQOACV5S48OL3ITKPMMMNUB4VES9PCEZ1XGT5BIQ9ZUWL4ETT"}
+
+[2026-07-08 02:12:11]     ScrapingBee HTTP 401 for https://www.mi.com/fr/product/xiaomi-17t: {"message":"Invalid api key: 540U1WLD4N21VYSA0EZ4HD482M5RGEQOACV5S48OL3ITKPMMMNUB4VES9PCEZ1XGT5BIQ9ZUWL4ETT"}
+
+[2026-07-08 02:12:11]     ScrapingBee HTTP 401 for https://www.mi.com/fr/product/xiaomi-17t-pro: {"message":"Invalid api key: 540U1WLD4N21VYSA0EZ4HD482M5RGEQOACV5S48OL3ITKPMMMNUB4VES9PCEZ1XGT5BIQ9ZUWL4ETT"}
+
+[2026-07-08 02:12:11]     ScrapingBee HTTP 401 for https://www.mi.com/fr/product/xiaomi-15t: {"message":"Invalid api key: 540U1WLD4N21VYSA0EZ4HD482M5RGEQOACV5S48OL3ITKPMMMNUB4VES9PCEZ1XGT5BIQ9ZUWL4ETT"}
+
+[2026-07-08 02:12:12]     ScrapingBee HTTP 401 for https://www.mi.com/fr/product/xiaomi-15t-pro: {"message":"Invalid api key: 540U1WLD4N21VYSA0EZ4HD482M5RGEQOACV5S48OL3ITKPMMMNUB4VES9PCEZ1XGT5BIQ9ZUWL4ETT"}
+
+[2026-07-08 02:12:12]     ScrapingBee HTTP 401 for https://www.mi.com/fr/product/redmi-note-15-pro-5g: {"message":"Invalid api key: 540U1WLD4N21VYSA0EZ4HD482M5RGEQOACV5S48OL3ITKPMMMNUB4VES9PCEZ1XGT5BIQ9ZUWL4ETT"}
+
+[2026-07-08 02:12:12]     ScrapingBee HTTP 401 for https://www.mi.com/fr/product/redmi-note-15-pro-plus-5g: {"message":"Invalid api key: 540U1WLD4N21VYSA0EZ4HD482M5RGEQOACV5S48OL3ITKPMMMNUB4VES9PCEZ1XGT5BIQ9ZUWL4ETT"}
+
+[2026-07-08 02:12:12]     ScrapingBee HTTP 401 for https://www.mi.com/fr/product/poco-f8-ultra: {"message":"Invalid api key: 540U1WLD4N21VYSA0EZ4HD482M5RGEQOACV5S48OL3ITKPMMMNUB4VES9PCEZ1XGT5BIQ9ZUWL4ETT"}
+
+[2026-07-08 02:12:13]     ScrapingBee HTTP 401 for https://www.mi.com/fr/product/poco-x8-pro: {"message":"Invalid api key: 540U1WLD4N21VYSA0EZ4HD482M5RGEQOACV5S48OL3ITKPMMMNUB4VES9PCEZ1XGT5BIQ9ZUWL4ETT"}
+
+[2026-07-08 02:12:13]     ScrapingBee HTTP 401 for https://www.mi.com/fr/product/poco-f7: {"message":"Invalid api key: 540U1WLD4N21VYSA0EZ4HD482M5RGEQOACV5S48OL3ITKPMMMNUB4VES9PCEZ1XGT5BIQ9ZUWL4ETT"}
+
+[2026-07-08 02:12:13]     ScrapingBee HTTP 401 for https://www.mi.com/fr/product/poco-f7-pro: {"message":"Invalid api key: 540U1WLD4N21VYSA0EZ4HD482M5RGEQOACV5S48OL3ITKPMMMNUB4VES9PCEZ1XGT5BIQ9ZUWL4ETT"}
+
+[2026-07-08 02:12:13]     ScrapingBee HTTP 401 for https://www.mi.com/fr/product/redmi-note-14-pro-5g: {"message":"Invalid api key: 540U1WLD4N21VYSA0EZ4HD482M5RGEQOACV5S48OL3ITKPMMMNUB4VES9PCEZ1XGT5BIQ9ZUWL4ETT"}
+
+[2026-07-08 02:12:14]     ScrapingBee HTTP 401 for https://www.mi.com/es/product/xiaomi-17-ultra: {"message":"Invalid api key: 540U1WLD4N21VYSA0EZ4HD482M5RGEQOACV5S48OL3ITKPMMMNUB4VES9PCEZ1XGT5BIQ9ZUWL4ETT"}
+
+[2026-07-08 02:12:14]     ScrapingBee HTTP 401 for https://www.mi.com/es/product/xiaomi-17t: {"message":"Invalid api key: 540U1WLD4N21VYSA0EZ4HD482M5RGEQOACV5S48OL3ITKPMMMNUB4VES9PCEZ1XGT5BIQ9ZUWL4ETT"}
+
+[2026-07-08 02:12:14]     ScrapingBee HTTP 401 for https://www.mi.com/es/product/xiaomi-17t-pro: {"message":"Invalid api key: 540U1WLD4N21VYSA0EZ4HD482M5RGEQOACV5S48OL3ITKPMMMNUB4VES9PCEZ1XGT5BIQ9ZUWL4ETT"}
+
+[2026-07-08 02:12:15]     ScrapingBee HTTP 401 for https://www.mi.com/es/product/xiaomi-15t: {"message":"Invalid api key: 540U1WLD4N21VYSA0EZ4HD482M5RGEQOACV5S48OL3ITKPMMMNUB4VES9PCEZ1XGT5BIQ9ZUWL4ETT"}
+
+[2026-07-08 02:12:15]     ScrapingBee HTTP 401 for https://www.mi.com/es/product/xiaomi-15t-pro: {"message":"Invalid api key: 540U1WLD4N21VYSA0EZ4HD482M5RGEQOACV5S48OL3ITKPMMMNUB4VES9PCEZ1XGT5BIQ9ZUWL4ETT"}
+
+[2026-07-08 02:12:15]     ScrapingBee HTTP 401 for https://www.mi.com/es/product/redmi-note-15-pro-5g: {"message":"Invalid api key: 540U1WLD4N21VYSA0EZ4HD482M5RGEQOACV5S48OL3ITKPMMMNUB4VES9PCEZ1XGT5BIQ9ZUWL4ETT"}
+
+[2026-07-08 02:12:15] Phase 3 done: 0 Mi Store prices
