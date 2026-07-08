@@ -150,7 +150,7 @@ def fetch_direct(url, retries=2):
 # ==================== ScrapingBee 抓取 (聚合网站) ====================
 def fetch_via_scrapingbee(url, render_js=True, country="de", wait=0):
     if not SCRAPINGBEE_KEY:
-        print("    No ScrapingBee API key, skipping")
+        debug("    No ScrapingBee API key, skipping")
         return None
     params = f"api_key={SCRAPINGBEE_KEY}&url={quote_plus(url)}&render_js={'true' if render_js else 'false'}&premium_proxy=true&country_code={country}"
     if wait:
@@ -160,14 +160,14 @@ def fetch_via_scrapingbee(url, render_js=True, country="de", wait=0):
         req = Request(api_url, headers={"Accept": "text/html"})
         with urlopen(req, timeout=60) as resp:
             html = resp.read().decode("utf-8", errors="replace")
-            print(f"    ScrapingBee OK, {len(html)} bytes")
+            debug(f"    ScrapingBee OK, {len(html)} bytes for {url}")
             return html
     except HTTPError as e:
         body = e.read().decode("utf-8", errors="replace") if hasattr(e, 'read') else ""
-        print(f"    ScrapingBee HTTP {e.code}: {body[:200]}")
+        debug(f"    ScrapingBee HTTP {e.code} for {url}: {body[:200]}")
         return None
     except (URLError, TimeoutError) as e:
-        print(f"    ScrapingBee error: {e}")
+        debug(f"    ScrapingBee error for {url}: {e}")
         return None
 
 # ==================== Amazon 解析 ====================
@@ -477,17 +477,25 @@ def scrape_mistore(seen, api_calls_used=0):
     print(f"\nMi Store total: {len(all_prices)} products (used {api_calls - api_calls_used} API calls)")
     return all_prices
 
+DEBUG_LOG = []
+
+def debug(msg):
+    DEBUG_LOG.append(f"[{now_str()}] {msg}")
+    print(msg)
+
+def write_debug():
+    with open("debug_run.txt", "w") as f:
+        f.write("\n".join(DEBUG_LOG))
+
 def main():
-    print(f"SCRAPINGBEE_API_KEY present: {bool(SCRAPINGBEE_KEY)} (len={len(SCRAPINGBEE_KEY)})")
-    # Write debug info to file for diagnosis
-    with open("debug_run.txt", "w") as dbg:
-        dbg.write(f"SCRAPINGBEE_KEY present: {bool(SCRAPINGBEE_KEY)}\n")
-        dbg.write(f"SCRAPINGBEE_KEY length: {len(SCRAPINGBEE_KEY)}\n")
-        dbg.write(f"SCRAPINGBEE_KEY first 8: {SCRAPINGBEE_KEY[:8] if SCRAPINGBEE_KEY else '(empty)'}\n")
-        dbg.write(f"All env vars with SCRAPING: {[k for k in os.environ if 'SCRAPING' in k.upper()]}\n")
+    debug(f"SCRAPINGBEE_KEY present: {bool(SCRAPINGBEE_KEY)} (len={len(SCRAPINGBEE_KEY)})")
+    debug(f"SCRAPINGBEE_KEY first 8: {SCRAPINGBEE_KEY[:8] if SCRAPINGBEE_KEY else '(empty)'}")
     amazon_prices, seen = scrape_amazon()
+    debug(f"Phase 1 done: {len(amazon_prices)} Amazon prices")
     aggregator_prices, agg_api_calls = scrape_aggregators(seen)
+    debug(f"Phase 2 done: {len(aggregator_prices)} aggregator prices, {agg_api_calls} API calls")
     mistore_prices = scrape_mistore(seen, api_calls_used=agg_api_calls)
+    debug(f"Phase 3 done: {len(mistore_prices)} Mi Store prices")
 
     all_prices = amazon_prices + aggregator_prices + mistore_prices
 
@@ -513,6 +521,7 @@ def main():
     print(f"Done! {len(all_prices)} records from {len(countries)} countries, {len(platforms)} platforms")
     print(f"Platforms: {', '.join(sorted(platforms))}")
     print(f"{'=' * 60}")
+    write_debug()
 
 if __name__ == "__main__":
     main()
