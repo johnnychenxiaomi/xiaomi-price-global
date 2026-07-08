@@ -324,7 +324,7 @@ def scrape_amazon():
 def scrape_aggregators(seen):
     if not SCRAPINGBEE_KEY:
         print("\nNo SCRAPINGBEE_API_KEY — skipping aggregator sites")
-        return []
+        return [], 0
 
     print("\n" + "=" * 60)
     print("Phase 2: Aggregator sites (via ScrapingBee)")
@@ -478,6 +478,7 @@ def scrape_mistore(seen, api_calls_used=0):
     return all_prices
 
 def main():
+    print(f"SCRAPINGBEE_API_KEY present: {bool(SCRAPINGBEE_KEY)} (len={len(SCRAPINGBEE_KEY)})")
     amazon_prices, seen = scrape_amazon()
     aggregator_prices, agg_api_calls = scrape_aggregators(seen)
     mistore_prices = scrape_mistore(seen, api_calls_used=agg_api_calls)
