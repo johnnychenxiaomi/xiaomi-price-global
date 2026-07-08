@@ -479,6 +479,12 @@ def scrape_mistore(seen, api_calls_used=0):
 
 def main():
     print(f"SCRAPINGBEE_API_KEY present: {bool(SCRAPINGBEE_KEY)} (len={len(SCRAPINGBEE_KEY)})")
+    # Write debug info to file for diagnosis
+    with open("debug_run.txt", "w") as dbg:
+        dbg.write(f"SCRAPINGBEE_KEY present: {bool(SCRAPINGBEE_KEY)}\n")
+        dbg.write(f"SCRAPINGBEE_KEY length: {len(SCRAPINGBEE_KEY)}\n")
+        dbg.write(f"SCRAPINGBEE_KEY first 8: {SCRAPINGBEE_KEY[:8] if SCRAPINGBEE_KEY else '(empty)'}\n")
+        dbg.write(f"All env vars with SCRAPING: {[k for k in os.environ if 'SCRAPING' in k.upper()]}\n")
     amazon_prices, seen = scrape_amazon()
     aggregator_prices, agg_api_calls = scrape_aggregators(seen)
     mistore_prices = scrape_mistore(seen, api_calls_used=agg_api_calls)
