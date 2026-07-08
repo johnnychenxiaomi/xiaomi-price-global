@@ -58,7 +58,14 @@ const productList = [
     "Mi 10", "Mi 10T Lite", "Redmi Note 8T", "Redmi Note 13 Pro+ 5G", "Mi 9 SE",
     "Xiaomi 12T Pro", "Redmi Note 7", "小米11青春版", "Redmi Note 8 Pro",
     "Redmi Note 12 5G", "Mi A3", "Xiaomi 13", "Redmi Note 8", "Xiaomi Pad 5",
-    "Xiaomi 11T", "Mi 11 Lite", "Xiaomi 14 Ultra"
+    "Xiaomi 11T", "Mi 11 Lite", "Xiaomi 14 Ultra",
+    "Xiaomi 15", "Xiaomi 15 Pro", "Xiaomi 15 Ultra",
+    "Xiaomi 15T", "Xiaomi 15T Pro",
+    "Xiaomi 17T", "Xiaomi 17T Pro", "Xiaomi 17 Ultra",
+    "Redmi Note 14 Pro", "Redmi Note 14 Pro+",
+    "Redmi Note 15 Pro", "Redmi Note 15 Pro 5G", "Redmi Note 15 Pro+",
+    "POCO X8", "POCO F8", "POCO F8 Pro",
+    "Xiaomi Pad 7", "Xiaomi Pad 7 Pro"
 ];
 
 // 数据源：优先从 prices.json 加载（GitHub Pages 可用），备选本地 API
@@ -75,6 +82,23 @@ const COUNTRY_CODE_MAP = {
     IT:'意大利',ES:'西班牙',PT:'葡萄牙',NL:'荷兰',BE:'比利时',AT:'奥地利',
     CH:'瑞士',IE:'爱尔兰',GB:'英国',LU:'卢森堡'
 };
+
+// 将抓取的产品名匹配到 productList 中的标准名
+function matchProductName(rawName) {
+    if (!rawName) return '';
+    const lower = rawName.toLowerCase().replace(/\s+/g, ' ').trim();
+    for (const std of productList) {
+        if (lower.includes(std.toLowerCase())) return std;
+    }
+    // 去掉容量/颜色等后缀再试
+    const cleaned = rawName.replace(/\b\d+\s*GB\b/gi, '').replace(/\b\d+\s*TB\b/gi, '')
+        .replace(/\b(Black|White|Blue|Green|Red|Purple|Gold|Silver|Gray|Grey|Yellow|Glacier|Lavender|Midnight)\b/gi, '')
+        .replace(/\s+/g, ' ').trim();
+    for (const std of productList) {
+        if (cleaned.toLowerCase().includes(std.toLowerCase())) return std;
+    }
+    return rawName.split(/\s+/).slice(0, 4).join(' ');
+}
 
 // 从 prices.json 或 API 加载真实价格数据
 async function loadFromAPI() {
@@ -127,14 +151,18 @@ async function loadFromAPI() {
 
             const platformList = [];
             for (const [pName, products] of Object.entries(platforms)) {
-                const prods = products.map(p => ({
-                    id: p.product_id,
-                    name: p.product_name,
-                    price: p.price,
-                    miStorePrice: Math.round(p.price * 1.1),
-                    miStoreUrl: ci.miStoreUrl + '/product/' + p.product_id,
-                    productUrl: p.url || '#'
-                }));
+                const prods = products.map(p => {
+                    const baseName = matchProductName(p.product_name);
+                    const pid = baseName.toLowerCase().replace(/\s+/g, '-');
+                    return {
+                        id: pid,
+                        name: baseName,
+                        price: p.price,
+                        miStorePrice: Math.round(p.price * 1.1),
+                        miStoreUrl: ci.miStoreUrl || '#',
+                        productUrl: p.url || '#'
+                    };
+                }).filter(p => p.id);
                 // 找到平台URL
                 const existingPlatform = ci.platforms?.find(pl => pl.name === pName);
                 platformList.push({ name: pName, url: existingPlatform?.url || '#', products: prods });
@@ -1250,26 +1278,38 @@ function handleCountryChange() {
     productSelect.innerHTML = '<option value="">-- 请选择产品 --</option>';
     
     if (country) {
-        // 获取该国家所有平台的所有产品ID
         const countryInfo = mockData[country];
-        const productIds = new Set();
+        const productMap = new Map();
         
         countryInfo.platforms.forEach(platform => {
             platform.products.forEach(product => {
-                productIds.add(product.id);
+                if (product.id && !productMap.has(product.id)) {
+                    productMap.set(product.id, product.name);
+                }
             });
         });
         
-        // 添加产品选项（使用产品列表顺序）
+        // 按 productList 顺序优先，剩余的追加
+        const added = new Set();
         productList.forEach(productName => {
             const productId = productName.toLowerCase().replace(/\s+/g, '-');
-            if (productIds.has(productId)) {
+            if (productMap.has(productId)) {
                 const option = document.createElement('option');
                 option.value = productId;
                 option.textContent = productName;
                 productSelect.appendChild(option);
+                added.add(productId);
             }
         });
+        // 追加不在 productList 中的真实产品
+        for (const [pid, pname] of productMap) {
+            if (!added.has(pid)) {
+                const option = document.createElement('option');
+                option.value = pid;
+                option.textContent = pname;
+                productSelect.appendChild(option);
+            }
+        }
         
         productSelect.disabled = false;
         searchBtn.disabled = true;

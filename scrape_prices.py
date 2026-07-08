@@ -96,11 +96,21 @@ def now_str():
     return datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
 
 def parse_price(text):
-    text = text.strip().replace('\xa0', ' ').replace(' ', '')
-    text = text.replace('.', '').replace(',', '.')
+    text = text.strip().replace('\xa0', ' ').replace('\u202f', '')
+    text = re.sub(r'\s+', '', text)
+    # 判断最后一个分隔符是小数点还是千分位
+    # "1.234,56" → 1234.56 | "1,234.56" → 1234.56 | "320,00" → 320.00 | "320.00" → 320.00
+    last_comma = text.rfind(',')
+    last_dot = text.rfind('.')
+    if last_comma > last_dot:
+        text = text.replace('.', '').replace(',', '.')
+    elif last_dot > last_comma:
+        text = text.replace(',', '')
+    else:
+        text = text.replace(',', '.')
     try:
         v = float(text)
-        return v if 30 < v < 50000 else None
+        return v if 30 < v < 5000 else None
     except ValueError:
         return None
 
