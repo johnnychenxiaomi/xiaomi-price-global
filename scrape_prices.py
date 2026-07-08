@@ -148,11 +148,13 @@ def fetch_direct(url, retries=2):
     return None
 
 # ==================== ScrapingBee 抓取 (聚合网站) ====================
-def fetch_via_scrapingbee(url, render_js=True, country="de"):
+def fetch_via_scrapingbee(url, render_js=True, country="de", wait=0):
     if not SCRAPINGBEE_KEY:
         print("    No ScrapingBee API key, skipping")
         return None
     params = f"api_key={SCRAPINGBEE_KEY}&url={quote_plus(url)}&render_js={'true' if render_js else 'false'}&premium_proxy=true&country_code={country}"
+    if wait:
+        params += f"&wait={wait}"
     api_url = f"https://app.scrapingbee.com/api/v1/?{params}"
     try:
         req = Request(api_url, headers={"Accept": "text/html"})
@@ -334,10 +336,11 @@ def scrape_aggregators(seen):
 
     for site in AGGREGATOR_SITES:
         name, cc, currency, url = site["name"], site["cc"], site["currency"], site["url"]
+        proxy_cc = site.get("proxy_cc", "de")
         print(f"\n--- {name} ({cc}, {currency}) ---")
         print(f"  URL: {url}")
 
-        html = fetch_via_scrapingbee(url, render_js=True)
+        html = fetch_via_scrapingbee(url, render_js=True, country=proxy_cc)
         api_calls += 1
         if not html:
             continue
@@ -357,13 +360,129 @@ def scrape_aggregators(seen):
             break
 
     print(f"\nAggregator total: {len(all_prices)} products (used {api_calls} API calls)")
+    return all_prices, api_calls
+
+# ==================== 小米官网价格 (Phase 3) ====================
+MI_STORE_SITES = [
+    {"cc": "DE", "locale": "de", "currency": "EUR", "base": "https://www.mi.com/de"},
+    {"cc": "FR", "locale": "fr", "currency": "EUR", "base": "https://www.mi.com/fr"},
+    {"cc": "ES", "locale": "es", "currency": "EUR", "base": "https://www.mi.com/es"},
+    {"cc": "IT", "locale": "it", "currency": "EUR", "base": "https://www.mi.com/it"},
+    {"cc": "NL", "locale": "nl", "currency": "EUR", "base": "https://www.mi.com/nl"},
+    {"cc": "PL", "locale": "pl", "currency": "PLN", "base": "https://www.mi.com/pl"},
+    {"cc": "RO", "locale": "ro", "currency": "RON", "base": "https://www.mi.com/ro"},
+    {"cc": "CZ", "locale": "cz", "currency": "CZK", "base": "https://www.mi.com/cz"},
+    {"cc": "GR", "locale": "gr", "currency": "EUR", "base": "https://www.mi.com/gr"},
+    {"cc": "SE", "locale": "se", "currency": "SEK", "base": "https://www.mi.com/se"},
+    {"cc": "AT", "locale": "at", "currency": "EUR", "base": "https://www.mi.com/at"},
+    {"cc": "GB", "locale": "gb", "currency": "GBP", "base": "https://www.mi.com/gb"},
+    {"cc": "DK", "locale": "dk", "currency": "DKK", "base": "https://www.mi.com/dk"},
+]
+
+MI_PRODUCT_SLUGS = [
+    ("Xiaomi 17 Ultra", "xiaomi-17-ultra"),
+    ("Xiaomi 17T", "xiaomi-17t"),
+    ("Xiaomi 17T Pro", "xiaomi-17t-pro"),
+    ("Xiaomi 15T", "xiaomi-15t"),
+    ("Xiaomi 15T Pro", "xiaomi-15t-pro"),
+    ("Redmi Note 15 Pro 5G", "redmi-note-15-pro-5g"),
+    ("Redmi Note 15 Pro+ 5G", "redmi-note-15-pro-plus-5g"),
+    ("POCO F8 Ultra", "poco-f8-ultra"),
+    ("POCO X8 Pro", "poco-x8-pro"),
+    ("POCO F7", "poco-f7"),
+    ("POCO F7 Pro", "poco-f7-pro"),
+    ("Redmi Note 14 Pro 5G", "redmi-note-14-pro-5g"),
+]
+
+def extract_mistore_price(html):
+    """从 JSON-LD 提取小米官网价格"""
+    for m in re.finditer(r'<script[^>]*type="application/ld\+json"[^>]*>(.*?)</script>', html, re.DOTALL):
+        try:
+            data = json.loads(m.group(1))
+            if isinstance(data, list):
+                data = data[0]
+            if data.get("@type") == "Product":
+                offers = data.get("offers", {})
+                if isinstance(offers, dict):
+                    price = offers.get("price")
+                    currency = offers.get("priceCurrency")
+                    if price and currency:
+                        return float(str(price).replace(",", ".")), currency
+                elif isinstance(offers, list) and offers:
+                    o = offers[0]
+                    price = o.get("price") or o.get("lowPrice")
+                    currency = o.get("priceCurrency")
+                    if price and currency:
+                        return float(str(price).replace(",", ".")), currency
+        except (json.JSONDecodeError, ValueError):
+            pass
+    # 也试 aria-label="Current Price XXX"
+    m = re.search(r'aria-label="Current Price\s*([\d.]+)"', html)
+    if m:
+        return float(m.group(1)), None
+    return None, None
+
+def scrape_mistore(seen, api_calls_used=0):
+    if not SCRAPINGBEE_KEY:
+        print("\nNo SCRAPINGBEE_API_KEY — skipping Mi Store")
+        return []
+
+    print("\n" + "=" * 60)
+    print("Phase 3: Mi Store official prices (via ScrapingBee)")
+    print("=" * 60)
+
+    all_prices = []
+    api_calls = api_calls_used
+
+    for site in MI_STORE_SITES:
+        cc, locale, currency, base = site["cc"], site["locale"], site["currency"], site["base"]
+        print(f"\n--- Mi Store {cc} ({base}) ---")
+
+        for product_name, slug in MI_PRODUCT_SLUGS:
+            if api_calls >= 40:
+                print(f"\n  Reached {api_calls} total API calls, stopping")
+                print(f"\nMi Store total: {len(all_prices)} products")
+                return all_prices
+
+            url = f"{base}/product/{slug}"
+            key = (product_name.lower(), cc)
+            if key in seen:
+                continue
+
+            print(f"  {product_name}...", end=" ")
+            html = fetch_via_scrapingbee(url, render_js=True, country=locale, wait=3000)
+            api_calls += 1
+            if not html:
+                continue
+
+            price, cur = extract_mistore_price(html)
+            if price and 30 < price < 50000:
+                seen.add(key)
+                actual_currency = cur if cur else currency
+                all_prices.append({
+                    "product_name": product_name,
+                    "platform": f"Mi Store ({cc})",
+                    "country_code": cc,
+                    "currency": actual_currency,
+                    "price": round(price, 2),
+                    "timestamp": now_str(),
+                    "is_official": True
+                })
+                print(f"{price} {actual_currency}")
+            else:
+                print("no price found")
+
+            time.sleep(0.5)
+
+    print(f"\nMi Store total: {len(all_prices)} products (used {api_calls - api_calls_used} API calls)")
     return all_prices
 
 def main():
     amazon_prices, seen = scrape_amazon()
-    aggregator_prices = scrape_aggregators(seen)
+    aggregator_prices, agg_api_calls = scrape_aggregators(seen)
+    mistore_prices = scrape_mistore(seen, api_calls_used=agg_api_calls)
 
-    all_prices = amazon_prices + aggregator_prices
+    all_prices = amazon_prices + aggregator_prices + mistore_prices
 
     if len(all_prices) < 10:
         print(f"\nOnly {len(all_prices)} results — keeping existing prices.json unchanged")

@@ -145,30 +145,39 @@ async function loadFromAPI() {
 
     // 按国家+平台分组
         const grouped = {};
+        // 提取 Mi Store 官方价格
+        const miStorePrices = {};
         for (const p of prices) {
             const cn = COUNTRY_CODE_MAP[p.country_code];
             if (!cn) continue;
             if (!grouped[cn]) grouped[cn] = {};
             if (!grouped[cn][p.platform]) grouped[cn][p.platform] = [];
             grouped[cn][p.platform].push(p);
+            if (p.is_official || (p.platform && p.platform.startsWith('Mi Store'))) {
+                const key = cn + '|' + matchProductName(p.product_name).toLowerCase();
+                miStorePrices[key] = p.price;
+            }
         }
 
         // 转换为前端格式，与 mockData 合并
-        const data = JSON.parse(JSON.stringify(mockData)); // 先复制模拟数据作为基础
+        const data = JSON.parse(JSON.stringify(mockData));
         for (const [country, platforms] of Object.entries(grouped)) {
             const ci = countryData[country];
             if (!ci) continue;
 
             const platformList = [];
             for (const [pName, products] of Object.entries(platforms)) {
+                if (pName.startsWith('Mi Store')) continue;
                 const prods = products.map(p => {
                     const baseName = matchProductName(p.product_name);
                     const pid = baseName.toLowerCase().replace(/\s+/g, '-');
+                    const miKey = country + '|' + baseName.toLowerCase();
+                    const officialPrice = miStorePrices[miKey];
                     return {
                         id: pid,
                         name: baseName,
                         price: p.price,
-                        miStorePrice: Math.round(p.price * 1.1),
+                        miStorePrice: officialPrice || Math.round(p.price * 1.1),
                         miStoreUrl: ci.miStoreUrl || '#',
                         productUrl: p.url || '#'
                     };
