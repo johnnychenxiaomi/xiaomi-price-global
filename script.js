@@ -62,9 +62,14 @@ const productList = [
     "Xiaomi 15", "Xiaomi 15 Pro", "Xiaomi 15 Ultra",
     "Xiaomi 15T", "Xiaomi 15T Pro",
     "Xiaomi 17T", "Xiaomi 17T Pro", "Xiaomi 17 Ultra",
-    "Redmi Note 14 Pro", "Redmi Note 14 Pro+",
-    "Redmi Note 15 Pro", "Redmi Note 15 Pro 5G", "Redmi Note 15 Pro+",
-    "POCO X8", "POCO F8", "POCO F8 Pro",
+    "Redmi 15", "Redmi 15C", "Redmi 13C", "Redmi 9C", "Redmi A5",
+    "Redmi Note 14", "Redmi Note 14 5G", "Redmi Note 14 Pro", "Redmi Note 14 Pro+",
+    "Redmi Note 15", "Redmi Note 15 4G", "Redmi Note 15 Pro", "Redmi Note 15 Pro 5G", "Redmi Note 15 Pro+",
+    "Redmi Note 12 Pro 5G", "Redmi Note 12 Pro",
+    "POCO C75", "POCO C81", "POCO C81 Pro",
+    "POCO X8", "POCO X8 Pro", "POCO F6", "POCO F6 Pro",
+    "POCO F8", "POCO F8 Pro", "POCO F8 Ultra",
+    "POCO M7", "POCO M8", "POCO M8 5G",
     "Xiaomi Pad 7", "Xiaomi Pad 7 Pro"
 ];
 
@@ -86,18 +91,23 @@ const COUNTRY_CODE_MAP = {
 // 将抓取的产品名匹配到 productList 中的标准名
 function matchProductName(rawName) {
     if (!rawName) return '';
-    const lower = rawName.toLowerCase().replace(/\s+/g, ' ').trim();
-    for (const std of productList) {
+    // 去掉品牌前缀(XIAOMI/Xiaomi)和无关词(Smartphone/Smartfon/Von/from)
+    let cleaned = rawName
+        .replace(/^XIAOMI\s+/i, '')
+        .replace(/\b(Smartphone|Smartfon|smartfon|Von|from|von)\b/gi, '')
+        .replace(/\b\d+\s*GB\b/gi, '').replace(/\b\d+\s*TB\b/gi, '')
+        .replace(/\b\d+\+\d+\s*GB\b/gi, '')
+        .replace(/\b(Black|White|Blue|Green|Red|Purple|Gold|Golden|Silver|Gray|Grey|Yellow|Glacier|Lavender|Midnight)\b/gi, '')
+        .replace(/[-–]\s*/g, ' ')
+        .replace(/\s+/g, ' ').trim();
+    const lower = cleaned.toLowerCase();
+    // 按标准名长度从长到短匹配，避免短名误匹配
+    const sorted = [...productList].sort((a, b) => b.length - a.length);
+    for (const std of sorted) {
         if (lower.includes(std.toLowerCase())) return std;
     }
-    // 去掉容量/颜色等后缀再试
-    const cleaned = rawName.replace(/\b\d+\s*GB\b/gi, '').replace(/\b\d+\s*TB\b/gi, '')
-        .replace(/\b(Black|White|Blue|Green|Red|Purple|Gold|Silver|Gray|Grey|Yellow|Glacier|Lavender|Midnight)\b/gi, '')
-        .replace(/\s+/g, ' ').trim();
-    for (const std of productList) {
-        if (cleaned.toLowerCase().includes(std.toLowerCase())) return std;
-    }
-    return rawName.split(/\s+/).slice(0, 4).join(' ');
+    // 用清理后的名字作为新产品名
+    return cleaned.split(/\s+/).slice(0, 4).join(' ');
 }
 
 // 从 prices.json 或 API 加载真实价格数据
