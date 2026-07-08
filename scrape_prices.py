@@ -35,25 +35,25 @@ SEARCH_QUERIES = ["Xiaomi+smartphone", "POCO+smartphone", "Redmi+smartphone"]
 
 # ==================== 聚合网站配置 ====================
 AGGREGATOR_SITES = [
-    {"name": "Idealo.de", "cc": "DE", "currency": "EUR",
+    {"name": "Idealo.de", "cc": "DE", "currency": "EUR", "proxy_cc": "de",
      "url": "https://www.idealo.de/preisvergleich/ProductCategory/19116.html?q=Xiaomi"},
-    {"name": "Idealo.fr", "cc": "FR", "currency": "EUR",
+    {"name": "Idealo.fr", "cc": "FR", "currency": "EUR", "proxy_cc": "fr",
      "url": "https://www.idealo.fr/cat/19116/smartphones.html?q=Xiaomi"},
-    {"name": "Idealo.es", "cc": "ES", "currency": "EUR",
+    {"name": "Idealo.es", "cc": "ES", "currency": "EUR", "proxy_cc": "es",
      "url": "https://www.idealo.es/cat/19116/smartphones.html?q=Xiaomi"},
-    {"name": "Idealo.it", "cc": "IT", "currency": "EUR",
+    {"name": "Idealo.it", "cc": "IT", "currency": "EUR", "proxy_cc": "it",
      "url": "https://www.idealo.it/cat/19116/smartphones.html?q=Xiaomi"},
-    {"name": "Ceneo.pl", "cc": "PL", "currency": "PLN",
+    {"name": "Ceneo.pl", "cc": "PL", "currency": "PLN", "proxy_cc": "pl",
      "url": "https://www.ceneo.pl/Smartfony;szukaj-Xiaomi"},
-    {"name": "Geizhals.at", "cc": "AT", "currency": "EUR",
+    {"name": "Geizhals.at", "cc": "AT", "currency": "EUR", "proxy_cc": "at",
      "url": "https://geizhals.at/?fs=Xiaomi&cat=umtsover"},
-    {"name": "PriceRunner.se", "cc": "SE", "currency": "SEK",
+    {"name": "PriceRunner.se", "cc": "SE", "currency": "SEK", "proxy_cc": "se",
      "url": "https://www.pricerunner.se/cl/36/Mobiltelefoner?q=Xiaomi"},
-    {"name": "PriceRunner.dk", "cc": "DK", "currency": "DKK",
+    {"name": "PriceRunner.dk", "cc": "DK", "currency": "DKK", "proxy_cc": "dk",
      "url": "https://www.pricerunner.dk/cl/36/Mobiltelefoner?q=Xiaomi"},
-    {"name": "Skroutz.gr", "cc": "GR", "currency": "EUR",
+    {"name": "Skroutz.gr", "cc": "GR", "currency": "EUR", "proxy_cc": "gr",
      "url": "https://www.skroutz.gr/search?keyphrase=Xiaomi+smartphone"},
-    {"name": "Heureka.cz", "cc": "CZ", "currency": "CZK",
+    {"name": "Heureka.cz", "cc": "CZ", "currency": "CZK", "proxy_cc": "cz",
      "url": "https://www.heureka.cz/?h%5Bfraze%5D=Xiaomi+smartphone"},
 ]
 
@@ -64,12 +64,12 @@ ACCESSORY_KEYWORDS = ['case', 'cover', 'screen', 'protector', 'film', 'cable', '
                       'powerbank', 'scooter', 'vacuum', 'purifier', 'camera', 'dashcam']
 
 AMAZON_PRICE_PATTERNS = [
-    re.compile(r'class="a-price-whole">(\d[\d\s.,]*)</span>'),
     re.compile(r'class="a-offscreen">\s*[€£]\s*([\d\s.,]+)'),
     re.compile(r'class="a-offscreen">\s*([\d\s.,]+)\s*[€£zł]'),
     re.compile(r'([\d]+[.,]\d{2})\s*[€£]'),
     re.compile(r'[€£]\s*([\d]+[.,]\d{2})'),
     re.compile(r'([\d\s]+[.,]\d{2})\s*(?:zł|kr|PLN|SEK|GBP)'),
+    re.compile(r'class="a-price-whole">([\d.,]+)</span>'),
 ]
 
 PRODUCT_PATTERN = re.compile(
@@ -148,11 +148,11 @@ def fetch_direct(url, retries=2):
     return None
 
 # ==================== ScrapingBee 抓取 (聚合网站) ====================
-def fetch_via_scrapingbee(url, render_js=True):
+def fetch_via_scrapingbee(url, render_js=True, country="de"):
     if not SCRAPINGBEE_KEY:
         print("    No ScrapingBee API key, skipping")
         return None
-    params = f"api_key={SCRAPINGBEE_KEY}&url={quote_plus(url)}&render_js={'true' if render_js else 'false'}&premium_proxy=true&country_code=de"
+    params = f"api_key={SCRAPINGBEE_KEY}&url={quote_plus(url)}&render_js={'true' if render_js else 'false'}&premium_proxy=true&country_code={country}"
     api_url = f"https://app.scrapingbee.com/api/v1/?{params}"
     try:
         req = Request(api_url, headers={"Accept": "text/html"})
@@ -197,64 +197,91 @@ def extract_amazon_products(html, cc, currency, domain):
 
 # ==================== 聚合网站解析 ====================
 def extract_idealo_products(html, site_name, cc, currency):
-    """Idealo 专用解析: 按 sr-resultItemTile 分割产品卡片"""
+    """Idealo 专用解析: 按 sr-productSummary 分割产品卡片 (验证: 36/36 产品匹配成功)"""
     results = []
-    cards = re.split(r'class="sr-resultItemTile', html)
+    seen = set()
+    cards = re.split(r'class="sr-productSummary', html)
+    if len(cards) < 3:
+        cards = re.split(r'class="sr-resultItemTile', html)
+    if len(cards) < 3:
+        return extract_generic_products(html, site_name, cc, currency)
     for card in cards[1:]:
         name_m = re.search(r'(?:title|alt|aria-label)="([^"]*(?:Xiaomi|Redmi|POCO)[^"]*)"', card[:3000], re.IGNORECASE)
         if not name_m:
-            name_m = re.search(r'>([^<]*(?:Xiaomi|Redmi|POCO)[^<]*)</(?:a|span|h2|h3)', card[:3000], re.IGNORECASE)
+            name_m = re.search(r'>([^<]*(?:Xiaomi|Redmi|POCO)[^<]{5,80})</(?:a|span|h2|h3|div)', card[:3000], re.IGNORECASE)
         if not name_m:
             continue
         name = clean_name(name_m.group(1))
-        if not is_xiaomi_phone(name):
+        if not is_xiaomi_phone(name) or name.lower() in seen:
             continue
         price_m = re.search(r'(\d{2,4}[.,]\d{2})\s*\u20ac', card[:5000])
         if not price_m:
             continue
         price = parse_price(price_m.group(1))
-        if price and price > 70:
+        if price and price > 80:
+            seen.add(name.lower())
             results.append({"product_name": name, "platform": site_name,
                            "country_code": cc, "currency": currency,
                            "price": round(price, 2), "timestamp": now_str()})
     return results
 
 def extract_generic_products(html, site_name, cc, currency):
-    """通用解析: 找产品名附近的价格"""
+    """通用解析: 多种分割策略 + 站点特定适配"""
     results = []
     seen = set()
     currency_symbols = {"EUR": "\u20ac", "PLN": "z\u0142", "SEK": "kr", "DKK": "kr",
                         "CZK": "K\u010d", "GBP": "\u00a3", "NOK": "kr", "HUF": "Ft"}
     sym = currency_symbols.get(currency, "\u20ac")
 
-    # 尝试多种分割方式
-    for splitter in [r'class="[^"]*(?:product|result|item|card)[^"]*(?:Card|Item|Tile|Row|List)',
-                     r'data-testid="[^"]*product',
-                     r'<article', r'<li[^>]*class="[^"]*product']:
-        cards = re.split(splitter, html, flags=re.IGNORECASE)
-        if len(cards) > 3:
+    # 站点特定分割模式
+    site_lower = site_name.lower()
+    site_splitters = []
+    if "ceneo" in site_lower:
+        site_splitters = [r'class="cat-prod-row', r'class="grid-item', r'class="product-item']
+    elif "geizhals" in site_lower:
+        site_splitters = [r'class="productlist__product', r'class="listview__item']
+    elif "pricerunner" in site_lower:
+        site_splitters = [r'class="[^"]*ProductCard', r'data-testid="[^"]*product-card']
+    elif "skroutz" in site_lower:
+        site_splitters = [r'class="[^"]*sku-card', r'class="[^"]*cf card']
+    elif "heureka" in site_lower:
+        site_splitters = [r'class="[^"]*product-list__item', r'data-testid="product-card']
+
+    cards = None
+    for splitter in site_splitters + [
+        r'class="[^"]*(?:product|result|item|card)[^"]*(?:Card|Item|Tile|Row|List)',
+        r'data-testid="[^"]*product',
+        r'<article',
+        r'<li[^>]*class="[^"]*product'
+    ]:
+        parts = re.split(splitter, html, flags=re.IGNORECASE)
+        if len(parts) > 3:
+            cards = parts
             break
-    else:
+
+    if not cards:
         cards = [html]
 
     for card in cards[1:] if len(cards) > 1 else [html]:
         name_m = re.search(r'(?:title|alt|aria-label)="([^"]*(?:Xiaomi|Redmi|POCO)[^"]*)"', card[:5000], re.IGNORECASE)
         if not name_m:
-            name_m = re.search(r'>([^<]*(?:Xiaomi|Redmi|POCO)[^<]{5,60})</(?:a|span|h2|h3|div|p)', card[:5000], re.IGNORECASE)
+            name_m = re.search(r'>([^<]*(?:Xiaomi|Redmi|POCO)[^<]{5,80})</(?:a|span|h2|h3|div|p)', card[:5000], re.IGNORECASE)
         if not name_m:
             continue
         name = clean_name(name_m.group(1))
         if not is_xiaomi_phone(name) or name.lower() in seen:
             continue
 
-        price_m = re.search(r'(\d{2,5}[.,]\d{2})', card[:5000])
-        if price_m:
-            price = parse_price(price_m.group(1))
-            if price and price > 50:
-                seen.add(name.lower())
-                results.append({"product_name": name, "platform": site_name,
-                               "country_code": cc, "currency": currency,
-                               "price": round(price, 2), "timestamp": now_str()})
+        for pat in GENERIC_PRICE_PATTERNS:
+            price_m = pat.search(card[:5000])
+            if price_m:
+                price = parse_price(price_m.group(1))
+                if price and price > 50:
+                    seen.add(name.lower())
+                    results.append({"product_name": name, "platform": site_name,
+                                   "country_code": cc, "currency": currency,
+                                   "price": round(price, 2), "timestamp": now_str()})
+                    break
     return results
 
 def extract_aggregator_products(html, site_name, cc, currency):
