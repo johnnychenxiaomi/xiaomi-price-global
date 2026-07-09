@@ -437,9 +437,14 @@ def scrape_mistore(seen):
     all_prices = []
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
-        page = browser.new_page(
-            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+        ctx = browser.new_context(
+            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+            locale="en-GB",
+            timezone_id="Europe/Berlin",
+            geolocation={"latitude": 52.52, "longitude": 13.405},
+            permissions=["geolocation"],
         )
+        page = ctx.new_page()
         count = 0
         for site in MI_STORE_SITES:
             cc, currency, base = site["cc"], site["currency"], site["base"]
@@ -454,9 +459,14 @@ def scrape_mistore(seen):
                 print(f"  {product_name}...", end=" ", flush=True)
                 try:
                     page.goto(url, wait_until="networkidle", timeout=30000)
-                    page.wait_for_timeout(2000)
+                    page.wait_for_timeout(3000)
                     html = page.content()
+                    final_url = page.url
+                    title = page.title()
                     count += 1
+
+                    if count <= 3:
+                        debug(f"  Page debug: url={final_url}, title={title[:80]}, html={len(html)} bytes")
 
                     price, cur = extract_mistore_price(html)
                     if price and 30 < price < 50000:
@@ -473,7 +483,7 @@ def scrape_mistore(seen):
                         })
                         print(f"{price} {actual_currency}")
                     else:
-                        print("no price found")
+                        print(f"no price (url={final_url[:60]})")
                 except Exception as e:
                     print(f"error: {e}")
                     debug(f"  Playwright error {cc}/{slug}: {e}")
