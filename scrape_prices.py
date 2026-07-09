@@ -422,59 +422,66 @@ def extract_mistore_price(html):
         return float(m.group(1)), None
     return None, None
 
-def scrape_mistore(seen, api_calls_used=0):
-    if not SCRAPINGBEE_KEY:
-        print("\nNo SCRAPINGBEE_API_KEY — skipping Mi Store")
-        return []
-
+def scrape_mistore(seen):
+    """Phase 3: 用 Playwright 免费抓取小米官网价格（不消耗 ScrapingBee 额度）"""
     print("\n" + "=" * 60)
-    print("Phase 3: Mi Store official prices (via ScrapingBee)")
+    print("Phase 3: Mi Store official prices (via Playwright, FREE)")
     print("=" * 60)
 
+    try:
+        from playwright.sync_api import sync_playwright
+    except ImportError:
+        debug("Playwright not installed — skipping Mi Store")
+        return []
+
     all_prices = []
-    api_calls = api_calls_used
+    with sync_playwright() as p:
+        browser = p.chromium.launch(headless=True)
+        page = browser.new_page(
+            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+        )
+        count = 0
+        for site in MI_STORE_SITES:
+            cc, currency, base = site["cc"], site["currency"], site["base"]
+            print(f"\n--- Mi Store {cc} ({base}) ---")
 
-    for site in MI_STORE_SITES:
-        cc, locale, currency, base = site["cc"], site["locale"], site["currency"], site["base"]
-        print(f"\n--- Mi Store {cc} ({base}) ---")
+            for product_name, slug in MI_PRODUCT_SLUGS:
+                key = (product_name.lower(), cc)
+                if key in seen:
+                    continue
 
-        for product_name, slug in MI_PRODUCT_SLUGS:
-            if api_calls >= 40:
-                print(f"\n  Reached {api_calls} total API calls, stopping")
-                print(f"\nMi Store total: {len(all_prices)} products")
-                return all_prices
+                url = f"{base}/product/{slug}"
+                print(f"  {product_name}...", end=" ", flush=True)
+                try:
+                    page.goto(url, wait_until="networkidle", timeout=30000)
+                    page.wait_for_timeout(2000)
+                    html = page.content()
+                    count += 1
 
-            url = f"{base}/product/{slug}"
-            key = (product_name.lower(), cc)
-            if key in seen:
-                continue
+                    price, cur = extract_mistore_price(html)
+                    if price and 30 < price < 50000:
+                        seen.add(key)
+                        actual_currency = cur if cur else currency
+                        all_prices.append({
+                            "product_name": product_name,
+                            "platform": f"Mi Store ({cc})",
+                            "country_code": cc,
+                            "currency": actual_currency,
+                            "price": round(price, 2),
+                            "timestamp": now_str(),
+                            "is_official": True
+                        })
+                        print(f"{price} {actual_currency}")
+                    else:
+                        print("no price found")
+                except Exception as e:
+                    print(f"error: {e}")
+                    debug(f"  Playwright error {cc}/{slug}: {e}")
 
-            print(f"  {product_name}...", end=" ")
-            html = fetch_via_scrapingbee(url, render_js=True, country=locale, wait=3000)
-            api_calls += 1
-            if not html:
-                continue
+        browser.close()
 
-            price, cur = extract_mistore_price(html)
-            if price and 30 < price < 50000:
-                seen.add(key)
-                actual_currency = cur if cur else currency
-                all_prices.append({
-                    "product_name": product_name,
-                    "platform": f"Mi Store ({cc})",
-                    "country_code": cc,
-                    "currency": actual_currency,
-                    "price": round(price, 2),
-                    "timestamp": now_str(),
-                    "is_official": True
-                })
-                print(f"{price} {actual_currency}")
-            else:
-                print("no price found")
-
-            time.sleep(0.5)
-
-    print(f"\nMi Store total: {len(all_prices)} products (used {api_calls - api_calls_used} API calls)")
+    debug(f"Mi Store total: {len(all_prices)} prices from {count} pages (FREE, no API credits used)")
+    print(f"\nMi Store total: {len(all_prices)} products ({count} pages fetched, FREE)")
     return all_prices
 
 DEBUG_LOG = []
@@ -494,7 +501,7 @@ def main():
     debug(f"Phase 1 done: {len(amazon_prices)} Amazon prices")
     aggregator_prices, agg_api_calls = scrape_aggregators(seen)
     debug(f"Phase 2 done: {len(aggregator_prices)} aggregator prices, {agg_api_calls} API calls")
-    mistore_prices = scrape_mistore(seen, api_calls_used=agg_api_calls)
+    mistore_prices = scrape_mistore(seen)
     debug(f"Phase 3 done: {len(mistore_prices)} Mi Store prices")
 
     all_prices = amazon_prices + aggregator_prices + mistore_prices

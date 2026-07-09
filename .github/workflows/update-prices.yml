@@ -18,7 +18,13 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Scrape prices (Amazon + aggregators)
+      - name: Install Playwright
+        run: |
+          pip install playwright
+          playwright install chromium
+          playwright install-deps chromium
+
+      - name: Scrape prices (Amazon + aggregators + Mi Store)
         env:
           SCRAPINGBEE_API_KEY: ${{ secrets.SCRAPINGBEE_API_KEY }}
         run: python scrape_prices.py
