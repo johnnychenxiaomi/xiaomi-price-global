@@ -1,26 +1,29 @@
-[2026-07-09 01:34:11] SCRAPINGBEE_KEY present: True (len=80)
-[2026-07-09 01:34:11] SCRAPINGBEE_KEY first 8: 540U1WLD
-[2026-07-09 01:36:44] Phase 1 done: 64 Amazon prices
-[2026-07-09 01:36:45]     ScrapingBee HTTP 401 for https://www.idealo.de/preisvergleich/ProductCategory/19116.html?q=Xiaomi: {"message":"Monthly API calls limit reached: 1000"}
+[2026-07-09 01:46:00] SCRAPINGBEE_KEY present: True (len=80)
+[2026-07-09 01:46:00] SCRAPINGBEE_KEY first 8: 540U1WLD
+[2026-07-09 01:48:42] Phase 1 done: 47 Amazon prices
+[2026-07-09 01:48:43]     ScrapingBee HTTP 401 for https://www.idealo.de/preisvergleich/ProductCategory/19116.html?q=Xiaomi: {"message":"Monthly API calls limit reached: 1000"}
 
-[2026-07-09 01:36:45]     ScrapingBee HTTP 401 for https://www.idealo.fr/cat/19116/smartphones.html?q=Xiaomi: {"message":"Monthly API calls limit reached: 1000"}
+[2026-07-09 01:48:43]     ScrapingBee HTTP 401 for https://www.idealo.fr/cat/19116/smartphones.html?q=Xiaomi: {"message":"Monthly API calls limit reached: 1000"}
 
-[2026-07-09 01:36:46]     ScrapingBee HTTP 401 for https://www.idealo.es/cat/19116/smartphones.html?q=Xiaomi: {"message":"Monthly API calls limit reached: 1000"}
+[2026-07-09 01:48:43]     ScrapingBee HTTP 401 for https://www.idealo.es/cat/19116/smartphones.html?q=Xiaomi: {"message":"Monthly API calls limit reached: 1000"}
 
-[2026-07-09 01:36:46]     ScrapingBee HTTP 401 for https://www.idealo.it/cat/19116/smartphones.html?q=Xiaomi: {"message":"Monthly API calls limit reached: 1000"}
+[2026-07-09 01:48:44]     ScrapingBee HTTP 401 for https://www.idealo.it/cat/19116/smartphones.html?q=Xiaomi: {"message":"Monthly API calls limit reached: 1000"}
 
-[2026-07-09 01:36:46]     ScrapingBee HTTP 401 for https://www.ceneo.pl/Smartfony;szukaj-Xiaomi: {"message":"Monthly API calls limit reached: 1000"}
+[2026-07-09 01:48:44]     ScrapingBee HTTP 401 for https://www.ceneo.pl/Smartfony;szukaj-Xiaomi: {"message":"Monthly API calls limit reached: 1000"}
 
-[2026-07-09 01:36:47]     ScrapingBee HTTP 401 for https://geizhals.at/?fs=Xiaomi&cat=umtsover: {"message":"Monthly API calls limit reached: 1000"}
+[2026-07-09 01:48:44]     ScrapingBee HTTP 401 for https://geizhals.at/?fs=Xiaomi&cat=umtsover: {"message":"Monthly API calls limit reached: 1000"}
 
-[2026-07-09 01:36:47]     ScrapingBee HTTP 401 for https://www.pricerunner.se/cl/36/Mobiltelefoner?q=Xiaomi: {"message":"Monthly API calls limit reached: 1000"}
+[2026-07-09 01:48:45]     ScrapingBee HTTP 401 for https://www.pricerunner.se/cl/36/Mobiltelefoner?q=Xiaomi: {"message":"Monthly API calls limit reached: 1000"}
 
-[2026-07-09 01:36:47]     ScrapingBee HTTP 401 for https://www.pricerunner.dk/cl/36/Mobiltelefoner?q=Xiaomi: {"message":"Monthly API calls limit reached: 1000"}
+[2026-07-09 01:48:45]     ScrapingBee HTTP 401 for https://www.pricerunner.dk/cl/36/Mobiltelefoner?q=Xiaomi: {"message":"Monthly API calls limit reached: 1000"}
 
-[2026-07-09 01:36:47]     ScrapingBee HTTP 401 for https://www.skroutz.gr/search?keyphrase=Xiaomi+smartphone: {"message":"Monthly API calls limit reached: 1000"}
+[2026-07-09 01:48:45]     ScrapingBee HTTP 401 for https://www.skroutz.gr/search?keyphrase=Xiaomi+smartphone: {"message":"Monthly API calls limit reached: 1000"}
 
-[2026-07-09 01:36:48]     ScrapingBee HTTP 401 for https://www.heureka.cz/?h%5Bfraze%5D=Xiaomi+smartphone: {"message":"Monthly API calls limit reached: 1000"}
+[2026-07-09 01:48:46]     ScrapingBee HTTP 401 for https://www.heureka.cz/?h%5Bfraze%5D=Xiaomi+smartphone: {"message":"Monthly API calls limit reached: 1000"}
 
-[2026-07-09 01:36:48] Phase 2 done: 0 aggregator prices, 10 API calls
-[2026-07-09 01:43:27] Mi Store total: 0 prices from 156 pages (FREE, no API credits used)
-[2026-07-09 01:43:27] Phase 3 done: 0 Mi Store prices
+[2026-07-09 01:48:46] Phase 2 done: 0 aggregator prices, 10 API calls
+[2026-07-09 01:48:51]   Page debug: url=https://www.mi.com/de/product/xiaomi-17-ultra, title=Access Denied, html=314 bytes
+[2026-07-09 01:48:55]   Page debug: url=https://www.mi.com/de/product/xiaomi-17t, title=Access Denied, html=309 bytes
+[2026-07-09 01:48:58]   Page debug: url=https://www.mi.com/de/product/xiaomi-17t-pro, title=Access Denied, html=313 bytes
+[2026-07-09 01:58:00] Mi Store total: 0 prices from 156 pages (FREE, no API credits used)
+[2026-07-09 01:58:00] Phase 3 done: 0 Mi Store prices
