@@ -166,8 +166,9 @@ async function loadFromAPI() {
             if (!ci) continue;
 
             const platformList = [];
+            const miStoreProducts = [];
             for (const [pName, products] of Object.entries(platforms)) {
-                if (pName.startsWith('Mi Store')) continue;
+                const isMiStore = pName.startsWith('Mi Store');
                 const prods = products.map(p => {
                     const baseName = matchProductName(p.product_name);
                     const pid = baseName.toLowerCase().replace(/\s+/g, '-');
@@ -177,14 +178,21 @@ async function loadFromAPI() {
                         id: pid,
                         name: baseName,
                         price: p.price,
-                        miStorePrice: officialPrice || Math.round(p.price * 1.1),
+                        miStorePrice: officialPrice || (isMiStore ? p.price : Math.round(p.price * 1.1)),
                         miStoreUrl: ci.miStoreUrl || '#',
                         productUrl: p.url || '#'
                     };
                 }).filter(p => p.id);
-                // 找到平台URL
-                const existingPlatform = ci.platforms?.find(pl => pl.name === pName);
-                platformList.push({ name: pName, url: existingPlatform?.url || '#', products: prods });
+                if (isMiStore) {
+                    miStoreProducts.push(...prods);
+                } else {
+                    const existingPlatform = ci.platforms?.find(pl => pl.name === pName);
+                    platformList.push({ name: pName, url: existingPlatform?.url || '#', products: prods });
+                }
+            }
+            if (miStoreProducts.length > 0) {
+                const miUrl = ci.miStoreUrl || '#';
+                platformList.push({ name: 'Mi Store (官网)', url: miUrl, products: miStoreProducts });
             }
 
             // 也保留原有平台列表（如果API没有覆盖）
