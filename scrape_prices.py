@@ -423,75 +423,133 @@ def extract_mistore_price(html):
     return None, None
 
 def scrape_mistore(seen):
-    """Phase 3: 用 Playwright 免费抓取小米官网价格（不消耗 ScrapingBee 额度）"""
+    """Phase 3: 小米官网价格 — 优先 Playwright，失败时 fallback 到 ScrapingBee"""
     print("\n" + "=" * 60)
-    print("Phase 3: Mi Store official prices (via Playwright, FREE)")
+    print("Phase 3: Mi Store official prices")
     print("=" * 60)
 
+    all_prices = []
+
+    # 先尝试 Playwright（免费，但在 GitHub Actions IP 可能被 mi.com 封锁）
+    pw_ok = False
     try:
         from playwright.sync_api import sync_playwright
+        with sync_playwright() as p:
+            browser = p.chromium.launch(headless=True)
+            ctx = browser.new_context(
+                user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+                locale="en-GB",
+                timezone_id="Europe/Berlin",
+            )
+            page = ctx.new_page()
+            # 测试一个页面看是否被封
+            test_url = f"{MI_STORE_SITES[0]['base']}/product/{MI_PRODUCT_SLUGS[0][1]}"
+            debug(f"  Testing Playwright on {test_url}")
+            page.goto(test_url, wait_until="networkidle", timeout=30000)
+            page.wait_for_timeout(3000)
+            html = page.content()
+            title = page.title()
+            debug(f"  Test result: title={title[:50]}, {len(html)} bytes")
+
+            if "Access Denied" in title or len(html) < 1000:
+                debug("  Playwright blocked by mi.com — falling back to ScrapingBee")
+            else:
+                pw_ok = True
+                price, cur = extract_mistore_price(html)
+                if price and 30 < price < 50000:
+                    pname = MI_PRODUCT_SLUGS[0][0]
+                    cc = MI_STORE_SITES[0]["cc"]
+                    seen.add((pname.lower(), cc))
+                    all_prices.append({
+                        "product_name": pname,
+                        "platform": f"Mi Store ({cc})",
+                        "country_code": cc,
+                        "currency": cur or MI_STORE_SITES[0]["currency"],
+                        "price": round(price, 2),
+                        "timestamp": now_str(),
+                        "is_official": True
+                    })
+                    debug(f"  Test OK: {pname} = {price} {cur}")
+
+                # Playwright 正常，继续抓剩余页面
+                count = 1
+                for site in MI_STORE_SITES:
+                    cc, currency, base = site["cc"], site["currency"], site["base"]
+                    for product_name, slug in MI_PRODUCT_SLUGS:
+                        key = (product_name.lower(), cc)
+                        if key in seen:
+                            continue
+                        url = f"{base}/product/{slug}"
+                        try:
+                            page.goto(url, wait_until="networkidle", timeout=30000)
+                            page.wait_for_timeout(2000)
+                            html = page.content()
+                            count += 1
+                            price, cur = extract_mistore_price(html)
+                            if price and 30 < price < 50000:
+                                seen.add(key)
+                                all_prices.append({
+                                    "product_name": product_name,
+                                    "platform": f"Mi Store ({cc})",
+                                    "country_code": cc,
+                                    "currency": cur or currency,
+                                    "price": round(price, 2),
+                                    "timestamp": now_str(),
+                                    "is_official": True
+                                })
+                                print(f"  {cc}/{product_name}: {price} {cur or currency}")
+                        except Exception as e:
+                            pass
+
+            browser.close()
     except ImportError:
-        debug("Playwright not installed — skipping Mi Store")
-        return []
+        debug("  Playwright not installed")
+    except Exception as e:
+        debug(f"  Playwright error: {e}")
 
-    all_prices = []
-    with sync_playwright() as p:
-        browser = p.chromium.launch(headless=True)
-        ctx = browser.new_context(
-            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
-            locale="en-GB",
-            timezone_id="Europe/Berlin",
-            geolocation={"latitude": 52.52, "longitude": 13.405},
-            permissions=["geolocation"],
-        )
-        page = ctx.new_page()
-        count = 0
-        for site in MI_STORE_SITES:
-            cc, currency, base = site["cc"], site["currency"], site["base"]
-            print(f"\n--- Mi Store {cc} ({base}) ---")
+    if pw_ok:
+        debug(f"Mi Store (Playwright): {len(all_prices)} prices (FREE)")
+        return all_prices
 
-            for product_name, slug in MI_PRODUCT_SLUGS:
-                key = (product_name.lower(), cc)
-                if key in seen:
-                    continue
+    # Fallback: ScrapingBee（每个页面消耗 1 credit，限制总数）
+    if not SCRAPINGBEE_KEY:
+        debug("  No ScrapingBee key — skipping Mi Store")
+        return all_prices
 
-                url = f"{base}/product/{slug}"
-                print(f"  {product_name}...", end=" ", flush=True)
-                try:
-                    page.goto(url, wait_until="networkidle", timeout=30000)
-                    page.wait_for_timeout(3000)
-                    html = page.content()
-                    final_url = page.url
-                    title = page.title()
-                    count += 1
+    debug("  Using ScrapingBee for Mi Store (costs API credits)")
+    api_calls = 0
+    max_calls = 20  # 限制 Mi Store 最多用 20 次 ScrapingBee
+    for site in MI_STORE_SITES:
+        cc, locale, currency, base = site["cc"], site["locale"], site["currency"], site["base"]
+        for product_name, slug in MI_PRODUCT_SLUGS:
+            if api_calls >= max_calls:
+                break
+            key = (product_name.lower(), cc)
+            if key in seen:
+                continue
+            url = f"{base}/product/{slug}"
+            html = fetch_via_scrapingbee(url, render_js=True, country=locale, wait=3000)
+            api_calls += 1
+            if not html:
+                continue
+            price, cur = extract_mistore_price(html)
+            if price and 30 < price < 50000:
+                seen.add(key)
+                all_prices.append({
+                    "product_name": product_name,
+                    "platform": f"Mi Store ({cc})",
+                    "country_code": cc,
+                    "currency": cur or currency,
+                    "price": round(price, 2),
+                    "timestamp": now_str(),
+                    "is_official": True
+                })
+                print(f"  {cc}/{product_name}: {price} {cur or currency}")
+            time.sleep(0.5)
+        if api_calls >= max_calls:
+            break
 
-                    if count <= 3:
-                        debug(f"  Page debug: url={final_url}, title={title[:80]}, html={len(html)} bytes")
-
-                    price, cur = extract_mistore_price(html)
-                    if price and 30 < price < 50000:
-                        seen.add(key)
-                        actual_currency = cur if cur else currency
-                        all_prices.append({
-                            "product_name": product_name,
-                            "platform": f"Mi Store ({cc})",
-                            "country_code": cc,
-                            "currency": actual_currency,
-                            "price": round(price, 2),
-                            "timestamp": now_str(),
-                            "is_official": True
-                        })
-                        print(f"{price} {actual_currency}")
-                    else:
-                        print(f"no price (url={final_url[:60]})")
-                except Exception as e:
-                    print(f"error: {e}")
-                    debug(f"  Playwright error {cc}/{slug}: {e}")
-
-        browser.close()
-
-    debug(f"Mi Store total: {len(all_prices)} prices from {count} pages (FREE, no API credits used)")
-    print(f"\nMi Store total: {len(all_prices)} products ({count} pages fetched, FREE)")
+    debug(f"Mi Store (ScrapingBee): {len(all_prices)} prices, {api_calls} API calls")
     return all_prices
 
 DEBUG_LOG = []
