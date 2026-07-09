@@ -198,7 +198,7 @@ async function loadFromAPI() {
             // 也保留原有平台列表（如果API没有覆盖）
             for (const pl of (ci.platforms || [])) {
                 if (!platformList.find(p => p.name === pl.name)) {
-                    platformList.push(pl);
+                    platformList.push({ ...pl, products: pl.products || [] });
                 }
             }
 
@@ -1309,7 +1309,7 @@ function handleCountryChange() {
         const productMap = new Map();
         
         countryInfo.platforms.forEach(platform => {
-            platform.products.forEach(product => {
+            (platform.products || []).forEach(product => {
                 if (product.id && !productMap.has(product.id)) {
                     productMap.set(product.id, product.name);
                 }
