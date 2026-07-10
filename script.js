@@ -287,21 +287,8 @@ function generateProductUrl(productName, platformUrl) {
     
     // 各平台真实搜索路径映射
     const searchPaths = {
-        // 小米官网 — 直接搜索
+        // 小米官网 — 统一搜索路径（所有国家共用 mi.com host）
         'mi.com':               `/search?keyword=${q}`,
-        'mi-store.pl':          `/szukaj?q=${q}`,
-        'mi-store.cz':          `/hledani?q=${q}`,
-        'mi-store.sk':          `/vyhladavanie?q=${q}`,
-        'mi-store.hu':          `/kereses?q=${q}`,
-        'mi-store.ro':          `/cautare?q=${q}`,
-        'mi-store.rs':          `/pretraga?q=${q}`,
-        'mi-store.hr':          `/pretraga?q=${q}`,
-        'mi-store.si':          `/iskanje?q=${q}`,
-        'mi-store.bg':          `/tyrsene?q=${q}`,
-        'mi-store.ua':          `/search?q=${q}`,
-        'mi-store.lv':          `/meklet?q=${q}`,
-        'mi-store.lt':          `/paieska?q=${q}`,
-        'mi-store.ee':          `/otsing?q=${q}`,
         
         // 比价聚合网站
         'ceneo.pl':             `/szukaj-${q.replace(/%20/g, '-')}`,
@@ -434,10 +421,10 @@ const countryData = {
     "波兰": {
         currency: "PLN",
         currencySymbol: "zł",
-        miStoreUrl: "https://mi-store.pl",
+        miStoreUrl: "https://www.mi.com/pl",
         aggregator: { name: "Ceneo.pl", url: "https://www.ceneo.pl",
             sellers: [
-                { name: "Mi-Store.pl", url: "https://mi-store.pl" },
+                { name: "Mi Store Poland", url: "https://www.mi.com/pl" },
                 { name: "Euro RTV AGD", url: "https://www.euro.com.pl" },
                 { name: "Media Expert", url: "https://www.mediaexpert.pl" },
                 { name: "x-kom", url: "https://www.x-kom.pl" },
@@ -448,7 +435,7 @@ const countryData = {
             ]
         },
         platforms: [
-            { name: "Mi Store Poland", url: "https://mi-store.pl" },
+            { name: "Mi Store Poland", url: "https://www.mi.com/pl" },
             { name: "Ceneo.pl (聚合)", url: "https://www.ceneo.pl" },
             { name: "Euro RTV AGD", url: "https://www.euro.com.pl" },
             { name: "Media Expert", url: "https://www.mediaexpert.pl" },
@@ -458,7 +445,7 @@ const countryData = {
     "罗马尼亚": {
         currency: "RON",
         currencySymbol: "lei",
-        miStoreUrl: "https://mi-store.ro",
+        miStoreUrl: "https://www.mi.com/ro",
         aggregator: { name: "Compari.ro", url: "https://www.compari.ro",
             sellers: [
                 { name: "eMAG", url: "https://www.emag.ro" },
@@ -467,11 +454,11 @@ const countryData = {
                 { name: "Flanco", url: "https://www.flanco.ro" },
                 { name: "CEL.ro", url: "https://www.cel.ro" },
                 { name: "evoMAG", url: "https://www.evomag.ro" },
-                { name: "Mi-Store.ro", url: "https://mi-store.ro" }
+                { name: "Mi-Store.ro", url: "https://www.mi.com/ro" }
             ]
         },
         platforms: [
-            { name: "Mi Store Romania", url: "https://mi-store.ro" },
+            { name: "Mi Store Romania", url: "https://www.mi.com/ro" },
             { name: "Compari.ro (聚合)", url: "https://www.compari.ro" },
             { name: "eMAG", url: "https://www.emag.ro" },
             { name: "Altex", url: "https://www.altex.ro" },
@@ -481,7 +468,7 @@ const countryData = {
     "捷克": {
         currency: "CZK",
         currencySymbol: "Kč",
-        miStoreUrl: "https://mi-store.cz",
+        miStoreUrl: "https://www.mi.com/cz",
         aggregator: { name: "Heureka.cz", url: "https://www.heureka.cz",
             sellers: [
                 { name: "Alza.cz", url: "https://www.alza.cz" },
@@ -489,12 +476,12 @@ const countryData = {
                 { name: "Mall.cz", url: "https://www.mall.cz" },
                 { name: "Datart", url: "https://www.datart.cz" },
                 { name: "Electroworld", url: "https://www.electroworld.cz" },
-                { name: "Mi-Store.cz", url: "https://mi-store.cz" },
+                { name: "Mi-Store.cz", url: "https://www.mi.com/cz" },
                 { name: "Mobilpohotovost", url: "https://www.mobilpohotovost.cz" }
             ]
         },
         platforms: [
-            { name: "Mi Store Czech", url: "https://mi-store.cz" },
+            { name: "Mi Store Czech", url: "https://www.mi.com/cz" },
             { name: "Heureka.cz (聚合)", url: "https://www.heureka.cz" },
             { name: "Alza.cz", url: "https://www.alza.cz" },
             { name: "CZC.cz", url: "https://www.czc.cz" },
@@ -504,7 +491,7 @@ const countryData = {
     "斯洛伐克": {
         currency: "EUR",
         currencySymbol: "€",
-        miStoreUrl: "https://mi-store.sk",
+        miStoreUrl: "https://www.mi.com/sk",
         aggregator: { name: "Heureka.sk", url: "https://www.heureka.sk",
             sellers: [
                 { name: "Alza.sk", url: "https://www.alza.sk" },
@@ -512,11 +499,11 @@ const countryData = {
                 { name: "Hej.sk", url: "https://www.hej.sk" },
                 { name: "Datart.sk", url: "https://www.datart.sk" },
                 { name: "NAY", url: "https://www.nay.sk" },
-                { name: "Mi-Store.sk", url: "https://mi-store.sk" }
+                { name: "Mi-Store.sk", url: "https://www.mi.com/sk" }
             ]
         },
         platforms: [
-            { name: "Mi Store Slovakia", url: "https://mi-store.sk" },
+            { name: "Mi Store Slovakia", url: "https://www.mi.com/sk" },
             { name: "Heureka.sk (聚合)", url: "https://www.heureka.sk" },
             { name: "Alza.sk", url: "https://www.alza.sk" },
             { name: "Hej.sk", url: "https://www.hej.sk" },
@@ -526,7 +513,7 @@ const countryData = {
     "匈牙利": {
         currency: "HUF",
         currencySymbol: "Ft",
-        miStoreUrl: "https://mi-store.hu",
+        miStoreUrl: "https://www.mi.com/hu",
         aggregator: { name: "Arukereso.hu", url: "https://www.arukereso.hu",
             sellers: [
                 { name: "eMAG Hungary", url: "https://www.emag.hu" },
@@ -534,12 +521,12 @@ const countryData = {
                 { name: "Aqua.hu", url: "https://www.aqua.hu" },
                 { name: "Euronics", url: "https://www.euronics.hu" },
                 { name: "iSTYLE", url: "https://www.istyle.hu" },
-                { name: "Mi-Store.hu", url: "https://mi-store.hu" },
+                { name: "Mi-Store.hu", url: "https://www.mi.com/hu" },
                 { name: "Mall.hu", url: "https://www.mall.hu" }
             ]
         },
         platforms: [
-            { name: "Mi Store Hungary", url: "https://mi-store.hu" },
+            { name: "Mi Store Hungary", url: "https://www.mi.com/hu" },
             { name: "Arukereso.hu (聚合)", url: "https://www.arukereso.hu" },
             { name: "eMAG Hungary", url: "https://www.emag.hu" },
             { name: "MediaMarkt Hungary", url: "https://www.mediamarkt.hu" },
@@ -549,18 +536,18 @@ const countryData = {
     "克罗地亚": {
         currency: "EUR",
         currencySymbol: "€",
-        miStoreUrl: "https://mi-store.hr",
+        miStoreUrl: "https://www.mi.com/hr",
         aggregator: { name: "Jeftinije.hr", url: "https://www.jeftinije.hr",
             sellers: [
                 { name: "Links.hr", url: "https://www.links.hr" },
                 { name: "HGSPOT", url: "https://www.hgspot.hr" },
                 { name: "Instar", url: "https://www.instar-informatika.hr" },
                 { name: "Sancta Domenica", url: "https://www.sancta-domenica.hr" },
-                { name: "Mi-Store.hr", url: "https://mi-store.hr" }
+                { name: "Mi-Store.hr", url: "https://www.mi.com/hr" }
             ]
         },
         platforms: [
-            { name: "Mi Store Croatia", url: "https://mi-store.hr" },
+            { name: "Mi Store Croatia", url: "https://www.mi.com/hr" },
             { name: "Jeftinije.hr (聚合)", url: "https://www.jeftinije.hr" },
             { name: "Links.hr", url: "https://www.links.hr" },
             { name: "HGSPOT", url: "https://www.hgspot.hr" },
@@ -570,18 +557,18 @@ const countryData = {
     "斯洛文尼亚": {
         currency: "EUR",
         currencySymbol: "€",
-        miStoreUrl: "https://mi-store.si",
+        miStoreUrl: "https://www.mi.com/si",
         aggregator: { name: "Ceneje.si", url: "https://www.ceneje.si",
             sellers: [
                 { name: "Big Bang", url: "https://www.bigbang.si" },
                 { name: "Mimovrste", url: "https://www.mimovrste.com" },
                 { name: "Enaa.com", url: "https://www.enaa.com" },
                 { name: "Harvey Norman", url: "https://www.harveynorman.si" },
-                { name: "Mi-Store.si", url: "https://mi-store.si" }
+                { name: "Mi-Store.si", url: "https://www.mi.com/si" }
             ]
         },
         platforms: [
-            { name: "Mi Store Slovenia", url: "https://mi-store.si" },
+            { name: "Mi Store Slovenia", url: "https://www.mi.com/si" },
             { name: "Ceneje.si (聚合)", url: "https://www.ceneje.si" },
             { name: "Big Bang", url: "https://www.bigbang.si" },
             { name: "Mimovrste", url: "https://www.mimovrste.com" },
@@ -591,19 +578,19 @@ const countryData = {
     "塞尔维亚": {
         currency: "RSD",
         currencySymbol: "din",
-        miStoreUrl: "https://mi-store.rs",
+        miStoreUrl: "https://www.mi.com/rs",
         aggregator: { name: "Idealno.rs", url: "https://www.idealno.rs",
             sellers: [
                 { name: "Tehnomanija", url: "https://www.tehnomanija.rs" },
                 { name: "Gigatron", url: "https://www.gigatron.rs" },
                 { name: "WinWin", url: "https://www.winwin.rs" },
                 { name: "Emmezeta", url: "https://www.emmezeta.rs" },
-                { name: "Mi-Store.rs", url: "https://mi-store.rs" },
+                { name: "Mi-Store.rs", url: "https://www.mi.com/rs" },
                 { name: "Comtrade", url: "https://www.ctshop.rs" }
             ]
         },
         platforms: [
-            { name: "Mi Store Serbia", url: "https://mi-store.rs" },
+            { name: "Mi Store Serbia", url: "https://www.mi.com/rs" },
             { name: "Idealno.rs (聚合)", url: "https://www.idealno.rs" },
             { name: "Tehnomanija", url: "https://www.tehnomanija.rs" },
             { name: "Gigatron", url: "https://www.gigatron.rs" },
@@ -613,10 +600,10 @@ const countryData = {
     "黑山": {
         currency: "EUR",
         currencySymbol: "€",
-        miStoreUrl: "https://mi-store.me",
+        miStoreUrl: "https://www.mi.com/me",
         aggregator: null,
         platforms: [
-            { name: "Mi Store Montenegro", url: "https://mi-store.me" },
+            { name: "Mi Store Montenegro", url: "https://www.mi.com/me" },
             { name: "Volujak", url: "https://www.volujak.me" },
             { name: "Gigatron ME", url: "https://www.gigatron.me" }
         ]
@@ -624,10 +611,10 @@ const countryData = {
     "北马其顿": {
         currency: "MKD",
         currencySymbol: "ден",
-        miStoreUrl: "https://mi-store.mk",
+        miStoreUrl: "https://www.mi.com/mk",
         aggregator: null,
         platforms: [
-            { name: "Mi Store North Macedonia", url: "https://mi-store.mk" },
+            { name: "Mi Store North Macedonia", url: "https://www.mi.com/mk" },
             { name: "Anhoch", url: "https://www.anhoch.com" },
             { name: "Neptun MK", url: "https://www.neptun.mk" }
         ]
@@ -635,10 +622,10 @@ const countryData = {
     "阿尔巴尼亚": {
         currency: "ALL",
         currencySymbol: "L",
-        miStoreUrl: "https://mi-store.al",
+        miStoreUrl: "https://www.mi.com/al",
         aggregator: null,
         platforms: [
-            { name: "Mi Store Albania", url: "https://mi-store.al" },
+            { name: "Mi Store Albania", url: "https://www.mi.com/al" },
             { name: "Neptun Albania", url: "https://www.neptun.al" },
             { name: "Euromax", url: "https://www.euromax.al" }
         ]
@@ -646,10 +633,10 @@ const countryData = {
     "波斯尼亚和黑塞哥维那": {
         currency: "BAM",
         currencySymbol: "KM",
-        miStoreUrl: "https://mi-store.ba",
+        miStoreUrl: "https://www.mi.com/ba",
         aggregator: null,
         platforms: [
-            { name: "Mi Store Bosnia", url: "https://mi-store.ba" },
+            { name: "Mi Store Bosnia", url: "https://www.mi.com/ba" },
             { name: "Tehnopolis", url: "https://www.tehnopolis.ba" },
             { name: "Msan", url: "https://www.msan.ba" }
         ]
@@ -657,10 +644,10 @@ const countryData = {
     "科索沃": {
         currency: "EUR",
         currencySymbol: "€",
-        miStoreUrl: "https://mi-store.xk",
+        miStoreUrl: "https://www.mi.com/xk",
         aggregator: null,
         platforms: [
-            { name: "Mi Store Kosovo", url: "https://mi-store.xk" },
+            { name: "Mi Store Kosovo", url: "https://www.mi.com/xk" },
             { name: "Gjirafa", url: "https://www.gjirafa.com" },
             { name: "Neptun XK", url: "https://www.neptun-ks.com" }
         ]
@@ -781,7 +768,7 @@ const countryData = {
     "乌克兰": {
         currency: "UAH",
         currencySymbol: "₴",
-        miStoreUrl: "https://mi-store.ua",
+        miStoreUrl: "https://www.mi.com/ua",
         aggregator: { name: "Hotline.ua", url: "https://hotline.ua",
             sellers: [
                 { name: "Rozetka", url: "https://rozetka.com.ua" },
@@ -789,12 +776,12 @@ const countryData = {
                 { name: "Foxtrot", url: "https://foxtrot.com.ua" },
                 { name: "Comfy", url: "https://comfy.ua" },
                 { name: "Eldorado", url: "https://www.eldorado.ua" },
-                { name: "Mi-Store.ua", url: "https://mi-store.ua" },
+                { name: "Mi-Store.ua", url: "https://www.mi.com/ua" },
                 { name: "Citrus", url: "https://www.citrus.ua" }
             ]
         },
         platforms: [
-            { name: "Mi Store Ukraine", url: "https://mi-store.ua" },
+            { name: "Mi Store Ukraine", url: "https://www.mi.com/ua" },
             { name: "Hotline.ua (聚合)", url: "https://hotline.ua" },
             { name: "Rozetka", url: "https://rozetka.com.ua" },
             { name: "Allo", url: "https://allo.ua" },
@@ -804,18 +791,18 @@ const countryData = {
     "拉脱维亚": {
         currency: "EUR",
         currencySymbol: "€",
-        miStoreUrl: "https://mi-store.lv",
+        miStoreUrl: "https://www.mi.com/lv",
         aggregator: { name: "Salidzini.lv", url: "https://www.salidzini.lv",
             sellers: [
                 { name: "1a.lv", url: "https://www.1a.lv" },
                 { name: "220.lv", url: "https://www.220.lv" },
                 { name: "RD Electronics", url: "https://www.rdveikals.lv" },
                 { name: "Euronics", url: "https://www.euronics.lv" },
-                { name: "Mi-Store.lv", url: "https://mi-store.lv" }
+                { name: "Mi-Store.lv", url: "https://www.mi.com/lv" }
             ]
         },
         platforms: [
-            { name: "Mi Store Latvia", url: "https://mi-store.lv" },
+            { name: "Mi Store Latvia", url: "https://www.mi.com/lv" },
             { name: "Salidzini.lv (聚合)", url: "https://www.salidzini.lv" },
             { name: "1a.lv", url: "https://www.1a.lv" },
             { name: "220.lv", url: "https://www.220.lv" },
@@ -825,7 +812,7 @@ const countryData = {
     "立陶宛": {
         currency: "EUR",
         currencySymbol: "€",
-        miStoreUrl: "https://mi-store.lt",
+        miStoreUrl: "https://www.mi.com/lt",
         aggregator: { name: "Kainos.lt", url: "https://www.kainos.lt",
             sellers: [
                 { name: "Varle.lt", url: "https://www.varle.lt" },
@@ -833,11 +820,11 @@ const countryData = {
                 { name: "Topo Centras", url: "https://www.topocentras.lt" },
                 { name: "Pigu.lt", url: "https://pigu.lt" },
                 { name: "1a.lt", url: "https://www.1a.lt" },
-                { name: "Mi-Store.lt", url: "https://mi-store.lt" }
+                { name: "Mi-Store.lt", url: "https://www.mi.com/lt" }
             ]
         },
         platforms: [
-            { name: "Mi Store Lithuania", url: "https://mi-store.lt" },
+            { name: "Mi Store Lithuania", url: "https://www.mi.com/lt" },
             { name: "Kainos.lt (聚合)", url: "https://www.kainos.lt" },
             { name: "Varle.lt", url: "https://www.varle.lt" },
             { name: "Kilobaitas", url: "https://www.kilobaitas.lt" },
@@ -847,18 +834,18 @@ const countryData = {
     "爱沙尼亚": {
         currency: "EUR",
         currencySymbol: "€",
-        miStoreUrl: "https://mi-store.ee",
+        miStoreUrl: "https://www.mi.com/ee",
         aggregator: { name: "Hinnavaatlus", url: "https://www.hinnavaatlus.ee",
             sellers: [
                 { name: "1A.ee", url: "https://www.1a.ee" },
                 { name: "Klick", url: "https://www.klick.ee" },
                 { name: "Euronics", url: "https://www.euronics.ee" },
                 { name: "Photopoint", url: "https://www.photopoint.ee" },
-                { name: "Mi-Store.ee", url: "https://mi-store.ee" }
+                { name: "Mi-Store.ee", url: "https://www.mi.com/ee" }
             ]
         },
         platforms: [
-            { name: "Mi Store Estonia", url: "https://mi-store.ee" },
+            { name: "Mi Store Estonia", url: "https://www.mi.com/ee" },
             { name: "Hinnavaatlus (聚合)", url: "https://www.hinnavaatlus.ee" },
             { name: "1A.ee", url: "https://www.1a.ee" },
             { name: "Klick", url: "https://www.klick.ee" },
@@ -868,10 +855,10 @@ const countryData = {
     "摩尔多瓦": {
         currency: "MDL",
         currencySymbol: "L",
-        miStoreUrl: "https://mi-store.md",
+        miStoreUrl: "https://www.mi.com/md",
         aggregator: null,
         platforms: [
-            { name: "Mi Store Moldova", url: "https://mi-store.md" },
+            { name: "Mi Store Moldova", url: "https://www.mi.com/md" },
             { name: "Enter", url: "https://www.enter.online" },
             { name: "Darwin", url: "https://darwin.md" }
         ]
@@ -879,19 +866,19 @@ const countryData = {
     "保加利亚": {
         currency: "BGN",
         currencySymbol: "лв",
-        miStoreUrl: "https://mi-store.bg",
+        miStoreUrl: "https://www.mi.com/bg",
         aggregator: { name: "Pazaruvaj.com", url: "https://www.pazaruvaj.com",
             sellers: [
                 { name: "Ozone.bg", url: "https://www.ozone.bg" },
                 { name: "Technopolis", url: "https://www.technopolis.bg" },
                 { name: "Technomarket", url: "https://www.technomarket.bg" },
                 { name: "eMAG.bg", url: "https://www.emag.bg" },
-                { name: "Mi-Store.bg", url: "https://mi-store.bg" },
+                { name: "Mi-Store.bg", url: "https://www.mi.com/bg" },
                 { name: "Ardes.bg", url: "https://www.ardes.bg" }
             ]
         },
         platforms: [
-            { name: "Mi Store Bulgaria", url: "https://mi-store.bg" },
+            { name: "Mi Store Bulgaria", url: "https://www.mi.com/bg" },
             { name: "Pazaruvaj.com (聚合)", url: "https://www.pazaruvaj.com" },
             { name: "Ozone.bg", url: "https://www.ozone.bg" },
             { name: "Technopolis", url: "https://www.technopolis.bg" },
@@ -901,10 +888,10 @@ const countryData = {
     "马耳他": {
         currency: "EUR",
         currencySymbol: "€",
-        miStoreUrl: "https://mi-store.mt",
+        miStoreUrl: "https://www.mi.com/mt",
         aggregator: null,
         platforms: [
-            { name: "Mi Store Malta", url: "https://mi-store.mt" },
+            { name: "Mi Store Malta", url: "https://www.mi.com/mt" },
             { name: "Scan Malta", url: "https://www.scanmalta.com" },
             { name: "Intercomp", url: "https://www.intercomp.com.mt" }
         ]
@@ -912,10 +899,10 @@ const countryData = {
     "塞浦路斯": {
         currency: "EUR",
         currencySymbol: "€",
-        miStoreUrl: "https://mi-store.cy",
+        miStoreUrl: "https://www.mi.com/cy",
         aggregator: null,
         platforms: [
-            { name: "Mi Store Cyprus", url: "https://mi-store.cy" },
+            { name: "Mi Store Cyprus", url: "https://www.mi.com/cy" },
             { name: "Public Cyprus", url: "https://www.public.com.cy" },
             { name: "Stephanis", url: "https://www.stephanis.com.cy" }
         ]
@@ -923,16 +910,16 @@ const countryData = {
     "奥兰": {
         currency: "EUR",
         currencySymbol: "€",
-        miStoreUrl: "https://mi-store.ax",
+        miStoreUrl: "https://www.mi.com/ax",
         aggregator: null,
         platforms: [
-            { name: "Mi Store Aland", url: "https://mi-store.ax" }
+            { name: "Mi Store Aland", url: "https://www.mi.com/ax" }
         ]
     },
     "南斯拉夫": {
-        currency: "YUN", currencySymbol: "din", miStoreUrl: "https://mi-store.yu",
+        currency: "YUN", currencySymbol: "din", miStoreUrl: "https://www.mi.com/yu",
         aggregator: null,
-        platforms: [{ name: "Mi Store Yugoslavia", url: "https://mi-store.yu" }]
+        platforms: [{ name: "Mi Store Yugoslavia", url: "https://www.mi.com/yu" }]
     },
     "德国": {
         currency: "EUR", currencySymbol: "€", miStoreUrl: "https://www.mi.com/de",
@@ -2054,15 +2041,15 @@ function handleExportJSON() {
 // ========== 覆盖地区交互式地图（全新欧洲地图） ==========
 // 覆盖的27国数据（不含冰岛）
 const mapCountries = {
-    PL: { zh: '波兰', flag: '🇵🇱', aggregator: 'Ceneo.pl', store: 'mi-store.pl', countryKey: '波兰' },
-    CZ: { zh: '捷克', flag: '🇨🇿', aggregator: 'Heureka.cz', store: 'mi-store.cz', countryKey: '捷克' },
-    SK: { zh: '斯洛伐克', flag: '🇸🇰', aggregator: 'Heureka.sk', store: 'mi-store.sk', countryKey: '斯洛伐克' },
-    HU: { zh: '匈牙利', flag: '🇭🇺', aggregator: 'Arukereso.hu', store: 'mi-store.hu', countryKey: '匈牙利' },
-    RO: { zh: '罗马尼亚', flag: '🇷🇴', aggregator: 'Compari.ro', store: 'mi-store.ro', countryKey: '罗马尼亚' },
-    BG: { zh: '保加利亚', flag: '🇧🇬', aggregator: 'Pazaruvaj.com', store: 'mi-store.bg', countryKey: '保加利亚' },
+    PL: { zh: '波兰', flag: '🇵🇱', aggregator: 'Ceneo.pl', store: 'www.mi.com/pl', countryKey: '波兰' },
+    CZ: { zh: '捷克', flag: '🇨🇿', aggregator: 'Heureka.cz', store: 'www.mi.com/cz', countryKey: '捷克' },
+    SK: { zh: '斯洛伐克', flag: '🇸🇰', aggregator: 'Heureka.sk', store: 'www.mi.com/sk', countryKey: '斯洛伐克' },
+    HU: { zh: '匈牙利', flag: '🇭🇺', aggregator: 'Arukereso.hu', store: 'www.mi.com/hu', countryKey: '匈牙利' },
+    RO: { zh: '罗马尼亚', flag: '🇷🇴', aggregator: 'Compari.ro', store: 'www.mi.com/ro', countryKey: '罗马尼亚' },
+    BG: { zh: '保加利亚', flag: '🇧🇬', aggregator: 'Pazaruvaj.com', store: 'www.mi.com/bg', countryKey: '保加利亚' },
     HR: { zh: '克罗地亚', flag: '🇭🇷', aggregator: 'Jeftinije.hr', store: null, countryKey: '克罗地亚' },
     SI: { zh: '斯洛文尼亚', flag: '🇸🇮', aggregator: 'Ceneje.si', store: null, countryKey: '斯洛文尼亚' },
-    RS: { zh: '塞尔维亚', flag: '🇷🇸', aggregator: 'Idealno.rs', store: 'mi-store.rs', countryKey: '塞尔维亚' },
+    RS: { zh: '塞尔维亚', flag: '🇷🇸', aggregator: 'Idealno.rs', store: 'www.mi.com/rs', countryKey: '塞尔维亚' },
     ME: { zh: '黑山', flag: '🇲🇪', aggregator: null, store: null, countryKey: '黑山' },
     MK: { zh: '北马其顿', flag: '🇲🇰', aggregator: null, store: null, countryKey: '北马其顿' },
     AL: { zh: '阿尔巴尼亚', flag: '🇦🇱', aggregator: null, store: null, countryKey: '阿尔巴尼亚' },
