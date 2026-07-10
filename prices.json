@@ -1,6 +1,6 @@
 {
-  "updated": "2026-07-09",
-  "total": 166,
+  "updated": "2026-07-10",
+  "total": 167,
   "countries": 10,
   "sources": [
     "Amazon.nl",
@@ -23,7 +23,7 @@
       "country_code": "AT",
       "currency": "EUR",
       "price": 449.9,
-      "timestamp": "2026-07-09T02:31:50Z",
+      "timestamp": "2026-07-10T02:11:42Z",
       "is_official": true
     },
     {
@@ -32,7 +32,7 @@
       "country_code": "AT",
       "currency": "EUR",
       "price": 599.9,
-      "timestamp": "2026-07-09T02:31:54Z",
+      "timestamp": "2026-07-10T02:11:46Z",
       "is_official": true
     },
     {
@@ -41,7 +41,7 @@
       "country_code": "AT",
       "currency": "EUR",
       "price": 659.9,
-      "timestamp": "2026-07-09T02:31:42Z",
+      "timestamp": "2026-07-10T02:11:33Z",
       "is_official": true
     },
     {
@@ -50,7 +50,7 @@
       "country_code": "AT",
       "currency": "EUR",
       "price": 409.9,
-      "timestamp": "2026-07-09T02:31:46Z",
+      "timestamp": "2026-07-10T02:11:38Z",
       "is_official": true
     },
     {
@@ -59,7 +59,7 @@
       "country_code": "AT",
       "currency": "EUR",
       "price": 399.9,
-      "timestamp": "2026-07-09T02:31:58Z",
+      "timestamp": "2026-07-10T02:11:50Z",
       "is_official": true
     },
     {
@@ -68,7 +68,7 @@
       "country_code": "AT",
       "currency": "EUR",
       "price": 359.9,
-      "timestamp": "2026-07-09T02:31:32Z",
+      "timestamp": "2026-07-10T02:11:23Z",
       "is_official": true
     },
     {
@@ -77,7 +77,7 @@
       "country_code": "AT",
       "currency": "EUR",
       "price": 439.9,
-      "timestamp": "2026-07-09T02:31:37Z",
+      "timestamp": "2026-07-10T02:11:29Z",
       "is_official": true
     },
     {
@@ -86,7 +86,7 @@
       "country_code": "AT",
       "currency": "EUR",
       "price": 399.9,
-      "timestamp": "2026-07-09T02:31:24Z",
+      "timestamp": "2026-07-10T02:11:14Z",
       "is_official": true
     },
     {
@@ -95,7 +95,7 @@
       "country_code": "AT",
       "currency": "EUR",
       "price": 799.9,
-      "timestamp": "2026-07-09T02:31:28Z",
+      "timestamp": "2026-07-10T02:11:19Z",
       "is_official": true
     },
     {
@@ -104,7 +104,7 @@
       "country_code": "AT",
       "currency": "EUR",
       "price": 1399.9,
-      "timestamp": "2026-07-09T02:31:09Z",
+      "timestamp": "2026-07-10T02:11:01Z",
       "is_official": true
     },
     {
@@ -113,7 +113,7 @@
       "country_code": "AT",
       "currency": "EUR",
       "price": 749.9,
-      "timestamp": "2026-07-09T02:31:14Z",
+      "timestamp": "2026-07-10T02:11:05Z",
       "is_official": true
     },
     {
@@ -122,7 +122,7 @@
       "country_code": "AT",
       "currency": "EUR",
       "price": 999.9,
-      "timestamp": "2026-07-09T02:31:19Z",
+      "timestamp": "2026-07-10T02:11:10Z",
       "is_official": true
     },
     {
@@ -131,7 +131,7 @@
       "country_code": "CZ",
       "currency": "CZK",
       "price": 7999.0,
-      "timestamp": "2026-07-09T02:28:56Z",
+      "timestamp": "2026-07-10T02:08:24Z",
       "is_official": true
     },
     {
@@ -140,7 +140,7 @@
       "country_code": "CZ",
       "currency": "CZK",
       "price": 9499.0,
-      "timestamp": "2026-07-09T02:29:00Z",
+      "timestamp": "2026-07-10T02:08:29Z",
       "is_official": true
     },
     {
@@ -149,7 +149,7 @@
       "country_code": "CZ",
       "currency": "CZK",
       "price": 19499.0,
-      "timestamp": "2026-07-09T02:28:48Z",
+      "timestamp": "2026-07-10T02:08:15Z",
       "is_official": true
     },
     {
@@ -158,7 +158,7 @@
       "country_code": "CZ",
       "currency": "CZK",
       "price": 9499.0,
-      "timestamp": "2026-07-09T02:28:52Z",
+      "timestamp": "2026-07-10T02:08:19Z",
       "is_official": true
     },
     {
@@ -167,7 +167,7 @@
       "country_code": "CZ",
       "currency": "CZK",
       "price": 6299.0,
-      "timestamp": "2026-07-09T02:29:04Z",
+      "timestamp": "2026-07-10T02:08:33Z",
       "is_official": true
     },
     {
@@ -176,7 +176,7 @@
       "country_code": "CZ",
       "currency": "CZK",
       "price": 7499.0,
-      "timestamp": "2026-07-09T02:28:40Z",
+      "timestamp": "2026-07-10T02:08:06Z",
       "is_official": true
     },
     {
@@ -184,8 +184,8 @@
       "platform": "Mi Store (CZ)",
       "country_code": "CZ",
       "currency": "CZK",
-      "price": 8644.0,
-      "timestamp": "2026-07-09T02:28:43Z",
+      "price": 8299.0,
+      "timestamp": "2026-07-10T02:08:11Z",
       "is_official": true
     },
     {
@@ -194,7 +194,7 @@
       "country_code": "CZ",
       "currency": "CZK",
       "price": 12499.0,
-      "timestamp": "2026-07-09T02:28:31Z",
+      "timestamp": "2026-07-10T02:07:58Z",
       "is_official": true
     },
     {
@@ -203,7 +203,7 @@
       "country_code": "CZ",
       "currency": "CZK",
       "price": 15999.0,
-      "timestamp": "2026-07-09T02:28:35Z",
+      "timestamp": "2026-07-10T02:08:02Z",
       "is_official": true
     },
     {
@@ -212,7 +212,7 @@
       "country_code": "CZ",
       "currency": "CZK",
       "price": 29199.0,
-      "timestamp": "2026-07-09T02:28:19Z",
+      "timestamp": "2026-07-10T02:07:45Z",
       "is_official": true
     },
     {
@@ -221,7 +221,7 @@
       "country_code": "CZ",
       "currency": "CZK",
       "price": 15499.0,
-      "timestamp": "2026-07-09T02:28:23Z",
+      "timestamp": "2026-07-10T02:07:49Z",
       "is_official": true
     },
     {
@@ -230,7 +230,7 @@
       "country_code": "CZ",
       "currency": "CZK",
       "price": 21499.0,
-      "timestamp": "2026-07-09T02:28:27Z",
+      "timestamp": "2026-07-10T02:07:53Z",
       "is_official": true
     },
     {
@@ -239,7 +239,7 @@
       "country_code": "DE",
       "currency": "EUR",
       "price": 449.9,
-      "timestamp": "2026-07-09T02:22:54Z",
+      "timestamp": "2026-07-10T02:00:57Z",
       "is_official": true
     },
     {
@@ -248,7 +248,7 @@
       "country_code": "DE",
       "currency": "EUR",
       "price": 649.9,
-      "timestamp": "2026-07-09T02:22:59Z",
+      "timestamp": "2026-07-10T02:01:02Z",
       "is_official": true
     },
     {
@@ -257,7 +257,7 @@
       "country_code": "DE",
       "currency": "EUR",
       "price": 639.9,
-      "timestamp": "2026-07-09T02:22:46Z",
+      "timestamp": "2026-07-10T02:00:47Z",
       "is_official": true
     },
     {
@@ -266,7 +266,7 @@
       "country_code": "DE",
       "currency": "EUR",
       "price": 419.9,
-      "timestamp": "2026-07-09T02:22:50Z",
+      "timestamp": "2026-07-10T02:00:53Z",
       "is_official": true
     },
     {
@@ -275,7 +275,7 @@
       "country_code": "DE",
       "currency": "EUR",
       "price": 399.9,
-      "timestamp": "2026-07-09T02:23:03Z",
+      "timestamp": "2026-07-10T02:01:07Z",
       "is_official": true
     },
     {
@@ -284,7 +284,7 @@
       "country_code": "DE",
       "currency": "EUR",
       "price": 399.9,
-      "timestamp": "2026-07-09T02:22:35Z",
+      "timestamp": "2026-07-10T02:00:37Z",
       "is_official": true
     },
     {
@@ -293,7 +293,7 @@
       "country_code": "DE",
       "currency": "EUR",
       "price": 429.9,
-      "timestamp": "2026-07-09T02:22:40Z",
+      "timestamp": "2026-07-10T02:00:41Z",
       "is_official": true
     },
     {
@@ -302,7 +302,7 @@
       "country_code": "DE",
       "currency": "EUR",
       "price": 449.9,
-      "timestamp": "2026-07-09T02:22:26Z",
+      "timestamp": "2026-07-10T02:00:28Z",
       "is_official": true
     },
     {
@@ -311,7 +311,7 @@
       "country_code": "DE",
       "currency": "EUR",
       "price": 899.9,
-      "timestamp": "2026-07-09T02:22:31Z",
+      "timestamp": "2026-07-10T02:00:33Z",
       "is_official": true
     },
     {
@@ -320,7 +320,7 @@
       "country_code": "DE",
       "currency": "EUR",
       "price": 1299.9,
-      "timestamp": "2026-07-09T02:22:13Z",
+      "timestamp": "2026-07-10T02:00:14Z",
       "is_official": true
     },
     {
@@ -329,7 +329,7 @@
       "country_code": "DE",
       "currency": "EUR",
       "price": 749.9,
-      "timestamp": "2026-07-09T02:22:17Z",
+      "timestamp": "2026-07-10T02:00:19Z",
       "is_official": true
     },
     {
@@ -338,7 +338,7 @@
       "country_code": "DE",
       "currency": "EUR",
       "price": 899.9,
-      "timestamp": "2026-07-09T02:22:22Z",
+      "timestamp": "2026-07-10T02:00:23Z",
       "is_official": true
     },
     {
@@ -347,7 +347,7 @@
       "country_code": "ES",
       "currency": "EUR",
       "price": 499.99,
-      "timestamp": "2026-07-09T02:24:38Z",
+      "timestamp": "2026-07-10T02:02:45Z",
       "is_official": true
     },
     {
@@ -355,8 +355,8 @@
       "platform": "Mi Store (ES)",
       "country_code": "ES",
       "currency": "EUR",
-      "price": 399.99,
-      "timestamp": "2026-07-09T02:24:43Z",
+      "price": 599.99,
+      "timestamp": "2026-07-10T02:02:52Z",
       "is_official": true
     },
     {
@@ -365,7 +365,7 @@
       "country_code": "ES",
       "currency": "EUR",
       "price": 699.99,
-      "timestamp": "2026-07-09T02:24:30Z",
+      "timestamp": "2026-07-10T02:02:35Z",
       "is_official": true
     },
     {
@@ -374,7 +374,7 @@
       "country_code": "ES",
       "currency": "EUR",
       "price": 389.99,
-      "timestamp": "2026-07-09T02:24:34Z",
+      "timestamp": "2026-07-10T02:02:41Z",
       "is_official": true
     },
     {
@@ -383,7 +383,7 @@
       "country_code": "ES",
       "currency": "EUR",
       "price": 399.99,
-      "timestamp": "2026-07-09T02:24:47Z",
+      "timestamp": "2026-07-10T02:02:56Z",
       "is_official": true
     },
     {
@@ -392,7 +392,7 @@
       "country_code": "ES",
       "currency": "EUR",
       "price": 369.99,
-      "timestamp": "2026-07-09T02:24:21Z",
+      "timestamp": "2026-07-10T02:02:27Z",
       "is_official": true
     },
     {
@@ -401,7 +401,7 @@
       "country_code": "ES",
       "currency": "EUR",
       "price": 359.99,
-      "timestamp": "2026-07-09T02:24:25Z",
+      "timestamp": "2026-07-10T02:02:31Z",
       "is_official": true
     },
     {
@@ -410,7 +410,7 @@
       "country_code": "ES",
       "currency": "EUR",
       "price": 469.99,
-      "timestamp": "2026-07-09T02:24:13Z",
+      "timestamp": "2026-07-10T02:02:18Z",
       "is_official": true
     },
     {
@@ -419,7 +419,7 @@
       "country_code": "ES",
       "currency": "EUR",
       "price": 629.99,
-      "timestamp": "2026-07-09T02:24:17Z",
+      "timestamp": "2026-07-10T02:02:22Z",
       "is_official": true
     },
     {
@@ -428,7 +428,7 @@
       "country_code": "ES",
       "currency": "EUR",
       "price": 1249.99,
-      "timestamp": "2026-07-09T02:23:59Z",
+      "timestamp": "2026-07-10T02:02:05Z",
       "is_official": true
     },
     {
@@ -437,7 +437,7 @@
       "country_code": "ES",
       "currency": "EUR",
       "price": 749.99,
-      "timestamp": "2026-07-09T02:24:04Z",
+      "timestamp": "2026-07-10T02:02:10Z",
       "is_official": true
     },
     {
@@ -446,7 +446,7 @@
       "country_code": "ES",
       "currency": "EUR",
       "price": 899.99,
-      "timestamp": "2026-07-09T02:24:08Z",
+      "timestamp": "2026-07-10T02:02:14Z",
       "is_official": true
     },
     {
@@ -455,7 +455,7 @@
       "country_code": "FR",
       "currency": "EUR",
       "price": 503.0,
-      "timestamp": "2026-07-09T02:23:46Z",
+      "timestamp": "2026-07-10T02:01:52Z",
       "is_official": true
     },
     {
@@ -464,7 +464,7 @@
       "country_code": "FR",
       "currency": "EUR",
       "price": 603.0,
-      "timestamp": "2026-07-09T02:23:50Z",
+      "timestamp": "2026-07-10T02:01:56Z",
       "is_official": true
     },
     {
@@ -473,7 +473,7 @@
       "country_code": "FR",
       "currency": "EUR",
       "price": 599.0,
-      "timestamp": "2026-07-09T02:23:38Z",
+      "timestamp": "2026-07-10T02:01:43Z",
       "is_official": true
     },
     {
@@ -482,7 +482,7 @@
       "country_code": "FR",
       "currency": "EUR",
       "price": 349.0,
-      "timestamp": "2026-07-09T02:23:42Z",
+      "timestamp": "2026-07-10T02:01:47Z",
       "is_official": true
     },
     {
@@ -491,7 +491,7 @@
       "country_code": "FR",
       "currency": "EUR",
       "price": 403.0,
-      "timestamp": "2026-07-09T02:23:55Z",
+      "timestamp": "2026-07-10T02:02:00Z",
       "is_official": true
     },
     {
@@ -500,7 +500,7 @@
       "country_code": "FR",
       "currency": "EUR",
       "price": 349.0,
-      "timestamp": "2026-07-09T02:23:29Z",
+      "timestamp": "2026-07-10T02:01:34Z",
       "is_official": true
     },
     {
@@ -509,7 +509,7 @@
       "country_code": "FR",
       "currency": "EUR",
       "price": 499.0,
-      "timestamp": "2026-07-09T02:23:33Z",
+      "timestamp": "2026-07-10T02:01:39Z",
       "is_official": true
     },
     {
@@ -518,7 +518,7 @@
       "country_code": "FR",
       "currency": "EUR",
       "price": 603.0,
-      "timestamp": "2026-07-09T02:23:20Z",
+      "timestamp": "2026-07-10T02:01:26Z",
       "is_official": true
     },
     {
@@ -527,7 +527,7 @@
       "country_code": "FR",
       "currency": "EUR",
       "price": 903.0,
-      "timestamp": "2026-07-09T02:23:25Z",
+      "timestamp": "2026-07-10T02:01:30Z",
       "is_official": true
     },
     {
@@ -536,7 +536,7 @@
       "country_code": "FR",
       "currency": "EUR",
       "price": 1503.0,
-      "timestamp": "2026-07-09T02:23:07Z",
+      "timestamp": "2026-07-10T02:01:12Z",
       "is_official": true
     },
     {
@@ -545,7 +545,7 @@
       "country_code": "FR",
       "currency": "EUR",
       "price": 703.0,
-      "timestamp": "2026-07-09T02:23:12Z",
+      "timestamp": "2026-07-10T02:01:17Z",
       "is_official": true
     },
     {
@@ -554,7 +554,16 @@
       "country_code": "FR",
       "currency": "EUR",
       "price": 803.0,
-      "timestamp": "2026-07-09T02:23:16Z",
+      "timestamp": "2026-07-10T02:01:22Z",
+      "is_official": true
+    },
+    {
+      "product_name": "POCO F7",
+      "platform": "Mi Store (IT)",
+      "country_code": "IT",
+      "currency": "EUR",
+      "price": 449.9,
+      "timestamp": "2026-07-10T02:04:30Z",
       "is_official": true
     },
     {
@@ -563,7 +572,7 @@
       "country_code": "IT",
       "currency": "EUR",
       "price": 649.9,
-      "timestamp": "2026-07-09T02:25:37Z",
+      "timestamp": "2026-07-10T02:04:42Z",
       "is_official": true
     },
     {
@@ -572,7 +581,7 @@
       "country_code": "IT",
       "currency": "EUR",
       "price": 699.9,
-      "timestamp": "2026-07-09T02:25:23Z",
+      "timestamp": "2026-07-10T02:03:34Z",
       "is_official": true
     },
     {
@@ -581,7 +590,7 @@
       "country_code": "IT",
       "currency": "EUR",
       "price": 339.9,
-      "timestamp": "2026-07-09T02:25:28Z",
+      "timestamp": "2026-07-10T02:03:39Z",
       "is_official": true
     },
     {
@@ -590,7 +599,7 @@
       "country_code": "IT",
       "currency": "EUR",
       "price": 399.9,
-      "timestamp": "2026-07-09T02:25:41Z",
+      "timestamp": "2026-07-10T02:04:48Z",
       "is_official": true
     },
     {
@@ -599,7 +608,7 @@
       "country_code": "IT",
       "currency": "EUR",
       "price": 399.9,
-      "timestamp": "2026-07-09T02:25:14Z",
+      "timestamp": "2026-07-10T02:03:24Z",
       "is_official": true
     },
     {
@@ -608,7 +617,7 @@
       "country_code": "IT",
       "currency": "EUR",
       "price": 449.9,
-      "timestamp": "2026-07-09T02:25:18Z",
+      "timestamp": "2026-07-10T02:03:30Z",
       "is_official": true
     },
     {
@@ -617,7 +626,7 @@
       "country_code": "IT",
       "currency": "EUR",
       "price": 469.9,
-      "timestamp": "2026-07-09T02:25:04Z",
+      "timestamp": "2026-07-10T02:03:16Z",
       "is_official": true
     },
     {
@@ -626,7 +635,7 @@
       "country_code": "IT",
       "currency": "EUR",
       "price": 599.9,
-      "timestamp": "2026-07-09T02:25:09Z",
+      "timestamp": "2026-07-10T02:03:20Z",
       "is_official": true
     },
     {
@@ -635,7 +644,7 @@
       "country_code": "IT",
       "currency": "EUR",
       "price": 1499.9,
-      "timestamp": "2026-07-09T02:24:51Z",
+      "timestamp": "2026-07-10T02:03:01Z",
       "is_official": true
     },
     {
@@ -644,7 +653,7 @@
       "country_code": "IT",
       "currency": "EUR",
       "price": 749.9,
-      "timestamp": "2026-07-09T02:24:55Z",
+      "timestamp": "2026-07-10T02:03:06Z",
       "is_official": true
     },
     {
@@ -653,7 +662,7 @@
       "country_code": "IT",
       "currency": "EUR",
       "price": 1099.9,
-      "timestamp": "2026-07-09T02:25:00Z",
+      "timestamp": "2026-07-10T02:03:11Z",
       "is_official": true
     },
     {
@@ -686,7 +695,7 @@
       "country_code": "NL",
       "currency": "EUR",
       "price": 339.9,
-      "timestamp": "2026-07-09T02:26:24Z",
+      "timestamp": "2026-07-10T02:05:32Z",
       "is_official": true
     },
     {
@@ -695,7 +704,7 @@
       "country_code": "NL",
       "currency": "EUR",
       "price": 379.9,
-      "timestamp": "2026-07-09T02:26:28Z",
+      "timestamp": "2026-07-10T02:05:37Z",
       "is_official": true
     },
     {
@@ -704,7 +713,7 @@
       "country_code": "NL",
       "currency": "EUR",
       "price": 649.99,
-      "timestamp": "2026-07-09T02:26:16Z",
+      "timestamp": "2026-07-10T02:05:23Z",
       "is_official": true
     },
     {
@@ -713,7 +722,7 @@
       "country_code": "NL",
       "currency": "EUR",
       "price": 309.9,
-      "timestamp": "2026-07-09T02:26:20Z",
+      "timestamp": "2026-07-10T02:05:28Z",
       "is_official": true
     },
     {
@@ -722,7 +731,7 @@
       "country_code": "NL",
       "currency": "EUR",
       "price": 399.9,
-      "timestamp": "2026-07-09T02:26:32Z",
+      "timestamp": "2026-07-10T02:05:41Z",
       "is_official": true
     },
     {
@@ -731,7 +740,7 @@
       "country_code": "NL",
       "currency": "EUR",
       "price": 279.9,
-      "timestamp": "2026-07-09T02:26:07Z",
+      "timestamp": "2026-07-10T02:05:14Z",
       "is_official": true
     },
     {
@@ -740,7 +749,7 @@
       "country_code": "NL",
       "currency": "EUR",
       "price": 319.9,
-      "timestamp": "2026-07-09T02:26:11Z",
+      "timestamp": "2026-07-10T02:05:19Z",
       "is_official": true
     },
     {
@@ -797,7 +806,7 @@
       "country_code": "NL",
       "currency": "EUR",
       "price": 649.9,
-      "timestamp": "2026-07-09T02:25:58Z",
+      "timestamp": "2026-07-10T02:05:06Z",
       "is_official": true
     },
     {
@@ -806,7 +815,7 @@
       "country_code": "NL",
       "currency": "EUR",
       "price": 799.9,
-      "timestamp": "2026-07-09T02:26:03Z",
+      "timestamp": "2026-07-10T02:05:10Z",
       "is_official": true
     },
     {
@@ -815,7 +824,7 @@
       "country_code": "NL",
       "currency": "EUR",
       "price": 1499.9,
-      "timestamp": "2026-07-09T02:25:45Z",
+      "timestamp": "2026-07-10T02:04:53Z",
       "is_official": true
     },
     {
@@ -824,7 +833,7 @@
       "country_code": "NL",
       "currency": "EUR",
       "price": 749.9,
-      "timestamp": "2026-07-09T02:25:49Z",
+      "timestamp": "2026-07-10T02:04:57Z",
       "is_official": true
     },
     {
@@ -833,7 +842,7 @@
       "country_code": "NL",
       "currency": "EUR",
       "price": 899.9,
-      "timestamp": "2026-07-09T02:25:54Z",
+      "timestamp": "2026-07-10T02:05:01Z",
       "is_official": true
     },
     {
@@ -962,7 +971,7 @@
       "country_code": "PL",
       "currency": "PLN",
       "price": 1999.0,
-      "timestamp": "2026-07-09T02:27:15Z",
+      "timestamp": "2026-07-10T02:06:30Z",
       "is_official": true
     },
     {
@@ -971,7 +980,7 @@
       "country_code": "PL",
       "currency": "PLN",
       "price": 2399.0,
-      "timestamp": "2026-07-09T02:27:20Z",
+      "timestamp": "2026-07-10T02:06:34Z",
       "is_official": true
     },
     {
@@ -980,7 +989,7 @@
       "country_code": "PL",
       "currency": "PLN",
       "price": 2999.0,
-      "timestamp": "2026-07-09T02:27:07Z",
+      "timestamp": "2026-07-10T02:06:21Z",
       "is_official": true
     },
     {
@@ -1013,7 +1022,7 @@
       "country_code": "PL",
       "currency": "PLN",
       "price": 1749.0,
-      "timestamp": "2026-07-09T02:27:11Z",
+      "timestamp": "2026-07-10T02:06:26Z",
       "is_official": true
     },
     {
@@ -1022,7 +1031,7 @@
       "country_code": "PL",
       "currency": "PLN",
       "price": 1799.0,
-      "timestamp": "2026-07-09T02:27:24Z",
+      "timestamp": "2026-07-10T02:06:39Z",
       "is_official": true
     },
     {
@@ -1031,7 +1040,7 @@
       "country_code": "PL",
       "currency": "PLN",
       "price": 1499.0,
-      "timestamp": "2026-07-09T02:26:58Z",
+      "timestamp": "2026-07-10T02:06:12Z",
       "is_official": true
     },
     {
@@ -1040,7 +1049,7 @@
       "country_code": "PL",
       "currency": "PLN",
       "price": 1699.0,
-      "timestamp": "2026-07-09T02:27:02Z",
+      "timestamp": "2026-07-10T02:06:17Z",
       "is_official": true
     },
     {
@@ -1129,7 +1138,7 @@
       "country_code": "PL",
       "currency": "PLN",
       "price": 2999.0,
-      "timestamp": "2026-07-09T02:26:50Z",
+      "timestamp": "2026-07-10T02:05:59Z",
       "is_official": true
     },
     {
@@ -1138,7 +1147,7 @@
       "country_code": "PL",
       "currency": "PLN",
       "price": 3999.0,
-      "timestamp": "2026-07-09T02:26:54Z",
+      "timestamp": "2026-07-10T02:06:08Z",
       "is_official": true
     },
     {
@@ -1147,7 +1156,7 @@
       "country_code": "PL",
       "currency": "PLN",
       "price": 5999.0,
-      "timestamp": "2026-07-09T02:26:37Z",
+      "timestamp": "2026-07-10T02:05:45Z",
       "is_official": true
     },
     {
@@ -1156,7 +1165,7 @@
       "country_code": "PL",
       "currency": "PLN",
       "price": 2999.0,
-      "timestamp": "2026-07-09T02:26:41Z",
+      "timestamp": "2026-07-10T02:05:50Z",
       "is_official": true
     },
     {
@@ -1165,7 +1174,7 @@
       "country_code": "PL",
       "currency": "PLN",
       "price": 3699.0,
-      "timestamp": "2026-07-09T02:26:45Z",
+      "timestamp": "2026-07-10T02:05:54Z",
       "is_official": true
     },
     {
@@ -1254,7 +1263,7 @@
       "country_code": "RO",
       "currency": "RON",
       "price": 1999.0,
-      "timestamp": "2026-07-09T02:28:06Z",
+      "timestamp": "2026-07-10T02:07:32Z",
       "is_official": true
     },
     {
@@ -1263,7 +1272,7 @@
       "country_code": "RO",
       "currency": "RON",
       "price": 2699.0,
-      "timestamp": "2026-07-09T02:28:10Z",
+      "timestamp": "2026-07-10T02:07:36Z",
       "is_official": true
     },
     {
@@ -1272,7 +1281,7 @@
       "country_code": "RO",
       "currency": "RON",
       "price": 3599.0,
-      "timestamp": "2026-07-09T02:27:58Z",
+      "timestamp": "2026-07-10T02:07:20Z",
       "is_official": true
     },
     {
@@ -1281,7 +1290,7 @@
       "country_code": "RO",
       "currency": "RON",
       "price": 1699.0,
-      "timestamp": "2026-07-09T02:28:02Z",
+      "timestamp": "2026-07-10T02:07:28Z",
       "is_official": true
     },
     {
@@ -1290,7 +1299,7 @@
       "country_code": "RO",
       "currency": "RON",
       "price": 1199.0,
-      "timestamp": "2026-07-09T02:28:14Z",
+      "timestamp": "2026-07-10T02:07:41Z",
       "is_official": true
     },
     {
@@ -1299,7 +1308,7 @@
       "country_code": "RO",
       "currency": "RON",
       "price": 2099.0,
-      "timestamp": "2026-07-09T02:27:49Z",
+      "timestamp": "2026-07-10T02:07:11Z",
       "is_official": true
     },
     {
@@ -1308,7 +1317,7 @@
       "country_code": "RO",
       "currency": "RON",
       "price": 2399.0,
-      "timestamp": "2026-07-09T02:27:54Z",
+      "timestamp": "2026-07-10T02:07:15Z",
       "is_official": true
     },
     {
@@ -1317,7 +1326,7 @@
       "country_code": "RO",
       "currency": "RON",
       "price": 2399.0,
-      "timestamp": "2026-07-09T02:27:41Z",
+      "timestamp": "2026-07-10T02:07:02Z",
       "is_official": true
     },
     {
@@ -1326,7 +1335,7 @@
       "country_code": "RO",
       "currency": "RON",
       "price": 3999.0,
-      "timestamp": "2026-07-09T02:27:45Z",
+      "timestamp": "2026-07-10T02:07:07Z",
       "is_official": true
     },
     {
@@ -1335,7 +1344,7 @@
       "country_code": "RO",
       "currency": "RON",
       "price": 7199.0,
-      "timestamp": "2026-07-09T02:27:28Z",
+      "timestamp": "2026-07-10T02:06:45Z",
       "is_official": true
     },
     {
@@ -1344,7 +1353,7 @@
       "country_code": "RO",
       "currency": "RON",
       "price": 3599.0,
-      "timestamp": "2026-07-09T02:27:33Z",
+      "timestamp": "2026-07-10T02:06:49Z",
       "is_official": true
     },
     {
@@ -1353,7 +1362,7 @@
       "country_code": "RO",
       "currency": "RON",
       "price": 4399.0,
-      "timestamp": "2026-07-09T02:27:37Z",
+      "timestamp": "2026-07-10T02:06:57Z",
       "is_official": true
     },
     {
@@ -1362,7 +1371,7 @@
       "country_code": "SE",
       "currency": "SEK",
       "price": 3790.0,
-      "timestamp": "2026-07-09T02:30:51Z",
+      "timestamp": "2026-07-10T02:10:48Z",
       "is_official": true
     },
     {
@@ -1371,7 +1380,7 @@
       "country_code": "SE",
       "currency": "SEK",
       "price": 4590.0,
-      "timestamp": "2026-07-09T02:30:55Z",
+      "timestamp": "2026-07-10T02:10:52Z",
       "is_official": true
     },
     {
@@ -1380,7 +1389,7 @@
       "country_code": "SE",
       "currency": "SEK",
       "price": 7990.0,
-      "timestamp": "2026-07-09T02:30:42Z",
+      "timestamp": "2026-07-10T02:10:39Z",
       "is_official": true
     },
     {
@@ -1389,7 +1398,7 @@
       "country_code": "SE",
       "currency": "SEK",
       "price": 4990.0,
-      "timestamp": "2026-07-09T02:30:47Z",
+      "timestamp": "2026-07-10T02:10:44Z",
       "is_official": true
     },
     {
@@ -1398,7 +1407,7 @@
       "country_code": "SE",
       "currency": "SEK",
       "price": 4990.0,
-      "timestamp": "2026-07-09T02:31:04Z",
+      "timestamp": "2026-07-10T02:10:57Z",
       "is_official": true
     },
     {
@@ -1407,7 +1416,7 @@
       "country_code": "SE",
       "currency": "SEK",
       "price": 5790.0,
-      "timestamp": "2026-07-09T02:30:34Z",
+      "timestamp": "2026-07-10T02:10:30Z",
       "is_official": true
     },
     {
@@ -1416,7 +1425,7 @@
       "country_code": "SE",
       "currency": "SEK",
       "price": 6490.0,
-      "timestamp": "2026-07-09T02:30:38Z",
+      "timestamp": "2026-07-10T02:10:35Z",
       "is_official": true
     },
     {
@@ -1425,7 +1434,7 @@
       "country_code": "SE",
       "currency": "SEK",
       "price": 7290.0,
-      "timestamp": "2026-07-09T02:30:25Z",
+      "timestamp": "2026-07-10T02:10:21Z",
       "is_official": true
     },
     {
@@ -1434,7 +1443,7 @@
       "country_code": "SE",
       "currency": "SEK",
       "price": 10290.0,
-      "timestamp": "2026-07-09T02:30:30Z",
+      "timestamp": "2026-07-10T02:10:26Z",
       "is_official": true
     },
     {
@@ -1443,7 +1452,7 @@
       "country_code": "SE",
       "currency": "SEK",
       "price": 19990.0,
-      "timestamp": "2026-07-09T02:30:13Z",
+      "timestamp": "2026-07-10T02:10:09Z",
       "is_official": true
     },
     {
@@ -1452,7 +1461,7 @@
       "country_code": "SE",
       "currency": "SEK",
       "price": 7990.0,
-      "timestamp": "2026-07-09T02:30:17Z",
+      "timestamp": "2026-07-10T02:10:13Z",
       "is_official": true
     },
     {
@@ -1461,7 +1470,7 @@
       "country_code": "SE",
       "currency": "SEK",
       "price": 11990.0,
-      "timestamp": "2026-07-09T02:30:21Z",
+      "timestamp": "2026-07-10T02:10:17Z",
       "is_official": true
     }
   ]
