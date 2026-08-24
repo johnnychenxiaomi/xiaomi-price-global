@@ -1,70 +1,70 @@
-[2026-08-23 07:07:38] SCRAPINGBEE_KEY present: True (len=80)
-[2026-08-23 07:07:38] SCRAPINGBEE_KEY first 8: 540U1WLD
-[2026-08-23 07:10:52] Phase 1 done: 13 Amazon prices
-[2026-08-23 07:10:53]     ScrapingBee HTTP 401 for https://www.idealo.de/preisvergleich/ProductCategory/19116.html?q=Xiaomi: {"message":"Monthly API calls limit reached: 1000"}
+[2026-08-24 07:33:18] SCRAPINGBEE_KEY present: True (len=80)
+[2026-08-24 07:33:18] SCRAPINGBEE_KEY first 8: 540U1WLD
+[2026-08-24 07:36:09] Phase 1 done: 104 Amazon prices
+[2026-08-24 07:36:09]     ScrapingBee HTTP 401 for https://www.idealo.de/preisvergleich/ProductCategory/19116.html?q=Xiaomi: {"message":"Monthly API calls limit reached: 1000"}
 
-[2026-08-23 07:10:53]     ScrapingBee HTTP 401 for https://www.idealo.fr/cat/19116/smartphones.html?q=Xiaomi: {"message":"Monthly API calls limit reached: 1000"}
+[2026-08-24 07:36:10]     ScrapingBee HTTP 401 for https://www.idealo.fr/cat/19116/smartphones.html?q=Xiaomi: {"message":"Monthly API calls limit reached: 1000"}
 
-[2026-08-23 07:10:53]     ScrapingBee HTTP 401 for https://www.idealo.es/cat/19116/smartphones.html?q=Xiaomi: {"message":"Monthly API calls limit reached: 1000"}
+[2026-08-24 07:36:10]     ScrapingBee HTTP 401 for https://www.idealo.es/cat/19116/smartphones.html?q=Xiaomi: {"message":"Monthly API calls limit reached: 1000"}
 
-[2026-08-23 07:10:54]     ScrapingBee HTTP 401 for https://www.idealo.it/cat/19116/smartphones.html?q=Xiaomi: {"message":"Monthly API calls limit reached: 1000"}
+[2026-08-24 07:36:10]     ScrapingBee HTTP 401 for https://www.idealo.it/cat/19116/smartphones.html?q=Xiaomi: {"message":"Monthly API calls limit reached: 1000"}
 
-[2026-08-23 07:10:54]     ScrapingBee HTTP 401 for https://www.ceneo.pl/Smartfony;szukaj-Xiaomi: {"message":"Monthly API calls limit reached: 1000"}
+[2026-08-24 07:36:11]     ScrapingBee HTTP 401 for https://www.ceneo.pl/Smartfony;szukaj-Xiaomi: {"message":"Monthly API calls limit reached: 1000"}
 
-[2026-08-23 07:10:54]     ScrapingBee HTTP 401 for https://geizhals.at/?fs=Xiaomi&cat=umtsover: {"message":"Monthly API calls limit reached: 1000"}
+[2026-08-24 07:36:11]     ScrapingBee HTTP 401 for https://geizhals.at/?fs=Xiaomi&cat=umtsover: {"message":"Monthly API calls limit reached: 1000"}
 
-[2026-08-23 07:10:55]     ScrapingBee HTTP 401 for https://www.pricerunner.se/cl/36/Mobiltelefoner?q=Xiaomi: {"message":"Monthly API calls limit reached: 1000"}
+[2026-08-24 07:36:12]     ScrapingBee HTTP 401 for https://www.pricerunner.se/cl/36/Mobiltelefoner?q=Xiaomi: {"message":"Monthly API calls limit reached: 1000"}
 
-[2026-08-23 07:10:55]     ScrapingBee HTTP 401 for https://www.pricerunner.dk/cl/36/Mobiltelefoner?q=Xiaomi: {"message":"Monthly API calls limit reached: 1000"}
+[2026-08-24 07:36:12]     ScrapingBee HTTP 401 for https://www.pricerunner.dk/cl/36/Mobiltelefoner?q=Xiaomi: {"message":"Monthly API calls limit reached: 1000"}
 
-[2026-08-23 07:10:55]     ScrapingBee HTTP 401 for https://www.skroutz.gr/search?keyphrase=Xiaomi+smartphone: {"message":"Monthly API calls limit reached: 1000"}
+[2026-08-24 07:36:12]     ScrapingBee HTTP 401 for https://www.skroutz.gr/search?keyphrase=Xiaomi+smartphone: {"message":"Monthly API calls limit reached: 1000"}
 
-[2026-08-23 07:10:56]     ScrapingBee HTTP 401 for https://www.heureka.cz/?h%5Bfraze%5D=Xiaomi+smartphone: {"message":"Monthly API calls limit reached: 1000"}
+[2026-08-24 07:36:13]     ScrapingBee HTTP 401 for https://www.heureka.cz/?h%5Bfraze%5D=Xiaomi+smartphone: {"message":"Monthly API calls limit reached: 1000"}
 
-[2026-08-23 07:10:56] Phase 2 done: 0 aggregator prices, 10 API calls
-[2026-08-23 07:10:58]   Testing Playwright on https://www.mi.com/de/product/xiaomi-17-ultra
-[2026-08-23 07:11:01]   Test result: title=Access Denied, 314 bytes
-[2026-08-23 07:11:01]   Playwright blocked by mi.com — falling back to ScrapingBee
-[2026-08-23 07:11:02]   Using ScrapingBee for Mi Store (costs API credits)
-[2026-08-23 07:11:02]     ScrapingBee HTTP 401 for https://www.mi.com/de/product/xiaomi-17-ultra: {"message":"Monthly API calls limit reached: 1000"}
+[2026-08-24 07:36:13] Phase 2 done: 0 aggregator prices, 10 API calls
+[2026-08-24 07:36:15]   Testing Playwright on https://www.mi.com/de/product/xiaomi-17-ultra
+[2026-08-24 07:36:19]   Test result: title=Access Denied, 312 bytes
+[2026-08-24 07:36:19]   Playwright blocked by mi.com — falling back to ScrapingBee
+[2026-08-24 07:36:19]   Using ScrapingBee for Mi Store (costs API credits)
+[2026-08-24 07:36:20]     ScrapingBee HTTP 401 for https://www.mi.com/de/product/xiaomi-17-ultra: {"message":"Monthly API calls limit reached: 1000"}
 
-[2026-08-23 07:11:03]     ScrapingBee HTTP 401 for https://www.mi.com/de/product/xiaomi-17t: {"message":"Monthly API calls limit reached: 1000"}
+[2026-08-24 07:36:21]     ScrapingBee HTTP 401 for https://www.mi.com/de/product/xiaomi-17t: {"message":"Monthly API calls limit reached: 1000"}
 
-[2026-08-23 07:11:03]     ScrapingBee HTTP 401 for https://www.mi.com/de/product/xiaomi-17t-pro: {"message":"Monthly API calls limit reached: 1000"}
+[2026-08-24 07:36:22]     ScrapingBee HTTP 401 for https://www.mi.com/de/product/xiaomi-17t-pro: {"message":"Monthly API calls limit reached: 1000"}
 
-[2026-08-23 07:11:04]     ScrapingBee HTTP 401 for https://www.mi.com/de/product/xiaomi-15t: {"message":"Monthly API calls limit reached: 1000"}
+[2026-08-24 07:36:22]     ScrapingBee HTTP 401 for https://www.mi.com/de/product/xiaomi-15t: {"message":"Monthly API calls limit reached: 1000"}
 
-[2026-08-23 07:11:04]     ScrapingBee HTTP 401 for https://www.mi.com/de/product/xiaomi-15t-pro: {"message":"Monthly API calls limit reached: 1000"}
+[2026-08-24 07:36:23]     ScrapingBee HTTP 401 for https://www.mi.com/de/product/xiaomi-15t-pro: {"message":"Monthly API calls limit reached: 1000"}
 
-[2026-08-23 07:11:05]     ScrapingBee HTTP 401 for https://www.mi.com/de/product/redmi-note-15-pro-5g: {"message":"Monthly API calls limit reached: 1000"}
+[2026-08-24 07:36:23]     ScrapingBee HTTP 401 for https://www.mi.com/de/product/redmi-note-15-pro-5g: {"message":"Monthly API calls limit reached: 1000"}
 
-[2026-08-23 07:11:05]     ScrapingBee HTTP 401 for https://www.mi.com/de/product/redmi-note-15-pro-plus-5g: {"message":"Monthly API calls limit reached: 1000"}
+[2026-08-24 07:36:24]     ScrapingBee HTTP 401 for https://www.mi.com/de/product/redmi-note-15-pro-plus-5g: {"message":"Monthly API calls limit reached: 1000"}
 
-[2026-08-23 07:11:05]     ScrapingBee HTTP 401 for https://www.mi.com/de/product/poco-f8-ultra: {"message":"Monthly API calls limit reached: 1000"}
+[2026-08-24 07:36:24]     ScrapingBee HTTP 401 for https://www.mi.com/de/product/poco-f8-ultra: {"message":"Monthly API calls limit reached: 1000"}
 
-[2026-08-23 07:11:06]     ScrapingBee HTTP 401 for https://www.mi.com/de/product/poco-x8-pro: {"message":"Monthly API calls limit reached: 1000"}
+[2026-08-24 07:36:25]     ScrapingBee HTTP 401 for https://www.mi.com/de/product/poco-x8-pro: {"message":"Monthly API calls limit reached: 1000"}
 
-[2026-08-23 07:11:06]     ScrapingBee HTTP 401 for https://www.mi.com/de/product/poco-f7: {"message":"Monthly API calls limit reached: 1000"}
+[2026-08-24 07:36:25]     ScrapingBee HTTP 401 for https://www.mi.com/de/product/poco-f7: {"message":"Monthly API calls limit reached: 1000"}
 
-[2026-08-23 07:11:06]     ScrapingBee HTTP 401 for https://www.mi.com/de/product/poco-f7-pro: {"message":"Monthly API calls limit reached: 1000"}
+[2026-08-24 07:36:26]     ScrapingBee HTTP 401 for https://www.mi.com/de/product/poco-f7-pro: {"message":"Monthly API calls limit reached: 1000"}
 
-[2026-08-23 07:11:06]     ScrapingBee HTTP 401 for https://www.mi.com/de/product/redmi-note-14-pro-5g: {"message":"Monthly API calls limit reached: 1000"}
+[2026-08-24 07:36:26]     ScrapingBee HTTP 401 for https://www.mi.com/de/product/redmi-note-14-pro-5g: {"message":"Monthly API calls limit reached: 1000"}
 
-[2026-08-23 07:11:07]     ScrapingBee HTTP 401 for https://www.mi.com/fr/product/xiaomi-17-ultra: {"message":"Monthly API calls limit reached: 1000"}
+[2026-08-24 07:36:27]     ScrapingBee HTTP 401 for https://www.mi.com/fr/product/xiaomi-17-ultra: {"message":"Monthly API calls limit reached: 1000"}
 
-[2026-08-23 07:11:07]     ScrapingBee HTTP 401 for https://www.mi.com/fr/product/xiaomi-17t: {"message":"Monthly API calls limit reached: 1000"}
+[2026-08-24 07:36:27]     ScrapingBee HTTP 401 for https://www.mi.com/fr/product/xiaomi-17t: {"message":"Monthly API calls limit reached: 1000"}
 
-[2026-08-23 07:11:07]     ScrapingBee HTTP 401 for https://www.mi.com/fr/product/xiaomi-17t-pro: {"message":"Monthly API calls limit reached: 1000"}
+[2026-08-24 07:36:28]     ScrapingBee HTTP 401 for https://www.mi.com/fr/product/xiaomi-17t-pro: {"message":"Monthly API calls limit reached: 1000"}
 
-[2026-08-23 07:11:08]     ScrapingBee HTTP 401 for https://www.mi.com/fr/product/xiaomi-15t: {"message":"Monthly API calls limit reached: 1000"}
+[2026-08-24 07:36:28]     ScrapingBee HTTP 401 for https://www.mi.com/fr/product/xiaomi-15t: {"message":"Monthly API calls limit reached: 1000"}
 
-[2026-08-23 07:11:09]     ScrapingBee HTTP 401 for https://www.mi.com/fr/product/xiaomi-15t-pro: {"message":"Monthly API calls limit reached: 1000"}
+[2026-08-24 07:36:28]     ScrapingBee HTTP 401 for https://www.mi.com/fr/product/xiaomi-15t-pro: {"message":"Monthly API calls limit reached: 1000"}
 
-[2026-08-23 07:11:09]     ScrapingBee HTTP 401 for https://www.mi.com/fr/product/redmi-note-15-pro-5g: {"message":"Monthly API calls limit reached: 1000"}
+[2026-08-24 07:36:29]     ScrapingBee HTTP 401 for https://www.mi.com/fr/product/redmi-note-15-pro-5g: {"message":"Monthly API calls limit reached: 1000"}
 
-[2026-08-23 07:11:10]     ScrapingBee HTTP 401 for https://www.mi.com/fr/product/redmi-note-15-pro-plus-5g: {"message":"Monthly API calls limit reached: 1000"}
+[2026-08-24 07:36:29]     ScrapingBee HTTP 401 for https://www.mi.com/fr/product/redmi-note-15-pro-plus-5g: {"message":"Monthly API calls limit reached: 1000"}
 
-[2026-08-23 07:11:10]     ScrapingBee HTTP 401 for https://www.mi.com/fr/product/poco-f8-ultra: {"message":"Monthly API calls limit reached: 1000"}
+[2026-08-24 07:36:30]     ScrapingBee HTTP 401 for https://www.mi.com/fr/product/poco-f8-ultra: {"message":"Monthly API calls limit reached: 1000"}
 
-[2026-08-23 07:11:10] Mi Store (ScrapingBee): 0 prices, 20 API calls
-[2026-08-23 07:11:10] Phase 3 done: 0 Mi Store prices
+[2026-08-24 07:36:30] Mi Store (ScrapingBee): 0 prices, 20 API calls
+[2026-08-24 07:36:30] Phase 3 done: 0 Mi Store prices
