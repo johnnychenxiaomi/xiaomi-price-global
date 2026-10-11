@@ -1,19 +1,116 @@
 {
-  "updated": "2026-10-10",
-  "total": 23,
-  "countries": 2,
+  "updated": "2026-10-11",
+  "total": 75,
+  "countries": 3,
   "sources": [
+    "Amazon.it",
     "Amazon.nl",
     "Amazon.pl"
   ],
   "prices": [
     {
-      "product_name": "XIAOMI POCO C71 4G Smartphone 4GB",
+      "product_name": "REDMI Note 17 Pro 5G Smartphone 12+256GB",
+      "platform": "Amazon.it",
+      "country_code": "IT",
+      "currency": "EUR",
+      "price": 352.38,
+      "timestamp": "2026-10-11 13:08:27"
+    },
+    {
+      "product_name": "Redmi 17 128GB",
+      "platform": "Amazon.it",
+      "country_code": "IT",
+      "currency": "EUR",
+      "price": 204.08,
+      "timestamp": "2026-10-11 13:08:44"
+    },
+    {
+      "product_name": "Redmi Note 10S Smartphone RAM 6 GB",
+      "platform": "Amazon.it",
+      "country_code": "IT",
+      "currency": "EUR",
+      "price": 175.05,
+      "timestamp": "2026-10-11 13:08:44"
+    },
+    {
+      "product_name": "XIAOMI 17 Ultra Smartphone 16+512 GB",
+      "platform": "Amazon.it",
+      "country_code": "IT",
+      "currency": "EUR",
+      "price": 1229.43,
+      "timestamp": "2026-10-11 13:08:27"
+    },
+    {
+      "product_name": "XIAOMI REDMI A7 Pro Smartphone 4+64GB",
+      "platform": "Amazon.it",
+      "country_code": "IT",
+      "currency": "EUR",
+      "price": 97.54,
+      "timestamp": "2026-10-11 13:08:27"
+    },
+    {
+      "product_name": "Xiaomi Mi 11 Lite Dual SIM 5G 8+128GB",
+      "platform": "Amazon.it",
+      "country_code": "IT",
+      "currency": "EUR",
+      "price": 211.77,
+      "timestamp": "2026-10-11 13:08:27"
+    },
+    {
+      "product_name": "Xiaomi POCO C75 4G Smartphone 6+128GB",
+      "platform": "Amazon.it",
+      "country_code": "IT",
+      "currency": "EUR",
+      "price": 173.0,
+      "timestamp": "2026-10-11 13:08:27"
+    },
+    {
+      "product_name": "Xiaomi Redmi Note 12 Smartphone 8GB",
+      "platform": "Amazon.it",
+      "country_code": "IT",
+      "currency": "EUR",
+      "price": 375.0,
+      "timestamp": "2026-10-11 13:08:44"
+    },
+    {
+      "product_name": "Xiaomi Redmi Note 13 4G 6GB",
+      "platform": "Amazon.it",
+      "country_code": "IT",
+      "currency": "EUR",
+      "price": 352.38,
+      "timestamp": "2026-10-11 13:08:27"
+    },
+    {
+      "product_name": "Xiaomi Redmi Note 13 Pro 12gb",
+      "platform": "Amazon.it",
+      "country_code": "IT",
+      "currency": "EUR",
+      "price": 535.0,
+      "timestamp": "2026-10-11 13:08:44"
+    },
+    {
+      "product_name": "Xiaomi Redmi Note 13 Pro 4G 512GB",
+      "platform": "Amazon.it",
+      "country_code": "IT",
+      "currency": "EUR",
+      "price": 509.0,
+      "timestamp": "2026-10-11 13:08:44"
+    },
+    {
+      "product_name": "Xiaomi Redmi Note 13 Pro+ 5G 12+512GB",
+      "platform": "Amazon.it",
+      "country_code": "IT",
+      "currency": "EUR",
+      "price": 368.46,
+      "timestamp": "2026-10-11 13:08:44"
+    },
+    {
+      "product_name": "POCO X7 Pro 12+512GB",
       "platform": "Amazon.nl",
       "country_code": "NL",
       "currency": "EUR",
-      "price": 146.29,
-      "timestamp": "2026-10-10 12:46:01"
+      "price": 399.99,
+      "timestamp": "2026-10-11 13:09:24"
     },
     {
       "product_name": "XIAOMI POCO C71 4G Smartphone Blue 4GB",
@@ -21,7 +118,7 @@
       "country_code": "NL",
       "currency": "EUR",
       "price": 149.99,
-      "timestamp": "2026-10-10 12:46:01"
+      "timestamp": "2026-10-11 13:09:24"
     },
     {
       "product_name": "XIAOMI POCO C81 Pro 4G Smartphone 4 + 256 GB",
@@ -29,7 +126,23 @@
       "country_code": "NL",
       "currency": "EUR",
       "price": 185.99,
-      "timestamp": "2026-10-10 12:46:01"
+      "timestamp": "2026-10-11 13:09:24"
+    },
+    {
+      "product_name": "XIAOMI POCO C81 Pro Smartphone 4+128GB",
+      "platform": "Amazon.nl",
+      "country_code": "NL",
+      "currency": "EUR",
+      "price": 139.9,
+      "timestamp": "2026-10-11 13:09:24"
+    },
+    {
+      "product_name": "XIAOMI POCO C81 Pro Smartphone 4+256GB",
+      "platform": "Amazon.nl",
+      "country_code": "NL",
+      "currency": "EUR",
+      "price": 159.9,
+      "timestamp": "2026-10-11 13:09:20"
     },
     {
       "product_name": "XIAOMI POCO F8 Pro Smartphone 12+256GB",
@@ -37,7 +150,15 @@
       "country_code": "NL",
       "currency": "EUR",
       "price": 469.9,
-      "timestamp": "2026-10-10 12:46:01"
+      "timestamp": "2026-10-11 13:09:24"
+    },
+    {
+      "product_name": "XIAOMI POCO F8 Ultra Smartphone 16+512GB",
+      "platform": "Amazon.nl",
+      "country_code": "NL",
+      "currency": "EUR",
+      "price": 739.9,
+      "timestamp": "2026-10-11 13:09:20"
     },
     {
       "product_name": "XIAOMI POCO M8 Pro 5G Smartphone 8GB",
@@ -45,7 +166,7 @@
       "country_code": "NL",
       "currency": "EUR",
       "price": 303.0,
-      "timestamp": "2026-10-10 12:46:01"
+      "timestamp": "2026-10-11 13:09:24"
     },
     {
       "product_name": "XIAOMI POCO M8 Pro Smartphone 8+256GB",
@@ -53,7 +174,23 @@
       "country_code": "NL",
       "currency": "EUR",
       "price": 249.9,
-      "timestamp": "2026-10-10 12:46:01"
+      "timestamp": "2026-10-11 13:09:24"
+    },
+    {
+      "product_name": "XIAOMI POCO M8 Smartphone 8+512GB",
+      "platform": "Amazon.nl",
+      "country_code": "NL",
+      "currency": "EUR",
+      "price": 219.9,
+      "timestamp": "2026-10-11 13:09:20"
+    },
+    {
+      "product_name": "XIAOMI POCO X8 Pro MAX Smartphone 12+512GB",
+      "platform": "Amazon.nl",
+      "country_code": "NL",
+      "currency": "EUR",
+      "price": 499.9,
+      "timestamp": "2026-10-11 13:09:20"
     },
     {
       "product_name": "XIAOMI POCO X8 Pro Max 5G Smartphone 12GB",
@@ -61,7 +198,7 @@
       "country_code": "NL",
       "currency": "EUR",
       "price": 569.99,
-      "timestamp": "2026-10-10 12:46:01"
+      "timestamp": "2026-10-11 13:09:24"
     },
     {
       "product_name": "XIAOMI POCO X8 Pro Smartphone 12 + 512 GB",
@@ -69,7 +206,7 @@
       "country_code": "NL",
       "currency": "EUR",
       "price": 389.99,
-      "timestamp": "2026-10-10 12:46:01"
+      "timestamp": "2026-10-11 13:09:24"
     },
     {
       "product_name": "XIAOMI POCO X8 Pro Smartphone 12+512GB",
@@ -77,7 +214,7 @@
       "country_code": "NL",
       "currency": "EUR",
       "price": 479.9,
-      "timestamp": "2026-10-10 12:46:01"
+      "timestamp": "2026-10-11 13:09:24"
     },
     {
       "product_name": "XIAOMI POCO X8 Pro Smartphone 8+256GB",
@@ -85,15 +222,7 @@
       "country_code": "NL",
       "currency": "EUR",
       "price": 399.0,
-      "timestamp": "2026-10-10 12:46:01"
-    },
-    {
-      "product_name": "XIAOMI Poco X8 Pro Max Smartphone 5G 12GB",
-      "platform": "Amazon.nl",
-      "country_code": "NL",
-      "currency": "EUR",
-      "price": 651.75,
-      "timestamp": "2026-10-10 12:46:01"
+      "timestamp": "2026-10-11 13:09:20"
     },
     {
       "product_name": "XIAOMI Poco X8 Pro Smartphone 8 + 256 GB",
@@ -101,15 +230,119 @@
       "country_code": "NL",
       "currency": "EUR",
       "price": 385.99,
-      "timestamp": "2026-10-10 12:46:01"
+      "timestamp": "2026-10-11 13:09:24"
+    },
+    {
+      "product_name": "XIAOMI REDMI A7 Pro Smartphone 4+128GB",
+      "platform": "Amazon.nl",
+      "country_code": "NL",
+      "currency": "EUR",
+      "price": 148.0,
+      "timestamp": "2026-10-11 13:09:24"
+    },
+    {
+      "product_name": "XIAOMI REDMI A7 Pro Smartphone 4+64GB",
+      "platform": "Amazon.nl",
+      "country_code": "NL",
+      "currency": "EUR",
+      "price": 129.9,
+      "timestamp": "2026-10-11 13:09:20"
+    },
+    {
+      "product_name": "XIAOMI REDMI Note 15 Pro 5G Smartphone 12+512GB",
+      "platform": "Amazon.nl",
+      "country_code": "NL",
+      "currency": "EUR",
+      "price": 399.9,
+      "timestamp": "2026-10-11 13:09:20"
+    },
+    {
+      "product_name": "XIAOMI REDMI Note 15 Smartphone 6+128GB",
+      "platform": "Amazon.nl",
+      "country_code": "NL",
+      "currency": "EUR",
+      "price": 199.9,
+      "timestamp": "2026-10-11 13:09:20"
+    },
+    {
+      "product_name": "XIAOMI REDMI Note 15 Smartphone 8+256GB",
+      "platform": "Amazon.nl",
+      "country_code": "NL",
+      "currency": "EUR",
+      "price": 249.9,
+      "timestamp": "2026-10-11 13:09:20"
+    },
+    {
+      "product_name": "XIAOMI Redmi 15 - Smartphone Von 6 + 128GB",
+      "platform": "Amazon.nl",
+      "country_code": "NL",
+      "currency": "EUR",
+      "price": 204.99,
+      "timestamp": "2026-10-11 13:09:28"
+    },
+    {
+      "product_name": "XIAOMI Redmi 15 - Smartphone Von 8 + 256GB",
+      "platform": "Amazon.nl",
+      "country_code": "NL",
+      "currency": "EUR",
+      "price": 234.99,
+      "timestamp": "2026-10-11 13:09:20"
     },
     {
       "product_name": "XIAOMI Redmi 15C 4G Smartphone 4GB",
       "platform": "Amazon.nl",
       "country_code": "NL",
       "currency": "EUR",
-      "price": 158.92,
-      "timestamp": "2026-10-10 12:46:01"
+      "price": 144.99,
+      "timestamp": "2026-10-11 13:09:20"
+    },
+    {
+      "product_name": "XIAOMI Redmi 15C 4G Smartphone 8GB",
+      "platform": "Amazon.nl",
+      "country_code": "NL",
+      "currency": "EUR",
+      "price": 203.33,
+      "timestamp": "2026-10-11 13:09:20"
+    },
+    {
+      "product_name": "XIAOMI Redmi Note 14 Pro 5G Smartphone 12GB",
+      "platform": "Amazon.nl",
+      "country_code": "NL",
+      "currency": "EUR",
+      "price": 379.0,
+      "timestamp": "2026-10-11 13:09:20"
+    },
+    {
+      "product_name": "XIAOMI Redmi Note 15 Pro 5G Smartphone 12GB",
+      "platform": "Amazon.nl",
+      "country_code": "NL",
+      "currency": "EUR",
+      "price": 446.99,
+      "timestamp": "2026-10-11 13:09:28"
+    },
+    {
+      "product_name": "Xiaomi 17 Ultra Smartphone 16+512GB",
+      "platform": "Amazon.nl",
+      "country_code": "NL",
+      "currency": "EUR",
+      "price": 1269.0,
+      "timestamp": "2026-10-11 13:09:20"
+    },
+    {
+      "product_name": "Xiaomi 17T Pro Smartphone 12+512GB",
+      "platform": "Amazon.nl",
+      "country_code": "NL",
+      "currency": "EUR",
+      "price": 699.0,
+      "timestamp": "2026-10-11 13:09:20"
+    },
+    {
+      "product_name": "Xiaomi POCO C81 Pro Smartphone 4 + 256 GB",
+      "platform": "Amazon.nl",
+      "country_code": "NL",
+      "currency": "EUR",
+      "price": 187.99,
+      "timestamp": "2026-10-11 13:09:24"
     },
     {
       "product_name": "Xiaomi POCO F2 Pro 5G Smartphone 6GB",
@@ -117,7 +350,7 @@
       "country_code": "NL",
       "currency": "EUR",
       "price": 222.99,
-      "timestamp": "2026-10-10 12:46:01"
+      "timestamp": "2026-10-11 13:09:24"
     },
     {
       "product_name": "Xiaomi Poco X7 Pro 5G 12GB",
@@ -125,7 +358,71 @@
       "country_code": "NL",
       "currency": "EUR",
       "price": 393.6,
-      "timestamp": "2026-10-10 12:46:01"
+      "timestamp": "2026-10-11 13:09:24"
+    },
+    {
+      "product_name": "Xiaomi Redmi 13C 5G 4GB",
+      "platform": "Amazon.nl",
+      "country_code": "NL",
+      "currency": "EUR",
+      "price": 184.99,
+      "timestamp": "2026-10-11 13:09:20"
+    },
+    {
+      "product_name": "Xiaomi Redmi 15 5G Dual Sim 8GB",
+      "platform": "Amazon.nl",
+      "country_code": "NL",
+      "currency": "EUR",
+      "price": 199.0,
+      "timestamp": "2026-10-11 13:09:20"
+    },
+    {
+      "product_name": "Xiaomi Redmi 15C Smartphone 8GB",
+      "platform": "Amazon.nl",
+      "country_code": "NL",
+      "currency": "EUR",
+      "price": 200.78,
+      "timestamp": "2026-10-11 13:09:20"
+    },
+    {
+      "product_name": "Xiaomi Redmi 9C 2GB",
+      "platform": "Amazon.nl",
+      "country_code": "NL",
+      "currency": "EUR",
+      "price": 114.99,
+      "timestamp": "2026-10-11 13:09:28"
+    },
+    {
+      "product_name": "Xiaomi Redmi 9C Smartphone 2GB",
+      "platform": "Amazon.nl",
+      "country_code": "NL",
+      "currency": "EUR",
+      "price": 114.99,
+      "timestamp": "2026-10-11 13:09:20"
+    },
+    {
+      "product_name": "Xiaomi Redmi A5 Smartphone - 3GB",
+      "platform": "Amazon.nl",
+      "country_code": "NL",
+      "currency": "EUR",
+      "price": 144.99,
+      "timestamp": "2026-10-11 13:09:28"
+    },
+    {
+      "product_name": "Xiaomi Redmi Note 14 Pro 5G 256GB",
+      "platform": "Amazon.nl",
+      "country_code": "NL",
+      "currency": "EUR",
+      "price": 322.72,
+      "timestamp": "2026-10-11 13:09:20"
+    },
+    {
+      "product_name": "Xiaomi Redmi Note 14 Pro+ 5G 256GB",
+      "platform": "Amazon.nl",
+      "country_code": "NL",
+      "currency": "EUR",
+      "price": 223.16,
+      "timestamp": "2026-10-11 13:09:20"
     },
     {
       "product_name": "XIAOMI POCO X8 Pro MAX smartfon 12+256 GB",
@@ -133,7 +430,7 @@
       "country_code": "PL",
       "currency": "PLN",
       "price": 2621.48,
-      "timestamp": "2026-10-10 12:46:22"
+      "timestamp": "2026-10-11 13:09:44"
     },
     {
       "product_name": "XIAOMI POCO X8 Pro Smartphone 8+512 GB",
@@ -141,7 +438,7 @@
       "country_code": "PL",
       "currency": "PLN",
       "price": 1487.46,
-      "timestamp": "2026-10-10 12:46:18"
+      "timestamp": "2026-10-11 13:09:32"
     },
     {
       "product_name": "XIAOMI POCO X8 Pro smartfon 8+256 GB",
@@ -149,7 +446,7 @@
       "country_code": "PL",
       "currency": "PLN",
       "price": 2097.1,
-      "timestamp": "2026-10-10 12:46:18"
+      "timestamp": "2026-10-11 13:09:32"
     },
     {
       "product_name": "XIAOMI Poco F6 Pro smartfon 12+256 GB",
@@ -157,7 +454,7 @@
       "country_code": "PL",
       "currency": "PLN",
       "price": 2056.93,
-      "timestamp": "2026-10-10 12:46:18"
+      "timestamp": "2026-10-11 13:09:37"
     },
     {
       "product_name": "XIAOMI REDMI Note 15 smartfon 8+256 GB",
@@ -165,7 +462,87 @@
       "country_code": "PL",
       "currency": "PLN",
       "price": 1036.72,
-      "timestamp": "2026-10-10 12:46:22"
+      "timestamp": "2026-10-11 13:09:32"
+    },
+    {
+      "product_name": "XIAOMI Redmi 15 4G 8+256 GB",
+      "platform": "Amazon.pl",
+      "country_code": "PL",
+      "currency": "PLN",
+      "price": 931.99,
+      "timestamp": "2026-10-11 13:09:32"
+    },
+    {
+      "product_name": "XIAOMI Redmi 15C 4G 8GB",
+      "platform": "Amazon.pl",
+      "country_code": "PL",
+      "currency": "PLN",
+      "price": 909.99,
+      "timestamp": "2026-10-11 13:09:32"
+    },
+    {
+      "product_name": "XIAOMI Redmi 15C 8GB",
+      "platform": "Amazon.pl",
+      "country_code": "PL",
+      "currency": "PLN",
+      "price": 866.99,
+      "timestamp": "2026-10-11 13:09:32"
+    },
+    {
+      "product_name": "XIAOMI Redmi 15C smartfon 4 GB",
+      "platform": "Amazon.pl",
+      "country_code": "PL",
+      "currency": "PLN",
+      "price": 752.99,
+      "timestamp": "2026-10-11 13:09:32"
+    },
+    {
+      "product_name": "XIAOMI Redmi 15C smartfon 8 GB",
+      "platform": "Amazon.pl",
+      "country_code": "PL",
+      "currency": "PLN",
+      "price": 866.99,
+      "timestamp": "2026-10-11 13:09:44"
+    },
+    {
+      "product_name": "XIAOMI Redmi 9C 2 GB",
+      "platform": "Amazon.pl",
+      "country_code": "PL",
+      "currency": "PLN",
+      "price": 480.99,
+      "timestamp": "2026-10-11 13:09:32"
+    },
+    {
+      "product_name": "XIAOMI Redmi A7 Pro 4G smartfon 4 GB",
+      "platform": "Amazon.pl",
+      "country_code": "PL",
+      "currency": "PLN",
+      "price": 609.99,
+      "timestamp": "2026-10-11 13:09:44"
+    },
+    {
+      "product_name": "XIAOMI Redmi Note 14 8 GB",
+      "platform": "Amazon.pl",
+      "country_code": "PL",
+      "currency": "PLN",
+      "price": 909.99,
+      "timestamp": "2026-10-11 13:09:44"
+    },
+    {
+      "product_name": "XIAOMI Smartfon 17T Pro 12 + 512 GB",
+      "platform": "Amazon.pl",
+      "country_code": "PL",
+      "currency": "PLN",
+      "price": 3099.0,
+      "timestamp": "2026-10-11 13:09:32"
+    },
+    {
+      "product_name": "XIAOMI Smartfon 17T Pro 5G 12 GB",
+      "platform": "Amazon.pl",
+      "country_code": "PL",
+      "currency": "PLN",
+      "price": 3349.0,
+      "timestamp": "2026-10-11 13:09:32"
     },
     {
       "product_name": "XIAOMI Smartfon POCO X8 Pro 12+512 GB",
@@ -173,7 +550,15 @@
       "country_code": "PL",
       "currency": "PLN",
       "price": 1899.0,
-      "timestamp": "2026-10-10 12:46:18"
+      "timestamp": "2026-10-11 13:09:32"
+    },
+    {
+      "product_name": "Xiaomi 11T Pro 5G smartfon 256 GB",
+      "platform": "Amazon.pl",
+      "country_code": "PL",
+      "currency": "PLN",
+      "price": 1231.99,
+      "timestamp": "2026-10-11 13:09:32"
     },
     {
       "product_name": "Xiaomi POCO M7 smartfon 6+128 GB",
@@ -181,7 +566,23 @@
       "country_code": "PL",
       "currency": "PLN",
       "price": 759.8,
-      "timestamp": "2026-10-10 12:46:18"
+      "timestamp": "2026-10-11 13:09:32"
+    },
+    {
+      "product_name": "Xiaomi Redmi 9C smartfon 2 GB",
+      "platform": "Amazon.pl",
+      "country_code": "PL",
+      "currency": "PLN",
+      "price": 480.99,
+      "timestamp": "2026-10-11 13:09:44"
+    },
+    {
+      "product_name": "Xiaomi Redmi A5 4G Midnight Black 4 + 128 GB",
+      "platform": "Amazon.pl",
+      "country_code": "PL",
+      "currency": "PLN",
+      "price": 609.99,
+      "timestamp": "2026-10-11 13:09:32"
     },
     {
       "product_name": "Xiaomi Redmi Note 12 Pro 5G 128GB",
@@ -189,7 +590,23 @@
       "country_code": "PL",
       "currency": "PLN",
       "price": 911.88,
-      "timestamp": "2026-10-10 12:46:22"
+      "timestamp": "2026-10-11 13:09:32"
+    },
+    {
+      "product_name": "Xiaomi Smartfon 17T 12 GB",
+      "platform": "Amazon.pl",
+      "country_code": "PL",
+      "currency": "PLN",
+      "price": 2200.99,
+      "timestamp": "2026-10-11 13:09:32"
+    },
+    {
+      "product_name": "Xiaomi Smartfon Redmi Note 15 Pro 4G 8 GB",
+      "platform": "Amazon.pl",
+      "country_code": "PL",
+      "currency": "PLN",
+      "price": 1513.99,
+      "timestamp": "2026-10-11 13:09:44"
     }
   ]
 }
