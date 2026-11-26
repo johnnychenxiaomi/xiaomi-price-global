@@ -1,453 +1,21 @@
 {
-  "updated": "2026-11-25",
-  "total": 159,
-  "countries": 10,
+  "updated": "2026-11-26",
+  "total": 75,
+  "countries": 4,
   "sources": [
+    "Amazon.co.uk",
     "Amazon.fr",
     "Amazon.nl",
-    "Mi Store (AT)",
-    "Mi Store (CZ)",
-    "Mi Store (DE)",
-    "Mi Store (ES)",
-    "Mi Store (FR)",
-    "Mi Store (IT)",
-    "Mi Store (NL)",
-    "Mi Store (PL)",
-    "Mi Store (RO)",
-    "Mi Store (SE)"
+    "Amazon.pl"
   ],
   "prices": [
     {
-      "product_name": "POCO F7",
-      "platform": "Mi Store (AT)",
-      "country_code": "AT",
-      "currency": "EUR",
-      "price": 449.9,
-      "timestamp": "2026-11-25 17:55:56",
-      "is_official": true
-    },
-    {
-      "product_name": "POCO F7 Pro",
-      "platform": "Mi Store (AT)",
-      "country_code": "AT",
-      "currency": "EUR",
-      "price": 599.9,
-      "timestamp": "2026-11-25 17:56:05",
-      "is_official": true
-    },
-    {
-      "product_name": "POCO F8 Ultra",
-      "platform": "Mi Store (AT)",
-      "country_code": "AT",
-      "currency": "EUR",
-      "price": 829.99,
-      "timestamp": "2026-11-25 17:55:37",
-      "is_official": true
-    },
-    {
-      "product_name": "POCO X8 Pro",
-      "platform": "Mi Store (AT)",
-      "country_code": "AT",
-      "currency": "EUR",
-      "price": 379.9,
-      "timestamp": "2026-11-25 17:55:47",
-      "is_official": true
-    },
-    {
-      "product_name": "Redmi Note 14 Pro 5G",
-      "platform": "Mi Store (AT)",
-      "country_code": "AT",
-      "currency": "EUR",
-      "price": 399.9,
-      "timestamp": "2026-11-25 17:56:14",
-      "is_official": true
-    },
-    {
-      "product_name": "Redmi Note 15 Pro 5G",
-      "platform": "Mi Store (AT)",
-      "country_code": "AT",
-      "currency": "EUR",
-      "price": 329.9,
-      "timestamp": "2026-11-25 17:54:57",
-      "is_official": true
-    },
-    {
-      "product_name": "Xiaomi 15T",
-      "platform": "Mi Store (AT)",
-      "country_code": "AT",
-      "currency": "EUR",
-      "price": 649.9,
-      "timestamp": "2026-11-25 17:54:18",
-      "is_official": true
-    },
-    {
-      "product_name": "Xiaomi 17 Ultra",
-      "platform": "Mi Store (AT)",
-      "country_code": "AT",
-      "currency": "EUR",
-      "price": 1499.9,
-      "timestamp": "2026-11-25 17:53:49",
-      "is_official": true
-    },
-    {
-      "product_name": "Xiaomi 17T",
-      "platform": "Mi Store (AT)",
-      "country_code": "AT",
-      "currency": "EUR",
-      "price": 499.9,
-      "timestamp": "2026-11-25 17:53:58",
-      "is_official": true
-    },
-    {
-      "product_name": "Xiaomi 17T Pro",
-      "platform": "Mi Store (AT)",
-      "country_code": "AT",
-      "currency": "EUR",
-      "price": 799.9,
-      "timestamp": "2026-11-25 17:54:09",
-      "is_official": true
-    },
-    {
-      "product_name": "POCO F7",
-      "platform": "Mi Store (CZ)",
-      "country_code": "CZ",
-      "currency": "CZK",
-      "price": 7999.0,
-      "timestamp": "2026-11-25 17:48:08",
-      "is_official": true
-    },
-    {
-      "product_name": "POCO F7 Pro",
-      "platform": "Mi Store (CZ)",
-      "country_code": "CZ",
-      "currency": "CZK",
-      "price": 9499.0,
-      "timestamp": "2026-11-25 17:48:19",
-      "is_official": true
-    },
-    {
-      "product_name": "POCO F8 Ultra",
-      "platform": "Mi Store (CZ)",
-      "country_code": "CZ",
-      "currency": "CZK",
-      "price": 16574.0,
-      "timestamp": "2026-11-25 17:47:49",
-      "is_official": true
-    },
-    {
-      "product_name": "POCO X8 Pro",
-      "platform": "Mi Store (CZ)",
-      "country_code": "CZ",
-      "currency": "CZK",
-      "price": 11999.0,
-      "timestamp": "2026-11-25 17:47:58",
-      "is_official": true
-    },
-    {
-      "product_name": "Redmi Note 14 Pro 5G",
-      "platform": "Mi Store (CZ)",
-      "country_code": "CZ",
-      "currency": "CZK",
-      "price": 6299.0,
-      "timestamp": "2026-11-25 17:48:30",
-      "is_official": true
-    },
-    {
-      "product_name": "Redmi Note 15 Pro 5G",
-      "platform": "Mi Store (CZ)",
-      "country_code": "CZ",
-      "currency": "CZK",
-      "price": 8999.0,
-      "timestamp": "2026-11-25 17:47:30",
-      "is_official": true
-    },
-    {
-      "product_name": "Redmi Note 15 Pro+ 5G",
-      "platform": "Mi Store (CZ)",
-      "country_code": "CZ",
-      "currency": "CZK",
-      "price": 10499.0,
-      "timestamp": "2026-11-25 17:47:38",
-      "is_official": true
-    },
-    {
-      "product_name": "Xiaomi 15T",
-      "platform": "Mi Store (CZ)",
-      "country_code": "CZ",
-      "currency": "CZK",
-      "price": 9999.0,
-      "timestamp": "2026-11-25 17:47:11",
-      "is_official": true
-    },
-    {
-      "product_name": "Xiaomi 15T Pro",
-      "platform": "Mi Store (CZ)",
-      "country_code": "CZ",
-      "currency": "CZK",
-      "price": 12999.0,
-      "timestamp": "2026-11-25 17:47:21",
-      "is_official": true
-    },
-    {
-      "product_name": "Xiaomi 17 Ultra",
-      "platform": "Mi Store (CZ)",
-      "country_code": "CZ",
-      "currency": "CZK",
-      "price": 28999.0,
-      "timestamp": "2026-11-25 17:46:22",
-      "is_official": true
-    },
-    {
-      "product_name": "Xiaomi 17T Pro",
-      "platform": "Mi Store (CZ)",
-      "country_code": "CZ",
-      "currency": "CZK",
-      "price": 18999.0,
-      "timestamp": "2026-11-25 17:47:03",
-      "is_official": true
-    },
-    {
-      "product_name": "POCO F7",
-      "platform": "Mi Store (DE)",
-      "country_code": "DE",
-      "currency": "EUR",
-      "price": 449.9,
-      "timestamp": "2026-11-25 17:31:21",
-      "is_official": true
-    },
-    {
-      "product_name": "POCO F7 Pro",
-      "platform": "Mi Store (DE)",
-      "country_code": "DE",
-      "currency": "EUR",
-      "price": 429.9,
-      "timestamp": "2026-11-25 17:31:30",
-      "is_official": true
-    },
-    {
-      "product_name": "POCO F8 Ultra",
-      "platform": "Mi Store (DE)",
-      "country_code": "DE",
-      "currency": "EUR",
-      "price": 649.9,
-      "timestamp": "2026-11-25 17:30:59",
-      "is_official": true
-    },
-    {
-      "product_name": "POCO X8 Pro",
-      "platform": "Mi Store (DE)",
-      "country_code": "DE",
-      "currency": "EUR",
-      "price": 419.9,
-      "timestamp": "2026-11-25 17:31:11",
-      "is_official": true
-    },
-    {
-      "product_name": "Redmi Note 14 Pro 5G",
-      "platform": "Mi Store (DE)",
-      "country_code": "DE",
-      "currency": "EUR",
-      "price": 399.9,
-      "timestamp": "2026-11-25 17:31:43",
-      "is_official": true
-    },
-    {
-      "product_name": "Redmi Note 15 Pro 5G",
-      "platform": "Mi Store (DE)",
-      "country_code": "DE",
-      "currency": "EUR",
-      "price": 399.9,
-      "timestamp": "2026-11-25 17:30:33",
-      "is_official": true
-    },
-    {
-      "product_name": "Redmi Note 15 Pro+ 5G",
-      "platform": "Mi Store (DE)",
-      "country_code": "DE",
-      "currency": "EUR",
-      "price": 389.9,
-      "timestamp": "2026-11-25 17:30:44",
-      "is_official": true
-    },
-    {
-      "product_name": "Xiaomi 15T",
-      "platform": "Mi Store (DE)",
-      "country_code": "DE",
-      "currency": "EUR",
-      "price": 649.9,
-      "timestamp": "2026-11-25 17:30:15",
-      "is_official": true
-    },
-    {
-      "product_name": "Xiaomi 15T Pro",
-      "platform": "Mi Store (DE)",
-      "country_code": "DE",
-      "currency": "EUR",
-      "price": 799.9,
-      "timestamp": "2026-11-25 17:30:24",
-      "is_official": true
-    },
-    {
-      "product_name": "Xiaomi 17 Ultra",
-      "platform": "Mi Store (DE)",
-      "country_code": "DE",
-      "currency": "EUR",
-      "price": 1499.9,
-      "timestamp": "2026-11-25 17:29:42",
-      "is_official": true
-    },
-    {
-      "product_name": "Xiaomi 17T",
-      "platform": "Mi Store (DE)",
-      "country_code": "DE",
-      "currency": "EUR",
-      "price": 599.9,
-      "timestamp": "2026-11-25 17:29:53",
-      "is_official": true
-    },
-    {
-      "product_name": "Xiaomi 17T Pro",
-      "platform": "Mi Store (DE)",
-      "country_code": "DE",
-      "currency": "EUR",
-      "price": 699.9,
-      "timestamp": "2026-11-25 17:30:01",
-      "is_official": true
-    },
-    {
-      "product_name": "POCO F7",
-      "platform": "Mi Store (ES)",
-      "country_code": "ES",
-      "currency": "EUR",
-      "price": 499.99,
-      "timestamp": "2026-11-25 17:36:14",
-      "is_official": true
-    },
-    {
-      "product_name": "POCO F7 Pro",
-      "platform": "Mi Store (ES)",
-      "country_code": "ES",
-      "currency": "EUR",
-      "price": 599.99,
-      "timestamp": "2026-11-25 17:36:23",
-      "is_official": true
-    },
-    {
-      "product_name": "POCO F8 Ultra",
-      "platform": "Mi Store (ES)",
-      "country_code": "ES",
-      "currency": "EUR",
-      "price": 649.99,
-      "timestamp": "2026-11-25 17:35:54",
-      "is_official": true
-    },
-    {
-      "product_name": "POCO X8 Pro",
-      "platform": "Mi Store (ES)",
-      "country_code": "ES",
-      "currency": "EUR",
-      "price": 379.99,
-      "timestamp": "2026-11-25 17:36:03",
-      "is_official": true
-    },
-    {
-      "product_name": "Redmi Note 14 Pro 5G",
-      "platform": "Mi Store (ES)",
-      "country_code": "ES",
-      "currency": "EUR",
-      "price": 399.99,
-      "timestamp": "2026-11-25 17:36:36",
-      "is_official": true
-    },
-    {
-      "product_name": "Redmi Note 15 Pro 5G",
-      "platform": "Mi Store (ES)",
-      "country_code": "ES",
-      "currency": "EUR",
-      "price": 299.99,
-      "timestamp": "2026-11-25 17:35:32",
-      "is_official": true
-    },
-    {
-      "product_name": "Redmi Note 15 Pro+ 5G",
-      "platform": "Mi Store (ES)",
-      "country_code": "ES",
-      "currency": "EUR",
-      "price": 399.99,
-      "timestamp": "2026-11-25 17:35:41",
-      "is_official": true
-    },
-    {
-      "product_name": "Xiaomi 15T",
-      "platform": "Mi Store (ES)",
-      "country_code": "ES",
-      "currency": "EUR",
-      "price": 649.99,
-      "timestamp": "2026-11-25 17:35:15",
-      "is_official": true
-    },
-    {
-      "product_name": "Xiaomi 15T Pro",
-      "platform": "Mi Store (ES)",
-      "country_code": "ES",
-      "currency": "EUR",
-      "price": 899.99,
-      "timestamp": "2026-11-25 17:35:23",
-      "is_official": true
-    },
-    {
-      "product_name": "Xiaomi 17 Ultra",
-      "platform": "Mi Store (ES)",
-      "country_code": "ES",
-      "currency": "EUR",
-      "price": 1499.99,
-      "timestamp": "2026-11-25 17:34:49",
-      "is_official": true
-    },
-    {
-      "product_name": "Xiaomi 17T",
-      "platform": "Mi Store (ES)",
-      "country_code": "ES",
-      "currency": "EUR",
-      "price": 499.99,
-      "timestamp": "2026-11-25 17:34:58",
-      "is_official": true
-    },
-    {
-      "product_name": "Xiaomi 17T Pro",
-      "platform": "Mi Store (ES)",
-      "country_code": "ES",
-      "currency": "EUR",
-      "price": 649.99,
-      "timestamp": "2026-11-25 17:35:06",
-      "is_official": true
-    },
-    {
-      "product_name": "POCO F7",
-      "platform": "Mi Store (FR)",
+      "product_name": "POCO C71 Smartphone 4+128GB",
+      "platform": "Amazon.fr",
       "country_code": "FR",
       "currency": "EUR",
-      "price": 453.0,
-      "timestamp": "2026-11-25 17:34:15",
-      "is_official": true
-    },
-    {
-      "product_name": "POCO F7 Pro",
-      "platform": "Mi Store (FR)",
-      "country_code": "FR",
-      "currency": "EUR",
-      "price": 459.0,
-      "timestamp": "2026-11-25 17:34:27",
-      "is_official": true
-    },
-    {
-      "product_name": "POCO F8 Ultra",
-      "platform": "Mi Store (FR)",
-      "country_code": "FR",
-      "currency": "EUR",
-      "price": 649.0,
-      "timestamp": "2026-11-25 17:33:27",
-      "is_official": true
+      "price": 180.0,
+      "timestamp": "2026-11-26 17:08:15"
     },
     {
       "product_name": "REDMI 17 5G 128GB",
@@ -455,7 +23,7 @@
       "country_code": "FR",
       "currency": "EUR",
       "price": 175.76,
-      "timestamp": "2026-11-25 17:27:39"
+      "timestamp": "2026-11-26 17:08:15"
     },
     {
       "product_name": "Redmi 17 128GB",
@@ -463,42 +31,15 @@
       "country_code": "FR",
       "currency": "EUR",
       "price": 166.62,
-      "timestamp": "2026-11-25 17:27:39"
-    },
-    {
-      "product_name": "Redmi Note 14 Pro 5G",
-      "platform": "Mi Store (FR)",
-      "country_code": "FR",
-      "currency": "EUR",
-      "price": 403.0,
-      "timestamp": "2026-11-25 17:34:38",
-      "is_official": true
-    },
-    {
-      "product_name": "Redmi Note 15 Pro 5G",
-      "platform": "Mi Store (FR)",
-      "country_code": "FR",
-      "currency": "EUR",
-      "price": 349.0,
-      "timestamp": "2026-11-25 17:33:01",
-      "is_official": true
-    },
-    {
-      "product_name": "Redmi Note 15 Pro+ 5G",
-      "platform": "Mi Store (FR)",
-      "country_code": "FR",
-      "currency": "EUR",
-      "price": 399.0,
-      "timestamp": "2026-11-25 17:33:15",
-      "is_official": true
+      "timestamp": "2026-11-26 17:08:15"
     },
     {
       "product_name": "XIAOMI 17T Pro Smartphone 12+256GB",
       "platform": "Amazon.fr",
       "country_code": "FR",
       "currency": "EUR",
-      "price": 544.17,
-      "timestamp": "2026-11-25 17:27:39"
+      "price": 721.83,
+      "timestamp": "2026-11-26 17:08:15"
     },
     {
       "product_name": "XIAOMI POCO C81 Pro Smartphone 4+128GB",
@@ -506,7 +47,7 @@
       "country_code": "FR",
       "currency": "EUR",
       "price": 90.83,
-      "timestamp": "2026-11-25 17:27:39"
+      "timestamp": "2026-11-26 17:08:32"
     },
     {
       "product_name": "XIAOMI POCO C81 Pro Smartphone 4+256GB",
@@ -514,7 +55,7 @@
       "country_code": "FR",
       "currency": "EUR",
       "price": 99.16,
-      "timestamp": "2026-11-25 17:27:39"
+      "timestamp": "2026-11-26 17:08:15"
     },
     {
       "product_name": "XIAOMI REDMI 17 256GB",
@@ -522,23 +63,23 @@
       "country_code": "FR",
       "currency": "EUR",
       "price": 197.94,
-      "timestamp": "2026-11-25 17:27:39"
+      "timestamp": "2026-11-26 17:08:32"
     },
     {
       "product_name": "XIAOMI REDMI A7 Pro Smartphone 4+64GB",
       "platform": "Amazon.fr",
       "country_code": "FR",
       "currency": "EUR",
-      "price": 148.67,
-      "timestamp": "2026-11-25 17:27:39"
+      "price": 151.44,
+      "timestamp": "2026-11-26 17:08:15"
     },
     {
       "product_name": "XIAOMI Redmi 17 128GB",
       "platform": "Amazon.fr",
       "country_code": "FR",
       "currency": "EUR",
-      "price": 147.52,
-      "timestamp": "2026-11-25 17:27:39"
+      "price": 148.81,
+      "timestamp": "2026-11-26 17:08:15"
     },
     {
       "product_name": "XIAOMI Redmi 17 5G 128GB",
@@ -546,60 +87,79 @@
       "country_code": "FR",
       "currency": "EUR",
       "price": 191.62,
-      "timestamp": "2026-11-25 17:27:39"
+      "timestamp": "2026-11-26 17:08:32"
     },
     {
-      "product_name": "Xiaomi 15T",
-      "platform": "Mi Store (FR)",
-      "country_code": "FR",
-      "currency": "EUR",
-      "price": 653.0,
-      "timestamp": "2026-11-25 17:32:30",
-      "is_official": true
-    },
-    {
-      "product_name": "Xiaomi 15T Pro",
-      "platform": "Mi Store (FR)",
-      "country_code": "FR",
-      "currency": "EUR",
-      "price": 1003.0,
-      "timestamp": "2026-11-25 17:32:46",
-      "is_official": true
-    },
-    {
-      "product_name": "Xiaomi 17 Ultra",
-      "platform": "Mi Store (FR)",
-      "country_code": "FR",
-      "currency": "EUR",
-      "price": 1503.0,
-      "timestamp": "2026-11-25 17:31:57",
-      "is_official": true
-    },
-    {
-      "product_name": "Xiaomi 17T",
-      "platform": "Mi Store (FR)",
-      "country_code": "FR",
-      "currency": "EUR",
-      "price": 599.9,
-      "timestamp": "2026-11-25 17:32:08",
-      "is_official": true
-    },
-    {
-      "product_name": "Xiaomi 17T Pro",
-      "platform": "Mi Store (FR)",
-      "country_code": "FR",
-      "currency": "EUR",
-      "price": 649.9,
-      "timestamp": "2026-11-25 17:32:18",
-      "is_official": true
-    },
-    {
-      "product_name": "Xiaomi POCO X8 Pro Smartphone 8+256GB",
+      "product_name": "Xiaomi 17 Ultra 16+512GB",
       "platform": "Amazon.fr",
       "country_code": "FR",
       "currency": "EUR",
-      "price": 251.27,
-      "timestamp": "2026-11-25 17:27:39"
+      "price": 1251.67,
+      "timestamp": "2026-11-26 17:08:15"
+    },
+    {
+      "product_name": "Xiaomi 17T Pro Smartphone 12GB",
+      "platform": "Amazon.fr",
+      "country_code": "FR",
+      "currency": "EUR",
+      "price": 853.0,
+      "timestamp": "2026-11-26 17:08:15"
+    },
+    {
+      "product_name": "Xiaomi 17T Smartphone 12+512GB",
+      "platform": "Amazon.fr",
+      "country_code": "FR",
+      "currency": "EUR",
+      "price": 502.5,
+      "timestamp": "2026-11-26 17:08:15"
+    },
+    {
+      "product_name": "Xiaomi POCO C75 Smartphone 4G 6+128GB",
+      "platform": "Amazon.fr",
+      "country_code": "FR",
+      "currency": "EUR",
+      "price": 173.0,
+      "timestamp": "2026-11-26 17:08:15"
+    },
+    {
+      "product_name": "Xiaomi POCO F8 Ultra Smartphone 16+512GB",
+      "platform": "Amazon.fr",
+      "country_code": "FR",
+      "currency": "EUR",
+      "price": 752.5,
+      "timestamp": "2026-11-26 17:08:15"
+    },
+    {
+      "product_name": "Xiaomi POCO M8 Pro Smartphone 12+512GB",
+      "platform": "Amazon.fr",
+      "country_code": "FR",
+      "currency": "EUR",
+      "price": 270.83,
+      "timestamp": "2026-11-26 17:08:15"
+    },
+    {
+      "product_name": "Xiaomi POCO M8 Smartphone 8+256GB",
+      "platform": "Amazon.fr",
+      "country_code": "FR",
+      "currency": "EUR",
+      "price": 215.83,
+      "timestamp": "2026-11-26 17:08:32"
+    },
+    {
+      "product_name": "Xiaomi POCO M8 Smartphone 8+512GB",
+      "platform": "Amazon.fr",
+      "country_code": "FR",
+      "currency": "EUR",
+      "price": 232.5,
+      "timestamp": "2026-11-26 17:08:15"
+    },
+    {
+      "product_name": "Xiaomi POCO X8 Pro Smartphone 12+512GB",
+      "platform": "Amazon.fr",
+      "country_code": "FR",
+      "currency": "EUR",
+      "price": 345.83,
+      "timestamp": "2026-11-26 17:08:15"
     },
     {
       "product_name": "Xiaomi REDMI 15C Smartphone 4+256GB",
@@ -607,115 +167,71 @@
       "country_code": "FR",
       "currency": "EUR",
       "price": 152.5,
-      "timestamp": "2026-11-25 17:27:39"
+      "timestamp": "2026-11-26 17:08:15"
     },
     {
-      "product_name": "POCO F7",
-      "platform": "Mi Store (IT)",
-      "country_code": "IT",
-      "currency": "EUR",
-      "price": 449.9,
-      "timestamp": "2026-11-25 17:38:41",
-      "is_official": true
+      "product_name": "XIAOMI 17T Pro Smartphone 12+1024GB",
+      "platform": "Amazon.co.uk",
+      "country_code": "GB",
+      "currency": "GBP",
+      "price": 749.0,
+      "timestamp": "2026-11-26 17:11:12"
     },
     {
-      "product_name": "POCO F7 Pro",
-      "platform": "Mi Store (IT)",
-      "country_code": "IT",
-      "currency": "EUR",
-      "price": 649.9,
-      "timestamp": "2026-11-25 17:38:56",
-      "is_official": true
+      "product_name": "XIAOMI 17T Smartphone 12+256GB",
+      "platform": "Amazon.co.uk",
+      "country_code": "GB",
+      "currency": "GBP",
+      "price": 415.83,
+      "timestamp": "2026-11-26 17:11:12"
     },
     {
-      "product_name": "POCO F8 Ultra",
-      "platform": "Mi Store (IT)",
-      "country_code": "IT",
-      "currency": "EUR",
-      "price": 649.9,
-      "timestamp": "2026-11-25 17:38:16",
-      "is_official": true
+      "product_name": "XIAOMI 17T Smartphone 12+512GB",
+      "platform": "Amazon.co.uk",
+      "country_code": "GB",
+      "currency": "GBP",
+      "price": 549.0,
+      "timestamp": "2026-11-26 17:11:12"
     },
     {
-      "product_name": "POCO X8 Pro",
-      "platform": "Mi Store (IT)",
-      "country_code": "IT",
-      "currency": "EUR",
-      "price": 369.9,
-      "timestamp": "2026-11-25 17:38:28",
-      "is_official": true
+      "product_name": "XIAOMI POCO C81 Pro Smartphone 4+256GB",
+      "platform": "Amazon.co.uk",
+      "country_code": "GB",
+      "currency": "GBP",
+      "price": 128.77,
+      "timestamp": "2026-11-26 17:11:12"
     },
     {
-      "product_name": "Redmi Note 14 Pro 5G",
-      "platform": "Mi Store (IT)",
-      "country_code": "IT",
-      "currency": "EUR",
-      "price": 399.9,
-      "timestamp": "2026-11-25 17:39:07",
-      "is_official": true
+      "product_name": "XIAOMI Poco M8 Smartphone 8+256GB",
+      "platform": "Amazon.co.uk",
+      "country_code": "GB",
+      "currency": "GBP",
+      "price": 149.17,
+      "timestamp": "2026-11-26 17:11:12"
     },
     {
-      "product_name": "Redmi Note 15 Pro 5G",
-      "platform": "Mi Store (IT)",
-      "country_code": "IT",
-      "currency": "EUR",
-      "price": 349.9,
-      "timestamp": "2026-11-25 17:37:48",
-      "is_official": true
+      "product_name": "XIAOMI REDMI A5 Smartphone 3+64GB",
+      "platform": "Amazon.co.uk",
+      "country_code": "GB",
+      "currency": "GBP",
+      "price": 63.95,
+      "timestamp": "2026-11-26 17:11:12"
     },
     {
-      "product_name": "Redmi Note 15 Pro+ 5G",
-      "platform": "Mi Store (IT)",
-      "country_code": "IT",
-      "currency": "EUR",
-      "price": 399.9,
-      "timestamp": "2026-11-25 17:38:02",
-      "is_official": true
+      "product_name": "XIAOMI REDMI A7 Pro Smartphone 4+64GB",
+      "platform": "Amazon.co.uk",
+      "country_code": "GB",
+      "currency": "GBP",
+      "price": 99.17,
+      "timestamp": "2026-11-26 17:11:12"
     },
     {
-      "product_name": "Xiaomi 15T",
-      "platform": "Mi Store (IT)",
-      "country_code": "IT",
-      "currency": "EUR",
-      "price": 699.9,
-      "timestamp": "2026-11-25 17:37:19",
-      "is_official": true
-    },
-    {
-      "product_name": "Xiaomi 15T Pro",
-      "platform": "Mi Store (IT)",
-      "country_code": "IT",
-      "currency": "EUR",
-      "price": 649.9,
-      "timestamp": "2026-11-25 17:37:35",
-      "is_official": true
-    },
-    {
-      "product_name": "Xiaomi 17 Ultra",
-      "platform": "Mi Store (IT)",
-      "country_code": "IT",
-      "currency": "EUR",
-      "price": 1299.9,
-      "timestamp": "2026-11-25 17:36:45",
-      "is_official": true
-    },
-    {
-      "product_name": "Xiaomi 17T",
-      "platform": "Mi Store (IT)",
-      "country_code": "IT",
-      "currency": "EUR",
-      "price": 549.9,
-      "timestamp": "2026-11-25 17:36:53",
-      "is_official": true
-    },
-    {
-      "product_name": "Xiaomi 17T Pro",
-      "platform": "Mi Store (IT)",
-      "country_code": "IT",
-      "currency": "EUR",
-      "price": 799.9,
-      "timestamp": "2026-11-25 17:37:05",
-      "is_official": true
+      "product_name": "Xiaomi 17T Pro Smartphone 12+512GB",
+      "platform": "Amazon.co.uk",
+      "country_code": "GB",
+      "currency": "GBP",
+      "price": 540.83,
+      "timestamp": "2026-11-26 17:11:12"
     },
     {
       "product_name": "POCO C71 Smartphone 4 + 128 GB",
@@ -723,7 +239,7 @@
       "country_code": "NL",
       "currency": "EUR",
       "price": 169.99,
-      "timestamp": "2026-11-25 17:28:31"
+      "timestamp": "2026-11-26 17:09:52"
     },
     {
       "product_name": "POCO C95 Pro 4G Smartphone 8GB",
@@ -731,43 +247,7 @@
       "country_code": "NL",
       "currency": "EUR",
       "price": 256.88,
-      "timestamp": "2026-11-25 17:28:31"
-    },
-    {
-      "product_name": "POCO F7",
-      "platform": "Mi Store (NL)",
-      "country_code": "NL",
-      "currency": "EUR",
-      "price": 349.9,
-      "timestamp": "2026-11-25 17:40:39",
-      "is_official": true
-    },
-    {
-      "product_name": "POCO F7 Pro",
-      "platform": "Mi Store (NL)",
-      "country_code": "NL",
-      "currency": "EUR",
-      "price": 429.9,
-      "timestamp": "2026-11-25 17:40:48",
-      "is_official": true
-    },
-    {
-      "product_name": "POCO F8 Ultra",
-      "platform": "Mi Store (NL)",
-      "country_code": "NL",
-      "currency": "EUR",
-      "price": 829.99,
-      "timestamp": "2026-11-25 17:40:22",
-      "is_official": true
-    },
-    {
-      "product_name": "POCO X8 Pro",
-      "platform": "Mi Store (NL)",
-      "country_code": "NL",
-      "currency": "EUR",
-      "price": 319.9,
-      "timestamp": "2026-11-25 17:40:30",
-      "is_official": true
+      "timestamp": "2026-11-26 17:09:52"
     },
     {
       "product_name": "REDMI 17 128GB",
@@ -775,25 +255,7 @@
       "country_code": "NL",
       "currency": "EUR",
       "price": 189.99,
-      "timestamp": "2026-11-25 17:28:27"
-    },
-    {
-      "product_name": "Redmi Note 15 Pro 5G",
-      "platform": "Mi Store (NL)",
-      "country_code": "NL",
-      "currency": "EUR",
-      "price": 399.9,
-      "timestamp": "2026-11-25 17:40:03",
-      "is_official": true
-    },
-    {
-      "product_name": "Redmi Note 15 Pro+ 5G",
-      "platform": "Mi Store (NL)",
-      "country_code": "NL",
-      "currency": "EUR",
-      "price": 499.9,
-      "timestamp": "2026-11-25 17:40:12",
-      "is_official": true
+      "timestamp": "2026-11-26 17:09:39"
     },
     {
       "product_name": "XIAOMI POCO C71 4G Smartphone Blue 4GB",
@@ -801,7 +263,23 @@
       "country_code": "NL",
       "currency": "EUR",
       "price": 169.99,
-      "timestamp": "2026-11-25 17:28:31"
+      "timestamp": "2026-11-26 17:09:52"
+    },
+    {
+      "product_name": "XIAOMI POCO C81 Pro 4G Smartphone 4 + 256 GB",
+      "platform": "Amazon.nl",
+      "country_code": "NL",
+      "currency": "EUR",
+      "price": 205.99,
+      "timestamp": "2026-11-26 17:09:52"
+    },
+    {
+      "product_name": "XIAOMI POCO C81 Pro 4G Smartphone 4 GB",
+      "platform": "Amazon.nl",
+      "country_code": "NL",
+      "currency": "EUR",
+      "price": 196.0,
+      "timestamp": "2026-11-26 17:09:52"
     },
     {
       "product_name": "XIAOMI POCO C81 Pro Smartphone 4+128GB",
@@ -809,7 +287,7 @@
       "country_code": "NL",
       "currency": "EUR",
       "price": 99.9,
-      "timestamp": "2026-11-25 17:28:27"
+      "timestamp": "2026-11-26 17:09:39"
     },
     {
       "product_name": "XIAOMI POCO C81 Pro Smartphone 4+256GB",
@@ -817,23 +295,23 @@
       "country_code": "NL",
       "currency": "EUR",
       "price": 119.9,
-      "timestamp": "2026-11-25 17:28:27"
+      "timestamp": "2026-11-26 17:09:39"
     },
     {
       "product_name": "XIAOMI POCO F8 Pro Smartphone 12+256GB",
       "platform": "Amazon.nl",
       "country_code": "NL",
       "currency": "EUR",
-      "price": 598.29,
-      "timestamp": "2026-11-25 17:28:27"
+      "price": 649.99,
+      "timestamp": "2026-11-26 17:09:39"
     },
     {
-      "product_name": "XIAOMI POCO F8 Ultra Smartphone 12+256GB",
+      "product_name": "XIAOMI POCO F8 Ultra Smartphone 16+512GB",
       "platform": "Amazon.nl",
       "country_code": "NL",
       "currency": "EUR",
-      "price": 649.9,
-      "timestamp": "2026-11-25 17:28:31"
+      "price": 798.99,
+      "timestamp": "2026-11-26 17:09:52"
     },
     {
       "product_name": "XIAOMI POCO M8 Pro 5G Smartphone 12GB",
@@ -841,23 +319,7 @@
       "country_code": "NL",
       "currency": "EUR",
       "price": 365.0,
-      "timestamp": "2026-11-25 17:28:27"
-    },
-    {
-      "product_name": "XIAOMI POCO M8 Pro 5G Smartphone 8GB",
-      "platform": "Amazon.nl",
-      "country_code": "NL",
-      "currency": "EUR",
-      "price": 305.99,
-      "timestamp": "2026-11-25 17:28:31"
-    },
-    {
-      "product_name": "XIAOMI POCO M8 Pro Smartphone 12+512GB",
-      "platform": "Amazon.nl",
-      "country_code": "NL",
-      "currency": "EUR",
-      "price": 299.9,
-      "timestamp": "2026-11-25 17:28:31"
+      "timestamp": "2026-11-26 17:09:52"
     },
     {
       "product_name": "XIAOMI POCO M8 Pro Smartphone 8+256GB",
@@ -865,7 +327,7 @@
       "country_code": "NL",
       "currency": "EUR",
       "price": 249.9,
-      "timestamp": "2026-11-25 17:28:27"
+      "timestamp": "2026-11-26 17:09:39"
     },
     {
       "product_name": "XIAOMI POCO M8 Smartphone 8+256GB",
@@ -873,7 +335,7 @@
       "country_code": "NL",
       "currency": "EUR",
       "price": 209.9,
-      "timestamp": "2026-11-25 17:28:31"
+      "timestamp": "2026-11-26 17:09:52"
     },
     {
       "product_name": "XIAOMI POCO X8 Pro MAX Smartphone 12+512GB",
@@ -881,7 +343,7 @@
       "country_code": "NL",
       "currency": "EUR",
       "price": 409.9,
-      "timestamp": "2026-11-25 17:28:27"
+      "timestamp": "2026-11-26 17:09:39"
     },
     {
       "product_name": "XIAOMI POCO X8 Pro Max 5G Smartphone 12GB",
@@ -889,7 +351,7 @@
       "country_code": "NL",
       "currency": "EUR",
       "price": 541.49,
-      "timestamp": "2026-11-25 17:28:31"
+      "timestamp": "2026-11-26 17:09:52"
     },
     {
       "product_name": "XIAOMI POCO X8 Pro Smartphone 12+512GB",
@@ -897,7 +359,7 @@
       "country_code": "NL",
       "currency": "EUR",
       "price": 459.0,
-      "timestamp": "2026-11-25 17:28:27"
+      "timestamp": "2026-11-26 17:09:39"
     },
     {
       "product_name": "XIAOMI POCO X8 Pro Smartphone 8+256GB",
@@ -905,15 +367,15 @@
       "country_code": "NL",
       "currency": "EUR",
       "price": 299.9,
-      "timestamp": "2026-11-25 17:28:27"
+      "timestamp": "2026-11-26 17:09:39"
     },
     {
       "product_name": "XIAOMI REDMI A7 Pro Smartphone 4+128GB",
       "platform": "Amazon.nl",
       "country_code": "NL",
       "currency": "EUR",
-      "price": 122.18,
-      "timestamp": "2026-11-25 17:28:31"
+      "price": 149.0,
+      "timestamp": "2026-11-26 17:09:52"
     },
     {
       "product_name": "XIAOMI REDMI A7 Pro Smartphone 4+64GB",
@@ -921,15 +383,15 @@
       "country_code": "NL",
       "currency": "EUR",
       "price": 129.9,
-      "timestamp": "2026-11-25 17:28:27"
+      "timestamp": "2026-11-26 17:09:39"
     },
     {
-      "product_name": "XIAOMI REDMI Note 15 5G Smartphone 8+256GB",
+      "product_name": "XIAOMI REDMI Note 15 Pro+ Smartphone 5G 12+512GB",
       "platform": "Amazon.nl",
       "country_code": "NL",
       "currency": "EUR",
-      "price": 299.9,
-      "timestamp": "2026-11-25 17:28:31"
+      "price": 479.0,
+      "timestamp": "2026-11-26 17:09:39"
     },
     {
       "product_name": "XIAOMI Redmi 15 - Smartphone Von 8 + 256GB",
@@ -937,7 +399,7 @@
       "country_code": "NL",
       "currency": "EUR",
       "price": 254.99,
-      "timestamp": "2026-11-25 17:28:27"
+      "timestamp": "2026-11-26 17:09:39"
     },
     {
       "product_name": "XIAOMI Redmi 15C 4G Smartphone 4GB",
@@ -945,7 +407,7 @@
       "country_code": "NL",
       "currency": "EUR",
       "price": 146.66,
-      "timestamp": "2026-11-25 17:28:27"
+      "timestamp": "2026-11-26 17:09:39"
     },
     {
       "product_name": "XIAOMI Redmi 17 4G Smartphone 4GB",
@@ -953,7 +415,7 @@
       "country_code": "NL",
       "currency": "EUR",
       "price": 179.0,
-      "timestamp": "2026-11-25 17:28:27"
+      "timestamp": "2026-11-26 17:09:39"
     },
     {
       "product_name": "XIAOMI Redmi A5 4GB",
@@ -961,25 +423,7 @@
       "country_code": "NL",
       "currency": "EUR",
       "price": 159.99,
-      "timestamp": "2026-11-25 17:28:27"
-    },
-    {
-      "product_name": "Xiaomi 15T",
-      "platform": "Mi Store (NL)",
-      "country_code": "NL",
-      "currency": "EUR",
-      "price": 649.9,
-      "timestamp": "2026-11-25 17:39:46",
-      "is_official": true
-    },
-    {
-      "product_name": "Xiaomi 15T Pro",
-      "platform": "Mi Store (NL)",
-      "country_code": "NL",
-      "currency": "EUR",
-      "price": 799.9,
-      "timestamp": "2026-11-25 17:39:55",
-      "is_official": true
+      "timestamp": "2026-11-26 17:09:39"
     },
     {
       "product_name": "Xiaomi 15T Pro 5G Dual Sim 256GB",
@@ -987,16 +431,7 @@
       "country_code": "NL",
       "currency": "EUR",
       "price": 454.9,
-      "timestamp": "2026-11-25 17:28:27"
-    },
-    {
-      "product_name": "Xiaomi 17 Ultra",
-      "platform": "Mi Store (NL)",
-      "country_code": "NL",
-      "currency": "EUR",
-      "price": 1699.9,
-      "timestamp": "2026-11-25 17:39:18",
-      "is_official": true
+      "timestamp": "2026-11-26 17:09:39"
     },
     {
       "product_name": "Xiaomi 17 Ultra Smartphone 16+512GB",
@@ -1004,25 +439,7 @@
       "country_code": "NL",
       "currency": "EUR",
       "price": 1189.0,
-      "timestamp": "2026-11-25 17:28:27"
-    },
-    {
-      "product_name": "Xiaomi 17T",
-      "platform": "Mi Store (NL)",
-      "country_code": "NL",
-      "currency": "EUR",
-      "price": 599.9,
-      "timestamp": "2026-11-25 17:39:27",
-      "is_official": true
-    },
-    {
-      "product_name": "Xiaomi 17T Pro",
-      "platform": "Mi Store (NL)",
-      "country_code": "NL",
-      "currency": "EUR",
-      "price": 799.9,
-      "timestamp": "2026-11-25 17:39:37",
-      "is_official": true
+      "timestamp": "2026-11-26 17:09:39"
     },
     {
       "product_name": "Xiaomi 17T Pro Smartphone 12+512GB",
@@ -1030,7 +447,7 @@
       "country_code": "NL",
       "currency": "EUR",
       "price": 699.0,
-      "timestamp": "2026-11-25 17:28:27"
+      "timestamp": "2026-11-26 17:09:39"
     },
     {
       "product_name": "Xiaomi 17T Smartphone 12+256GB",
@@ -1038,15 +455,23 @@
       "country_code": "NL",
       "currency": "EUR",
       "price": 499.0,
-      "timestamp": "2026-11-25 17:28:27"
+      "timestamp": "2026-11-26 17:09:39"
     },
     {
-      "product_name": "Xiaomi POCO C75 4G 6GB",
+      "product_name": "Xiaomi POCO C71 4G Smartphone 4GB",
       "platform": "Amazon.nl",
       "country_code": "NL",
       "currency": "EUR",
-      "price": 122.99,
-      "timestamp": "2026-11-25 17:28:31"
+      "price": 169.0,
+      "timestamp": "2026-11-26 17:09:52"
+    },
+    {
+      "product_name": "Xiaomi POCO C81 Pro Smartphone 4 + 256 GB",
+      "platform": "Amazon.nl",
+      "country_code": "NL",
+      "currency": "EUR",
+      "price": 189.99,
+      "timestamp": "2026-11-26 17:09:52"
     },
     {
       "product_name": "Xiaomi POCO F2 Pro 5G Smartphone 6GB",
@@ -1054,7 +479,15 @@
       "country_code": "NL",
       "currency": "EUR",
       "price": 222.99,
-      "timestamp": "2026-11-25 17:28:31"
+      "timestamp": "2026-11-26 17:09:52"
+    },
+    {
+      "product_name": "Xiaomi POCO X8 5G Smartphone 6 GB",
+      "platform": "Amazon.nl",
+      "country_code": "NL",
+      "currency": "EUR",
+      "price": 309.0,
+      "timestamp": "2026-11-26 17:09:52"
     },
     {
       "product_name": "Xiaomi Poco C71 128GB",
@@ -1062,23 +495,15 @@
       "country_code": "NL",
       "currency": "EUR",
       "price": 157.99,
-      "timestamp": "2026-11-25 17:28:31"
+      "timestamp": "2026-11-26 17:09:52"
     },
     {
-      "product_name": "Xiaomi Redmi 15C - Smartphone da 4 + 256GB",
+      "product_name": "Xiaomi Poco M6 Pro 256GB",
       "platform": "Amazon.nl",
       "country_code": "NL",
       "currency": "EUR",
-      "price": 181.48,
-      "timestamp": "2026-11-25 17:28:35"
-    },
-    {
-      "product_name": "Xiaomi Redmi 15c 4+128GB",
-      "platform": "Amazon.nl",
-      "country_code": "NL",
-      "currency": "EUR",
-      "price": 168.4,
-      "timestamp": "2026-11-25 17:28:35"
+      "price": 301.09,
+      "timestamp": "2026-11-26 17:09:52"
     },
     {
       "product_name": "Xiaomi Redmi 9C Smartphone 2GB",
@@ -1086,15 +511,7 @@
       "country_code": "NL",
       "currency": "EUR",
       "price": 116.15,
-      "timestamp": "2026-11-25 17:28:27"
-    },
-    {
-      "product_name": "Xiaomi Redmi A7 Pro Smartphone 4 + 64 GB",
-      "platform": "Amazon.nl",
-      "country_code": "NL",
-      "currency": "EUR",
-      "price": 138.99,
-      "timestamp": "2026-11-25 17:28:35"
+      "timestamp": "2026-11-26 17:09:39"
     },
     {
       "product_name": "Xiaomi Redmi Note 14 Pro 5G 256GB",
@@ -1102,7 +519,7 @@
       "country_code": "NL",
       "currency": "EUR",
       "price": 349.52,
-      "timestamp": "2026-11-25 17:28:27"
+      "timestamp": "2026-11-26 17:09:39"
     },
     {
       "product_name": "Xiaomi Redmi Note 17 Pro 5G Smartphone 12GB",
@@ -1110,295 +527,87 @@
       "country_code": "NL",
       "currency": "EUR",
       "price": 437.99,
-      "timestamp": "2026-11-25 17:28:27"
+      "timestamp": "2026-11-26 17:09:39"
     },
     {
-      "product_name": "POCO F7",
-      "platform": "Mi Store (PL)",
-      "country_code": "PL",
-      "currency": "PLN",
-      "price": 1999.0,
-      "timestamp": "2026-11-25 17:42:50",
-      "is_official": true
-    },
-    {
-      "product_name": "POCO F7 Pro",
-      "platform": "Mi Store (PL)",
-      "country_code": "PL",
-      "currency": "PLN",
-      "price": 2399.0,
-      "timestamp": "2026-11-25 17:42:59",
-      "is_official": true
-    },
-    {
-      "product_name": "POCO F8 Ultra",
-      "platform": "Mi Store (PL)",
+      "product_name": "XIAOMI 17T Pro smartfon 12 + 512 GB",
+      "platform": "Amazon.pl",
       "country_code": "PL",
       "currency": "PLN",
       "price": 3299.0,
-      "timestamp": "2026-11-25 17:42:33",
-      "is_official": true
+      "timestamp": "2026-11-26 17:10:15"
     },
     {
-      "product_name": "POCO X8 Pro",
-      "platform": "Mi Store (PL)",
+      "product_name": "XIAOMI POCO M8 Pro 5G 12+512 GB",
+      "platform": "Amazon.pl",
       "country_code": "PL",
       "currency": "PLN",
-      "price": 1699.0,
-      "timestamp": "2026-11-25 17:42:41",
-      "is_official": true
+      "price": 1557.99,
+      "timestamp": "2026-11-26 17:10:15"
     },
     {
-      "product_name": "Redmi Note 14 Pro 5G",
-      "platform": "Mi Store (PL)",
+      "product_name": "XIAOMI POCO X8 Pro Smartphone 12+512 GB",
+      "platform": "Amazon.pl",
       "country_code": "PL",
       "currency": "PLN",
-      "price": 1799.0,
-      "timestamp": "2026-11-25 17:43:09",
-      "is_official": true
+      "price": 1936.0,
+      "timestamp": "2026-11-26 17:10:15"
     },
     {
-      "product_name": "Redmi Note 15 Pro 5G",
-      "platform": "Mi Store (PL)",
+      "product_name": "XIAOMI Poco M8 Pro 5g smartfon 12+512 GB",
+      "platform": "Amazon.pl",
       "country_code": "PL",
       "currency": "PLN",
-      "price": 1899.0,
-      "timestamp": "2026-11-25 17:42:15",
-      "is_official": true
+      "price": 1557.99,
+      "timestamp": "2026-11-26 17:10:15"
     },
     {
-      "product_name": "Redmi Note 15 Pro+ 5G",
-      "platform": "Mi Store (PL)",
+      "product_name": "XIAOMI Redmi 15C 4G 8GB",
+      "platform": "Amazon.pl",
       "country_code": "PL",
       "currency": "PLN",
-      "price": 1999.0,
-      "timestamp": "2026-11-25 17:42:24",
-      "is_official": true
+      "price": 893.99,
+      "timestamp": "2026-11-26 17:10:15"
     },
     {
-      "product_name": "Xiaomi 15T",
-      "platform": "Mi Store (PL)",
+      "product_name": "XIAOMI Redmi 9C 2 GB",
+      "platform": "Amazon.pl",
       "country_code": "PL",
       "currency": "PLN",
-      "price": 2999.0,
-      "timestamp": "2026-11-25 17:41:57",
-      "is_official": true
+      "price": 526.77,
+      "timestamp": "2026-11-26 17:10:15"
     },
     {
-      "product_name": "Xiaomi 15T Pro",
-      "platform": "Mi Store (PL)",
+      "product_name": "XIAOMI Smartfon 17T 12+256GB",
+      "platform": "Amazon.pl",
       "country_code": "PL",
       "currency": "PLN",
-      "price": 2399.0,
-      "timestamp": "2026-11-25 17:42:06",
-      "is_official": true
+      "price": 2499.0,
+      "timestamp": "2026-11-26 17:10:15"
     },
     {
-      "product_name": "Xiaomi 17 Ultra",
-      "platform": "Mi Store (PL)",
+      "product_name": "XIAOMI Smartfon 17T Pro 12 + 512 GB",
+      "platform": "Amazon.pl",
       "country_code": "PL",
       "currency": "PLN",
-      "price": 5699.0,
-      "timestamp": "2026-11-25 17:41:27",
-      "is_official": true
+      "price": 4298.92,
+      "timestamp": "2026-11-26 17:10:15"
     },
     {
-      "product_name": "Xiaomi 17T",
-      "platform": "Mi Store (PL)",
+      "product_name": "XIAOMI Smartfon Redmi 15-4G 8 + 256 GB",
+      "platform": "Amazon.pl",
       "country_code": "PL",
       "currency": "PLN",
-      "price": 2299.0,
-      "timestamp": "2026-11-25 17:41:38",
-      "is_official": true
+      "price": 1048.99,
+      "timestamp": "2026-11-26 17:10:15"
     },
     {
-      "product_name": "Xiaomi 17T Pro",
-      "platform": "Mi Store (PL)",
+      "product_name": "Xiaomi Redmi A5 4G Midnight Black 4 + 128 GB",
+      "platform": "Amazon.pl",
       "country_code": "PL",
       "currency": "PLN",
-      "price": 2899.0,
-      "timestamp": "2026-11-25 17:41:49",
-      "is_official": true
-    },
-    {
-      "product_name": "POCO F7",
-      "platform": "Mi Store (RO)",
-      "country_code": "RO",
-      "currency": "RON",
-      "price": 1849.99,
-      "timestamp": "2026-11-25 17:45:29",
-      "is_official": true
-    },
-    {
-      "product_name": "POCO F7 Pro",
-      "platform": "Mi Store (RO)",
-      "country_code": "RO",
-      "currency": "RON",
-      "price": 2999.99,
-      "timestamp": "2026-11-25 17:45:40",
-      "is_official": true
-    },
-    {
-      "product_name": "POCO F8 Ultra",
-      "platform": "Mi Store (RO)",
-      "country_code": "RO",
-      "currency": "RON",
-      "price": 3599.99,
-      "timestamp": "2026-11-25 17:45:11",
-      "is_official": true
-    },
-    {
-      "product_name": "POCO X8 Pro",
-      "platform": "Mi Store (RO)",
-      "country_code": "RO",
-      "currency": "RON",
-      "price": 1899.99,
-      "timestamp": "2026-11-25 17:45:20",
-      "is_official": true
-    },
-    {
-      "product_name": "Redmi Note 15 Pro 5G",
-      "platform": "Mi Store (RO)",
-      "country_code": "RO",
-      "currency": "RON",
-      "price": 1449.99,
-      "timestamp": "2026-11-25 17:44:30",
-      "is_official": true
-    },
-    {
-      "product_name": "Xiaomi 15T",
-      "platform": "Mi Store (RO)",
-      "country_code": "RO",
-      "currency": "RON",
-      "price": 1799.99,
-      "timestamp": "2026-11-25 17:44:12",
-      "is_official": true
-    },
-    {
-      "product_name": "Xiaomi 15T Pro",
-      "platform": "Mi Store (RO)",
-      "country_code": "RO",
-      "currency": "RON",
-      "price": 3499.99,
-      "timestamp": "2026-11-25 17:44:21",
-      "is_official": true
-    },
-    {
-      "product_name": "Xiaomi 17 Ultra",
-      "platform": "Mi Store (RO)",
-      "country_code": "RO",
-      "currency": "RON",
-      "price": 7199.99,
-      "timestamp": "2026-11-25 17:43:21",
-      "is_official": true
-    },
-    {
-      "product_name": "Xiaomi 17T Pro",
-      "platform": "Mi Store (RO)",
-      "country_code": "RO",
-      "currency": "RON",
-      "price": 4399.99,
-      "timestamp": "2026-11-25 17:44:02",
-      "is_official": true
-    },
-    {
-      "product_name": "POCO F7",
-      "platform": "Mi Store (SE)",
-      "country_code": "SE",
-      "currency": "SEK",
-      "price": 3490.0,
-      "timestamp": "2026-11-25 17:53:20",
-      "is_official": true
-    },
-    {
-      "product_name": "POCO F7 Pro",
-      "platform": "Mi Store (SE)",
-      "country_code": "SE",
-      "currency": "SEK",
-      "price": 5990.0,
-      "timestamp": "2026-11-25 17:53:30",
-      "is_official": true
-    },
-    {
-      "product_name": "POCO F8 Ultra",
-      "platform": "Mi Store (SE)",
-      "country_code": "SE",
-      "currency": "SEK",
-      "price": 8990.0,
-      "timestamp": "2026-11-25 17:53:03",
-      "is_official": true
-    },
-    {
-      "product_name": "POCO X8 Pro",
-      "platform": "Mi Store (SE)",
-      "country_code": "SE",
-      "currency": "SEK",
-      "price": 4690.0,
-      "timestamp": "2026-11-25 17:53:11",
-      "is_official": true
-    },
-    {
-      "product_name": "Redmi Note 14 Pro 5G",
-      "platform": "Mi Store (SE)",
-      "country_code": "SE",
-      "currency": "SEK",
-      "price": 4990.0,
-      "timestamp": "2026-11-25 17:53:39",
-      "is_official": true
-    },
-    {
-      "product_name": "Redmi Note 15 Pro+ 5G",
-      "platform": "Mi Store (SE)",
-      "country_code": "SE",
-      "currency": "SEK",
-      "price": 4290.0,
-      "timestamp": "2026-11-25 17:52:54",
-      "is_official": true
-    },
-    {
-      "product_name": "Xiaomi 15T",
-      "platform": "Mi Store (SE)",
-      "country_code": "SE",
-      "currency": "SEK",
-      "price": 7290.0,
-      "timestamp": "2026-11-25 17:52:03",
-      "is_official": true
-    },
-    {
-      "product_name": "Xiaomi 15T Pro",
-      "platform": "Mi Store (SE)",
-      "country_code": "SE",
-      "currency": "SEK",
-      "price": 10290.0,
-      "timestamp": "2026-11-25 17:52:14",
-      "is_official": true
-    },
-    {
-      "product_name": "Xiaomi 17 Ultra",
-      "platform": "Mi Store (SE)",
-      "country_code": "SE",
-      "currency": "SEK",
-      "price": 14990.0,
-      "timestamp": "2026-11-25 17:51:36",
-      "is_official": true
-    },
-    {
-      "product_name": "Xiaomi 17T",
-      "platform": "Mi Store (SE)",
-      "country_code": "SE",
-      "currency": "SEK",
-      "price": 7090.0,
-      "timestamp": "2026-11-25 17:51:45",
-      "is_official": true
-    },
-    {
-      "product_name": "Xiaomi 17T Pro",
-      "platform": "Mi Store (SE)",
-      "country_code": "SE",
-      "currency": "SEK",
-      "price": 8990.0,
-      "timestamp": "2026-11-25 17:51:55",
-      "is_official": true
+      "price": 672.99,
+      "timestamp": "2026-11-26 17:10:15"
     }
   ]
 }
